@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Павел Карев](https://up.htmlacademy.ru/adaptive/11/user/20502).
-* Наставник: `Неизвестно`.
+* Наставник: [Игорь Кузнецов](https://htmlacademy.ru/profile/id201747).
 
 ---
 
