@@ -1,0 +1,52 @@
+.contacts {
+  @include flex-mobile-layout();
+  margin-top: 90px;
+}
+
+.contacts__caption {
+  margin: 0 auto;
+  flex-basis: 100%;
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-right: 30px;
+  padding-bottom: 0;
+  padding-left: 30px;
+  @include font(25px, 30px, bold);
+}
+
+.contacts__contents {
+  margin: 0 auto;
+  flex-basis: 100%;
+  box-sizing: border-box;
+  padding-right: 30px;
+  padding-left: 30px;
+  @include font(15px, 20px, normal);
+}
+
+.contacts__name {
+  width: 80px;
+  padding-bottom: 38px;
+  vertical-align: top;
+}
+
+.contacts__value {
+  width: 180px;
+  padding-bottom: 38px;
+  vertical-align: top;
+}
+
+.contacts__map {
+  height: 457px;
+  width: 320px;
+  background: #e9e5dc url("http://placehold.it/320x457") no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.contacts__write-us {
+  margin: 40px auto 53px;
+  flex-basis: 218px;
+  padding: 18px 20px 18px 20px;
+  text-align: center;
+  border: 1px solid black;
+}

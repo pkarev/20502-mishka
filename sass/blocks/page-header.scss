@@ -1,0 +1,14 @@
+.page-header {
+  @include flex-mobile-layout();
+}
+
+.page-header__title {
+  @include visibility-hidden();
+}
+
+.page-header__logo {
+  padding: 22px 30px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}

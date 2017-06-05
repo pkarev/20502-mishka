@@ -1,0 +1,39 @@
+.goods {
+  @include flex-mobile-layout();
+}
+
+.goods__caption {
+  margin: 0 auto;
+  flex-basis: 100%;
+  box-sizing: border-box;
+  padding-top: 70px;
+  padding-right: 30px;
+  padding-bottom: 150px;
+  padding-left: 30px;
+  text-align: center;
+  @include font(27px, 30px, bold);
+}
+
+.goods__list {
+  margin: 0 auto;
+  flex-basis: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods__list-item {
+  flex-basis: 100%;
+  a {
+  display: block;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 30px;
+  padding-right: 160px;
+
+  @include font(19px, 24px, bold);
+  text-decoration: none;
+  }
+}

@@ -1,3 +1,22 @@
 body {
-  background: lightgreen;
+  margin: 0;
+  padding: 0;
 }
+
+img {
+max-width: 100%;
+height: auto;
+}
+
+@import "mixins.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/main-index.scss";
+@import "blocks/goods.scss";
+@import "blocks/promo.scss";
+@import "blocks/modal.scss";
+@import "blocks/about-us.scss";
+@import "blocks/reviews.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "normalize.scss";
