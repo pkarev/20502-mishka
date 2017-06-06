@@ -9,6 +9,7 @@ height: auto;
 }
 
 @import "mixins.scss";
+@import "normalize.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/main-index.scss";
@@ -19,4 +20,7 @@ height: auto;
 @import "blocks/reviews.scss";
 @import "blocks/contacts.scss";
 @import "blocks/page-footer.scss";
-@import "normalize.scss";
+@import "blocks/main-catalog.scss";
+@import "blocks/items.scss";
+@import "blocks/catalog-item.scss";
+@import "blocks/production.scss";

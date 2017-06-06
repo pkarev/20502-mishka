@@ -1,0 +1,47 @@
+.production {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.production__caption {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding-top: 29px;
+  padding-right: 30px;
+  padding-bottom: 26px;
+  padding-left: 90px;
+  text-align: left;
+  @include font(17px, 24px, bold);
+}
+
+.production__video {
+  width: 100%;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.production__text {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  padding-left: 35px;
+  padding-right: 45px;
+  @include font(13px, 24px);
+}
+
+.production__make-order {
+  display: block;
+  margin: 0 auto;
+  width: 192px;
+  padding: 20px 26px 15px 26px;
+  text-align: center;
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin-bottom: 47px;
+}

@@ -1,9 +1,10 @@
 .modal {
-  @include flex-mobile-layout();
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
   left: 0;
-  top: 967px;
-  background-color: #fff;
+  top: 974px;
   @include visibility-hidden();
 }
 

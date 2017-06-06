@@ -1,5 +1,5 @@
 .main-nav {
-  @include flex-mobile-layout();
+  width: 100%;
   position: relative;
 }
 
@@ -7,47 +7,57 @@
   position: absolute;
   right: 0;
   top: -79px;
-  padding: 30px;
+  width: 80px;
+  height: 79px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: url(../img/icon-menu-open.svg) no-repeat center;
 }
 
 .main-nav__wrapper {
-  @include visibility-hidden();
+  // @include visibility-hidden();
   position: absolute;
   box-sizing: border-box;
-  width: 320px;
   margin: 0 auto;
+  width: 100%;
   top: 100%;
   left: 0;
+  z-index: 1;
 }
 
 .main-nav__list {
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
-  width: 320px;
+  width: 100%;
 }
 
 .main-nav__item {
-  a {
-    display: block;
-    padding-top: 27px;
-    padding-bottom: 27px;
-    padding-right: 30px;
-    padding-left: 76px;
-    width: 320px;
-    box-sizing: border-box;
-    text-decoration: none;
-    @include font(17px, 24px, bold);
-  }
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-.main-nav__search input[type="text"] {
+.main-nav__link {
+  display: block;
+  width: 100%;
   padding-top: 27px;
   padding-bottom: 27px;
   padding-right: 30px;
-  padding-left: 76px;
+  padding-left: 23.75%;
+  box-sizing: border-box;
+  text-decoration: none;
+  @include font(17px, 24px, bold);
+}
+
+.main-nav__search input[type="text"] {
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-right: 30px;
+  padding-left: 23.75%;
   border: none;
-  width: 320px;
   box-sizing: border-box;
   @include font(17px, 24px, bold);
   text-decoration: none;
@@ -55,11 +65,11 @@
 
 .main-nav__cart {
   display: block;
+  width: 100%;
   padding-top: 27px;
   padding-bottom: 27px;
   padding-right: 30px;
-  padding-left: 76px;
-  width: 320px;
+  padding-left: 23.75%;
   box-sizing: border-box;
   text-decoration: none;
   @include font(17px, 24px, bold);

@@ -1,0 +1,17 @@
+.items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items__caption {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 74px;
+  padding-right: 30px;
+  padding-bottom: 72px;
+  padding-left: 30px;
+  text-align: center;
+  @include font(27px, 30px, bold);
+}
