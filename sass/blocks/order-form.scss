@@ -1,6 +1,6 @@
 .order-form {
-  width: 320px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -9,23 +9,17 @@
   margin: 0;
   margin-top: 31px;
   width: 100%;
-  box-sizing: border-box;
   padding-top: 77px;
-  padding-right: 30px;
   padding-bottom: 77px;
-  padding-left: 30px;
   text-align: center;
   @include font(27px, 30px, bold);
 }
 
 .order-form__text {
   margin: 0;
-  width: 100%;
-  box-sizing: border-box;
+  max-width: 100%;
   padding-top: 26px;
-  padding-right: 30px;
   padding-bottom: 26px;
-  padding-left: 30px;
   @include font(13px, 24px);
   text-align: left;
 }
@@ -42,10 +36,7 @@
 .order-form__fieldset-caption {
   margin: 0;
   width: 100%;
-  box-sizing: border-box;
-  padding-right: 30px;
   margin-bottom: 36px;
-  padding-left: 30px;
   @include font(17px, 16px, bold);
   text-transform: uppercase;
   &--mb-smaller {
@@ -74,25 +65,23 @@
   }
   &--text-fields {
     margin-bottom: 0;
-    padding-left: 30px;
+    padding-left: 0;
   }
 }
 
 .order-form__input-text {
-  width: 81.25%;
+  width: 100%;
   box-sizing: border-box;
   padding: 16px 0;
-  margin: 0 auto;
   &:last-child {
     margin-bottom: 31px;
   }
 }
 
 .order-form__input-textarea {
-  width: 81.25%;
+  width: 100%;
   box-sizing: border-box;
   padding: 18px 17px;
-  margin: 0 auto;
   margin-bottom: 17px;
   @include font(17px, 18px);
   min-height: 142px;
@@ -101,17 +90,16 @@
 .order-form__required-legend {
   margin: 0;
   margin-bottom: 31px;
-  padding: 0 30px;
+  padding: 0;
   width: 100%;
-  box-sizing: border-box;
   @include font(14px, 16px);
 }
 
 .order-form__submit {
   display: block;
-  margin: 0 30px 55px 30px;
+  margin: 0 auto 55px;
   box-sizing: border-box;
-  width: 100%;
+  width: 260px;
   height: 52px;
   padding: 0 20px;
   text-align: center;

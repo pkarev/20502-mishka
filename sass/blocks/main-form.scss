@@ -1,3 +1,6 @@
 .main-form {
   @include flex-mobile-layout();
+  padding-right: 9.375%;
+  padding-left: 9.375%;
+  box-sizing: border-box;
 }

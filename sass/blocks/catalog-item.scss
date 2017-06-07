@@ -4,8 +4,6 @@
   flex-wrap: wrap;
   margin: 0 auto;
   margin-bottom: 30px;
-  padding: 0 30px;
-  box-sizing: border-box;
 }
 
 .catalog-item__link {
@@ -17,12 +15,10 @@
 }
 
 .catalog-item__name {
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
-  box-sizing: border-box;
   padding-top: 28px;
-  padding-left: 10.76923%;
-  padding-right: 10.76923%;
+  padding-left: 11.54%;
   padding-bottom: 0;
   @include font(17px, 24px, bold);
 }
@@ -33,13 +29,11 @@
 }
 
 .catalog-item__stats {
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
-  box-sizing: border-box;
   padding-top: 16px;
-  padding-right: 10.76923%;
   padding-bottom: 27px;
-  padding-left: 10.76923%;
+  padding-left: 11.54%;
   @include font(13px, 30px);
 }
 
@@ -49,7 +43,7 @@
   box-sizing: border-box;
   padding-top: 23px;
   padding-bottom: 24px;
-  padding-left: 10.76923%;
+  padding-left: 11.54%;
   @include font(15px, 24px, bold);
 }
 

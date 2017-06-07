@@ -5,37 +5,31 @@
 }
 
 .goods__caption {
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
   box-sizing: border-box;
   padding-top: 70px;
-  padding-right: 30px;
+  padding-right: 9.375%;
   padding-bottom: 150px;
-  padding-left: 30px;
+  padding-left: 9.375%;
   text-align: center;
   @include font(27px, 30px, bold);
 }
 
 .goods__list {
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
-  box-sizing: border-box;
   padding: 0;
   list-style-type: none;
-}
-
-.goods__list-item {
-  width: 100%;
 }
 
 .goods__link {
   display: block;
   padding-top: 28px;
   padding-bottom: 28px;
-  padding-left: 30px;
+  padding-left: 9.375%;
   padding-right: 50%;
   box-sizing: border-box;
-  width: 100%;
   @include font(19px, 24px, bold);
   text-decoration: none;
 }

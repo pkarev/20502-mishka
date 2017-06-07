@@ -2,16 +2,15 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding-right: 9.375%;
+  padding-left: 9.375%;
 }
 
 .promo__caption {
   margin: 0;
   width: 100%;
-  box-sizing: border-box;
   padding-top: 32px;
-  padding-right: 30px;
   padding-bottom: 10px;
-  padding-left: 30px;
   text-align: left;
   @include font(25px, 30px, bold);
 }
@@ -19,11 +18,7 @@
 .promo__legend {
   margin: 0;
   width: 100%;
-  box-sizing: border-box;
-  padding-top: 0;
-  padding-right: 30px;
   padding-bottom: 28px;
-  padding-left: 30px;
   text-align: left;
   @include font(17px, 20px, bold);
   text-transform: uppercase;
@@ -33,10 +28,7 @@
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  padding-top: 0;
-  padding-right: 30px;
   padding-bottom: 33px;
-  padding-left: 30px;
   text-align: left;
   @include font(15px, 24px, normal);
 }
@@ -45,32 +37,29 @@
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  padding-right: 30px;
-  padding-left: 30px;
   @include font(15px, 20px, normal);
 }
 
 .promo__name {
-  width: 38.46153%;
+  width: 38.46153%; /*ширина столбца таблицы*/
 }
 
 .promo__value {
-  width: 61.53847%;
+  width: 61.53847%; /*ширина столбца таблицы*/
 }
 
 .promo__image {
   margin: 0 auto;
-  max-width: 260px;
+  width: 260px;
+  height: 315px;
   box-sizing: border-box;
-  padding: 0 30px;
+  background-size: cover;
 }
 
 .promo__price {
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
   box-sizing: border-box;
-  padding-right: 30px;
-  padding-left: 30px;
   padding-top: 26px;
   padding-bottom: 26px;
   text-align: center;
@@ -80,7 +69,8 @@
 .promo__buy {
   display: block;
   margin: 0 auto;
-  width: 220px;
+  box-sizing: border-box;
+  width: 260px;
   padding: 18px 20px 18px 20px;
   text-align: center;
   border: 1px solid black;
