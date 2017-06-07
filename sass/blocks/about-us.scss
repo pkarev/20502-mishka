@@ -1,0 +1,35 @@
+.about-us {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-us__caption {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 70px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  @include font(25px, 30px, bold);
+}
+
+.about-us__list {
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 100%;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.about-us__item {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 60px;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  @include font(17px, 20px, bold);
+}

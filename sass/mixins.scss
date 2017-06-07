@@ -1,0 +1,25 @@
+@mixin visibility-hidden() {
+  position:absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin font($font-size, $line-height, $font-weight:normal, $color:black) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
+  font-family: OpenSans, Arial, sans-serif;
+}
+
+@mixin flex-mobile-layout(){
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  min-width: 320px;
+}

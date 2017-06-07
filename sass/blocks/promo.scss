@@ -1,0 +1,87 @@
+.promo {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.promo__caption {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 32px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  text-align: left;
+  @include font(25px, 30px, bold);
+}
+
+.promo__legend {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-right: 30px;
+  padding-bottom: 28px;
+  padding-left: 30px;
+  text-align: left;
+  @include font(17px, 20px, bold);
+  text-transform: uppercase;
+}
+
+.promo__text {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-right: 30px;
+  padding-bottom: 33px;
+  padding-left: 30px;
+  text-align: left;
+  @include font(15px, 24px, normal);
+}
+
+.promo__contents {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 30px;
+  padding-left: 30px;
+  @include font(15px, 20px, normal);
+}
+
+.promo__name {
+  width: 38.46153%;
+}
+
+.promo__value {
+  width: 61.53847%;
+}
+
+.promo__image {
+  margin: 0 auto;
+  max-width: 260px;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
+.promo__price {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  text-align: center;
+  @include font(17px, 27px, bold);
+}
+
+.promo__buy {
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+  padding: 18px 20px 18px 20px;
+  text-align: center;
+  border: 1px solid black;
+}
