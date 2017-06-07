@@ -1,9 +1,11 @@
 .modal {
-  width: 100%;
+  width: 320px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   top: 974px;
   @include visibility-hidden();
 }
@@ -12,11 +14,12 @@
   margin: 0 auto;
   flex-basis: 100%;
   padding-top: 33px;
-  padding-right: 85px;
+  padding-right: 26.875%;
   padding-bottom: 18px;
-  padding-left: 85px;
+  padding-left: 27.8125%;
+  box-sizing: border-box;
   text-align: center;
-  @include font(25px, 30px);
+  @include font(25px, 30px, bold);
   text-transform: uppercase;
 }
 
@@ -31,39 +34,34 @@
   @include font(15px, 30px, normal);
 }
 
-.modal__select-size {
-  margin: 0 auto;
+.modal__form {
   flex-basis: 100%;
-  padding-top: 0;
   padding-right: 30px;
-  padding-bottom: 20px;
   padding-left: 30px;
-  @include font(17px, 16px, bold);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  input[type="radio"] {
-    position: absolute;
-    @include visibility-hidden();
-  }
-
-  label {
-    flex-basis: 82px;
-    padding: 20px 0;
-    text-align: center;
-  }
-}
-
-.modal__add-to-cart {
-  margin: 0 auto;
-  flex-basis: 260px;
-  height: 52px;
-  padding-right: 20px;
-  padding-left: 20px;
-  text-align: center;
   box-sizing: border-box;
   margin-top: 31px;
   margin-bottom: 51px;
-  font: inherit;
   text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal__radio-button {
+  @include visibility-hidden();
+}
+
+.modal__label {
+  flex-basis: 82px;
+  box-sizing: border-box;
+  text-align: center;
+  outline: 1px solid black;
+  @include font(17px, 52px, bold);
+}
+
+.modal__submit {
+  flex-basis: 100%;
+  margin: 31px 0 46px 0;
+  padding: 18px 20px 14px 20px;
+  @include font(17px, 16px, bold);
 }
