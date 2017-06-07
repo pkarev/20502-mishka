@@ -20,6 +20,5 @@
 @mixin flex-mobile-layout(){
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
   min-width: 320px;
 }

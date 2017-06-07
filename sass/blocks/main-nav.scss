@@ -16,7 +16,7 @@
 }
 
 .main-nav__wrapper {
-  // @include visibility-hidden();
+  @include visibility-hidden();
   position: absolute;
   box-sizing: border-box;
   margin: 0 auto;
