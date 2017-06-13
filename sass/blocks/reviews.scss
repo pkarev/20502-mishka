@@ -4,6 +4,13 @@
   flex-wrap: wrap;
   padding-right: 9.375%;
   padding-left: 9.375%;
+  margin-bottom: 33px;
+  @media (min-width: $tablet-widths) {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-bottom: 32px;
+    position: relative;
+  }
 }
 
 .reviews__caption {
@@ -12,6 +19,14 @@
   padding-top: 57px;
   padding-bottom: 33px;
   @include font(25px, 30px, bold);
+  @media (min-width: $tablet-widths) {
+    padding-top: 82px;
+    padding-bottom: 54px;
+    @include font(43px, 50px, bold);
+    width: auto;
+    margin-right: auto;
+    order: -1;
+  }
 }
 
 .reviews__item {
@@ -23,7 +38,20 @@
 .reviews__text {
   @include font(15px, 30px);
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 4px;
+  @media (min-width: $tablet-widths) {
+    @include font(17px, 30px);
+    padding-bottom: 66px;
+  }
+}
+
+.reviews__author {
+  @media (min-width: $tablet-widths) {
+    display: block;
+    width: 334px;
+    margin-right: auto;
+    padding-bottom: 50px;
+  }
 }
 
 .reviews__author-name {
@@ -31,13 +59,18 @@
   padding-bottom: 10px;
   @include font(17px, 24px, bold);
   font-style: normal;
+  @media (min-width: $tablet-widths) {
+    @include font(18px, 24px);
+  }
 }
 
 .reviews__author-profile {
   display: block;
-  padding-bottom: 33px;
   @include font(17px, 24px);
   font-style: normal;
+  @media (min-width: $tablet-widths) {
+    @include font(17px, 30px);
+  }
 }
 
 .reviews__button {
@@ -46,20 +79,42 @@
   height: 52px;
   margin: 0;
   padding: 0;
+  @media (min-width: $tablet-widths) {
+    width: 80px;
+  }
 }
 
 .reviews__button--prev {
+  @media (min-width: $tablet-widths) {
+    position: absolute;
+    right: 140px;
+    bottom: 50px;
+    box-sizing: border-box;
+  }
 }
 .reviews__button--next {
-
+  @media (min-width: $tablet-widths) {
+    margin-right: 10px;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    box-sizing: border-box;
+  }
 }
 
 .reviews__write-review {
   margin: 0 auto;
   margin-top: 38px;
-  flex-basis: 260px;
+  width: 260px;
   box-sizing: border-box;
   padding: 18px 20px 18px 20px;
   text-align: center;
   border: 1px solid black;
+  @media (min-width: $tablet-widths) {
+    order: -1;
+    align-self: flex-start;
+    margin: 0;
+    margin-top: 78px;
+    width: 175px;
+  }
 }

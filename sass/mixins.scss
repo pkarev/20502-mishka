@@ -1,3 +1,6 @@
+$tablet-widths: 768px;
+$desktop-widths: 1150px;
+
 @mixin visibility-hidden() {
   position:absolute;
   width: 1px;
@@ -17,8 +20,15 @@
   font-family: OpenSans, Arial, sans-serif;
 }
 
-@mixin flex-mobile-layout(){
+@mixin flex-layout() {
   display: flex;
   flex-wrap: wrap;
-  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  @media (min-width: $tablet-widths) {
+    width: $tablet-widths;
+  }
+  // @media (min-width: $desktop-widths) {
+  //   width: $desktop-widths;
+  // }
 }

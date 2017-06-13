@@ -13,12 +13,24 @@
   padding-left: 34.61%;
   text-align: left;
   @include font(17px, 24px, bold);
+  @media (min-width: $tablet-widths) {
+    padding-top: 41px;
+    padding-bottom: 34px;
+    @include font(20px, 24px, bold);
+    padding-left: 107px;
+  }
 }
 
 .production__video {
   width: 100%;
   border: 2px solid black;
   box-sizing: border-box;
+  height: 150px;
+  @media (min-width: $tablet-widths) {
+    order: -1;
+    display: block;
+    height: 455px;
+  }
 }
 
 .production__text {
@@ -30,6 +42,13 @@
   padding-left: 13.46%;
   padding-right: 17.3%;
   @include font(13px, 24px);
+  @media (min-width: $tablet-widths) {
+    padding-top: 0;
+    padding-bottom: 32px;
+    padding-left: 42px;
+    padding-right: 47px;
+    @include font(15px, 30px);
+  }
 }
 
 .production__make-order {
@@ -41,4 +60,10 @@
   border: 1px solid black;
   box-sizing: border-box;
   margin-bottom: 47px;
+  @media (min-width: $tablet-widths) {
+    width: 100%;
+    margin-right: 42px;
+    margin-left: 42px;
+    @include font(17px, 16px);
+  }
 }

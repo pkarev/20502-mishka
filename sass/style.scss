@@ -1,13 +1,5 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-max-width: 100%;
-height: auto;
-}
-
+@import "scaffolding.scss";
+// @import "outlines.scss";
 @import "mixins.scss";
 @import "normalize.scss";
 @import "blocks/page-header.scss";

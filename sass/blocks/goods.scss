@@ -2,6 +2,11 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  @media (min-width: $tablet-widths) {
+    margin-top: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 }
 
 .goods__caption {
@@ -14,6 +19,13 @@
   padding-left: 9.375%;
   text-align: center;
   @include font(27px, 30px, bold);
+  @media (min-width: $tablet-widths) {
+    padding-top: 86px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 372px;
+    @include font(43px, 50px, bold);
+  }
 }
 
 .goods__list {
@@ -21,6 +33,19 @@
   width: 100%;
   padding: 0;
   list-style-type: none;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+}
+
+.goods__list-item {
+  @media (min-width: $tablet-widths) {
+    width: 50%
+  }
 }
 
 .goods__link {
@@ -32,4 +57,10 @@
   box-sizing: border-box;
   @include font(19px, 24px, bold);
   text-decoration: none;
+  @media (min-width: $tablet-widths) {
+    padding-top: 35px;
+    padding-right: 167px;
+    padding-bottom: 34px;
+    padding-left: 50px;
+  }
 }

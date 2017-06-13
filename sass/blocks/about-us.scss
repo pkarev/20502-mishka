@@ -4,6 +4,11 @@
   flex-wrap: wrap;
   padding-right: 9.375%;
   padding-left: 9.375%;
+  @media (min-width: $tablet-widths) {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-bottom: 32px;
+  }
 }
 
 .about-us__caption {
@@ -12,6 +17,11 @@
   padding-top: 70px;
   padding-bottom: 30px;
   @include font(25px, 30px, bold);
+  @media (min-width: $tablet-widths) {
+    padding-top: 124px;
+    padding-bottom: 44px;
+    @include font(43px, 50px, bold);
+  }
 }
 
 .about-us__list {
@@ -19,6 +29,10 @@
   padding: 0;
   width: 100%;
   list-style-type: none;
+  @media (min-width: $tablet-widths) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .about-us__item {
@@ -26,4 +40,10 @@
   padding-top: 60px;
   padding-bottom: 0;
   @include font(17px, 20px, bold);
+  @media (min-width: $tablet-widths) {
+    padding-bottom: 55px;
+    padding-top: 55px;
+    @include font(20px, 22px, bold);
+    width: 50%;
+  }
 }

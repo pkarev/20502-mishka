@@ -2,28 +2,34 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
     <header class="page-header">
       <h1 class="page-header__title">Магазин игрушек и аксессуаров "Мишка"</h1>
-      <a class="page-header__logo">
-        <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+      <a class="page-header__link">
+        <img class="page-header__logo page-header__logo--mobile" src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+        <img class="page-header__logo page-header__logo--tablet-desktop" src="img/logo-mobile.svg"  alt="Mishka" width="113" height="46">
       </a>
       <nav class="main-nav"> <!--main-nav--open - для открытого состояния меню -->
         <button class="main-nav__toggler" type="button">
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">Вязание на заказ</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--order" href="#">Вязание на заказ</a></li>
           </ul>
           <form class="main-nav__search" method="post" action="https://echo.htmlacademy.ru/">
-              <input class="main-nav__text" type="text" placeholder="Поиск по сайту">
+              <input class="main-nav__text-field" type="text" placeholder="Поиск по сайту">
           </form>
           <a class="main-nav__cart" href="#" title="Перейти в корзину">Корзина: пока пуста</a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--new-arrivals" href="#">Новые поступления</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--sale" href="#">Распродажа</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--free-shipping" href="#">Бесплатная доставка по России</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -104,7 +110,7 @@
           <tr class="contacts__row">
             <td class="contacts__name">адрес:</td>
             <td class="contacts__value">
-              г. Санкт-Петербург,
+              г. Санкт-Петербург,<br>
               ул. Большая Конюшенная,
               д. 19/8, офис 101
             </td>
@@ -115,6 +121,9 @@
       </section>
     </main>
     <footer class="page-footer">
+      <a class="page-footer__logo">
+        <img src="http://placehold.it/102x34" alt="Mishka" width="102" height="34">
+      </a>
       <ul class="page-footer__social-links">
         <li class="social-link social-link--vk"><a href="#">Мы в Вконтакте</a></li>
         <li class="social-link social-link--fb"><a href="#">Мы в Фейсбуке</a></li>
