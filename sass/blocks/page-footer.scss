@@ -1,17 +1,23 @@
 .page-footer {
   @include flex-layout();
   flex-direction: column;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     flex-direction: row;
     &--catalog {
       margin-top: 63px;
     }
   }
+  @media (min-width: $desktop-widths) {
+    flex-direction: row;
+    padding-right: 50px;
+    padding-left: 50px;
+    box-sizing: border-box;
+  }
 }
 
 .page-footer__logo {
   display: none;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     display: block;
     width: 102px;
     height: 34px;
@@ -20,6 +26,13 @@
     margin-bottom: 38px;
     margin-left: 30px;
     margin-right: 45px;
+  }
+  @media (min-width: $desktop-widths) {
+    display: block;
+    width: 102px;
+    height: 34px;
+    margin-top: 51px;
+    margin-bottom: 58px;
   }
 }
 
@@ -31,8 +44,12 @@
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     margin: 0 87px;
+  }
+  @media (min-width: $desktop-widths) {
+    margin-left: 345px;
+    margin-right: auto;
   }
 }
 
@@ -46,7 +63,10 @@
     height: 80px;
     box-sizing: border-box;
     border: 2px solid black;
-    @media (min-width: $tablet-widths) {
+    @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+      height: 143px;
+    }
+    @media (min-width: $desktop-widths) {
       height: 143px;
     }
   }
@@ -60,12 +80,19 @@
   padding-bottom: 31px;
   padding-left: 70px;
   @include font(19px, 18px, bold);
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     margin: 0;
     width: 232px;
     margin-top: 63px;
     padding: 0;
     padding-right: 100px;
+  }
+  @media (min-width: $desktop-widths) {
+    margin: 0;
+    width: 184px;
+    margin-top: 64px;
+    padding: 0;
+    padding-right: 58px;
   }
 }
 

@@ -3,12 +3,15 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) and (max-width: $desktop-widths) {
     margin-bottom: 54px;
     position: relative;
   }
+  @media (min-width: $desktop-widths) {
+    width: 316px;
+    margin: 0;
+  }
 }
-
 
 .catalog-item__link {
   width: 100%;
@@ -18,6 +21,23 @@
   flex-wrap: wrap;
 }
 
+.catalog-item__image {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+    width: 334px;
+    height: 334px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 316px;
+    height: 462px;
+  }
+}
+
 .catalog-item__name {
   margin: 0;
   width: 100%;
@@ -25,7 +45,7 @@
   padding-left: 11.54%;
   padding-bottom: 16px;
   @include font(17px, 24px, bold);
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     width: 334px;
     box-sizing: border-box;
     margin-left: 334px;
@@ -33,19 +53,15 @@
     padding-bottom: 10px;
     @include font(20px, 24px, bold);
   }
-}
-
-.catalog-item__image {
-  margin: 0 auto;
-  padding: 0;
-  @media (min-width: $tablet-widths) {
-    width: 334px;
-    height: 334px;
-    position: absolute;
-    top: 0;
-    left: 0;
+  @media (min-width: $desktop-widths) {
+    padding-bottom: 6;
+    @include font(20px, 24px, bold);
+    padding-left: 29px;
+    padding-right: 29px;
   }
 }
+
+
 
 .catalog-item__stats {
   margin: 0;
@@ -53,13 +69,20 @@
   margin-bottom: 27px;
   padding-left: 11.54%;
   @include font(13px, 30px);
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     width: 334px;
     box-sizing: border-box;
     margin-left: 334px;
     padding-left: 26px;
     margin-bottom: 168px;
     @include font(15px, 30px);
+  }
+  @media (min-width: $desktop-widths) {
+    padding-bottom: 40px;
+    @include font(15px, 30px);
+    padding-left: 29px;
+    padding-right: 29px;
+    margin: 0;
   }
 }
 
@@ -71,7 +94,7 @@
   padding-bottom: 24px;
   padding-left: 11.54%;
   @include font(15px, 24px, bold);
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     width: 259px;
     box-sizing: border-box;
     margin-left: 334px;
@@ -79,6 +102,14 @@
     padding-top: 25px;
     padding-bottom: 25px;
     @include font(17px, 24px, bold);
+  }
+  @media (min-width: $desktop-widths) {
+    width: 242px;
+    @include font(17px, 24px, bold);
+    padding-left: 29px;
+    padding-right: 74px;
+    padding-top: 26px;
+    align-self: flex-start;
   }
 }
 

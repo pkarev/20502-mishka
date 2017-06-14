@@ -2,8 +2,15 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     margin-top: 78px;
+  }
+  @media (min-width: $desktop-widths) {
+    padding-right: 50px;
+    padding-left: 50px;
+    position: relative;
+    margin-left: 175px;
+    margin-top: 33px;
   }
 }
 
@@ -13,11 +20,20 @@
   padding-right: 9.375%;
   padding-left: 9.375%;
   @include font(25px, 30px, bold);
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     @include font(43px, 50px, bold);
     padding-right: 50px;
     padding-left: 50px;
     padding-bottom: 54px;
+  }
+  @media (min-width: $desktop-widths) {
+    @include font(53px, 57px, bold);
+    width: 350px;
+    padding-bottom: 56px;
+    margin-right: 525px;
+    padding-right: 50px;
+    padding-left: 0;
+    box-sizing: border-box;
   }
 }
 
@@ -28,7 +44,7 @@
   padding-right: 9.375%;
   padding-left: 9.375%;
   @include font(15px, 20px, normal);
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     @include font(17px, 30px);
     padding-right: 50px;
     padding-left: 50px;
@@ -37,15 +53,29 @@
       display: flex;
     }
   }
+  @media (min-width: $desktop-widths) {
+    border-collapse: collapse;
+    @include font(17px, 30px);
+    width: 350px;
+    margin-right: 525px;
+    padding-right: 0;
+    margin-bottom: 75px;
+    box-sizing: border-box;
+  }
 }
 
 .contacts__name {
   width: 30.76923%;
   padding-bottom: 38px;
   vertical-align: top;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     width: 76px;
     padding: 0;
+  }
+    @media (min-width: $desktop-widths) {
+    width: 78px;
+    padding: 0;
+    padding-bottom: 30px;
   }
 }
 
@@ -53,10 +83,17 @@
   width: 69.23077%;
   padding-bottom: 38px;
   vertical-align: top;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     width: 252px;
     padding: 0;
     padding-right: 30px;
+    box-sizing: border-box;
+  }
+    @media (min-width: $desktop-widths) {
+    width: 272px;
+    padding: 0;
+    padding-right: 30px;
+    padding-bottom: 30px;
     box-sizing: border-box;
   }
 }
@@ -69,6 +106,14 @@
   background: url("http://placehold.it/768x457") no-repeat;
   background-position: center;
   background-size: auto;
+  @media (min-width: $desktop-widths) {
+    position: absolute;
+    width: 525px;
+    height: 457px;
+    right: 50px;
+    top: 40px;
+
+  }
 }
 
 .contacts__write-us {
@@ -78,7 +123,17 @@
   box-sizing: border-box;
   text-align: center;
   border: 1px solid black;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     margin: 55px auto 57px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 230px;
+    padding: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    margin: 0;
+    align-self: flex-start;
   }
 }

@@ -13,7 +13,10 @@
   padding: 0;
   margin: 0;
   background: url(../img/icon-menu-open.svg) no-repeat center;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+      display: none;
+    }
+  @media (min-width: $desktop-widths) {
       display: none;
     }
 }
@@ -26,30 +29,65 @@
   width: 100%;
   left: 0;
   z-index: 1;
-  @media (min-width: $tablet-widths) {
-      display: flex;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 0;
-      padding-top: 22px;
-    }
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+    padding-top: 22px;
+  }
+  @media (min-width: $desktop-widths) {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 45px;
+  }
 }
 
 .main-nav__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 100%;
-  @media (min-width: $tablet-widths) {
-    width: 167px * 2;
+  flex-basis: 100%;
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+    flex-basis: 167px * 2;
     display: flex;
     order: 2;
+  }
+  @media (min-width: $desktop-widths) {
+    flex-basis: 223px * 2;
+    flex-grow: 1;
+    display: flex;
   }
 }
 
 .main-nav__item {
   margin: 0;
   padding: 0;
+  &--new-arrivals,
+  &--sale,
+  &--free-shipping {
+    display: none;
+  }
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+    &--free-shipping {
+      display: block;
+      width: 334px;
+      margin-left: auto;
+    }
+  }
+  @media (min-width: $desktop-widths) {
+    &--new-arrivals,
+    &--sale,
+    &--free-shipping {
+      display: block;
+    }
+    &--free-shipping {
+      width: 350px;
+      margin-left: auto;
+    }
+  }
 }
 
 .main-nav__link {
@@ -61,28 +99,46 @@
   box-sizing: border-box;
   text-decoration: none;
   @include font(17px, 24px, bold);
-  &--new-arrivals,
-  &--sale,
-  &--free-shipping {
-    display: none;
-  }
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     padding-left: 0;
     padding-right: 20px;
     padding-top: 13px;
     padding-bottom: 13px;
-    width: 167px;
     box-sizing: border-box;
+    @include font(17px, 24px, bold);
     &--free-shipping {
-      display: block;
-      width: 300px;
-      box-sizing: border-box;
+      padding-left: 20px;
       padding-right: 0;
-      margin-left: 34px;
       text-align: right;
-      font-weight: normal;
+      @include font(15px, 24px);
     }
-
+    &--catalog,
+    &--order {
+      @include font(15px, 24px, bold);
+    }
+  }
+  @media (min-width: $desktop-widths) {
+    width: 223px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    padding-left: 0;
+    padding-right: 20px;
+    @include font(17px, 24px, bold);
+    &--free-shipping {
+      width: 350px;
+      padding-right: 0px;
+      text-align: right;
+      padding-left: 20px;
+      @include font(15px, 24px);
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    &--new-arrivals,
+    &--sale {
+      @include font(15px, 24px, bold);
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   }
 }
 
@@ -96,7 +152,7 @@
   box-sizing: border-box;
   @include font(17px, 24px, bold);
   text-decoration: none;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     width: 84px;
     height: 46px;
     padding: 0;
@@ -105,6 +161,20 @@
     border: 1px solid black;
     margin-left: 320px;
     margin-bottom: 41px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 170px;
+    height: 90px;
+    padding: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+  }
+}
+
+.main-nav__search {
+  @media (min-width: $desktop-widths) {
+    margin-left: auto;
   }
 }
 
@@ -117,7 +187,7 @@
   box-sizing: border-box;
   text-decoration: none;
   @include font(17px, 24px, bold);
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     width: 264px;
     padding-left: 44px;
     padding-top: 11px;
@@ -126,5 +196,12 @@
     text-align: right;
     box-sizing: border-box;
     margin-bottom: 41px;
+  }
+  @media (min-width: $desktop-widths) {
+    width: 266px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    padding-left: 86px;
+    padding-right: 0;
   }
 }

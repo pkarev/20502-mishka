@@ -25,10 +25,10 @@ $desktop-widths: 1150px;
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
-  @media (min-width: $tablet-widths) {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
     width: $tablet-widths;
   }
-  // @media (min-width: $desktop-widths) {
-  //   width: $desktop-widths;
-  // }
+  @media (min-width: $desktop-widths) {
+    width: $desktop-widths;
+  }
 }

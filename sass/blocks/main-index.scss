@@ -1,4 +1,7 @@
 .main-index {
   @include flex-layout();
   position: relative;
+  @media (min-width: $desktop-widths) {
+    margin-bottom: 105px;
+  }
 }
