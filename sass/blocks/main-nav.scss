@@ -1,6 +1,21 @@
 .main-nav {
   width: 100%;
   position: relative;
+  @include input-placeholder {
+    color: black;
+  }
+
+  @include tablet {
+    @include input-placeholder {
+      font-size: 0;
+    }
+  }
+
+  @include desktop {
+    @include input-placeholder {
+      font-size: 0;
+    }
+  }
 }
 
 .main-nav__toggler {
@@ -13,35 +28,35 @@
   padding: 0;
   margin: 0;
   background: url(../img/icon-menu-open.svg) no-repeat center;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
       display: none;
     }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
       display: none;
     }
 }
 
 .main-nav__wrapper {
-  display: block;
+  display: none;
   position: absolute;
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
   left: 0;
   z-index: 1;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  background-color: #ffffff;
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     z-index: 0;
-    padding-top: 22px;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    margin-bottom: 20px;
     z-index: 0;
-    margin-bottom: 45px;
   }
 }
 
@@ -50,12 +65,12 @@
   padding: 0;
   list-style-type: none;
   flex-basis: 100%;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     flex-basis: 167px * 2;
     display: flex;
     order: 2;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     flex-basis: 223px * 2;
     flex-grow: 1;
     display: flex;
@@ -65,28 +80,54 @@
 .main-nav__item {
   margin: 0;
   padding: 0;
-  &--new-arrivals,
-  &--sale,
-  &--free-shipping {
-    display: none;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
-    &--free-shipping {
-      display: block;
-      width: 334px;
-      margin-left: auto;
+
+  @include tablet {
+    &::after {
+      top: 0;
     }
   }
-  @media (min-width: $desktop-widths) {
-    &--new-arrivals,
-    &--sale,
-    &--free-shipping {
+
+  @include desktop {
+    &::after {
+      top: 0;
+      display: none;
+    }
+  }
+}
+
+.main-nav__item--new-arrivals,
+.main-nav__item--sale,
+.main-nav__item--free-shipping {
+  display: none;
+  @include desktop {
+    display: block;
+    &::after {
+      top: 0;
       display: block;
     }
-    &--free-shipping {
-      width: 350px;
-      margin-left: auto;
-    }
+  }
+}
+
+.main-nav__item--free-shipping {
+  @include tablet {
+    display: block;
+    width: 334px;
+    margin-left: auto;
+  }
+  @include desktop {
+    min-width: 350px;
+    flex-grow: 1;
+    margin-left: auto;
   }
 }
 
@@ -99,46 +140,48 @@
   box-sizing: border-box;
   text-decoration: none;
   @include font(17px, 24px, bold);
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
+    width: 167px;
     padding-left: 0;
     padding-right: 20px;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     box-sizing: border-box;
-    @include font(17px, 24px, bold);
-    &--free-shipping {
-      padding-left: 20px;
-      padding-right: 0;
-      text-align: right;
-      @include font(15px, 24px);
-    }
-    &--catalog,
-    &--order {
-      @include font(15px, 24px, bold);
-    }
+    @include font(15px, 24px, bold);
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     width: 223px;
-    padding-top: 33px;
-    padding-bottom: 33px;
+    padding-top: 30px;
+    padding-bottom: 36px;
     padding-left: 0;
     padding-right: 20px;
     @include font(17px, 24px, bold);
-    &--free-shipping {
-      width: 350px;
-      padding-right: 0px;
-      text-align: right;
-      padding-left: 20px;
-      @include font(15px, 24px);
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-    &--new-arrivals,
-    &--sale {
-      @include font(15px, 24px, bold);
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+  }
+}
+
+.main-nav__link--smaller {
+  @include desktop {
+    @include font(15px, 24px, bold);
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+}
+
+.main-nav__link--free-shipping {
+  @include tablet {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 0;
+    text-align: right;
+    @include font(15px, 24px, normal);
+  }
+
+  @include desktop {
+    width: 100%;
+    padding-right: 0px;
+    text-align: right;
+    padding-left: 20px;
+    @include font(15px, 24px, normal);
   }
 }
 
@@ -152,29 +195,82 @@
   box-sizing: border-box;
   @include font(17px, 24px, bold);
   text-decoration: none;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  background: none;
+
+  @include tablet {
     width: 84px;
-    height: 46px;
-    padding: 0;
-    font-size: 0;
-    box-sizing: border-box;
-    border: 1px solid black;
+    height: 88px;
+    padding: 10px;
     margin-left: 320px;
-    margin-bottom: 41px;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
   }
-  @media (min-width: $desktop-widths) {
-    width: 170px;
-    height: 90px;
-    padding: 0;
-    font-size: 0;
-    box-sizing: border-box;
-    border: 1px solid black;
+
+  @include desktop {
+    width: 84px;
+    height: 88px;
+    padding: 10px;
+    margin-left: auto;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
   }
 }
 
 .main-nav__search {
-  @media (min-width: $desktop-widths) {
-    margin-left: auto;
+  @include mobile {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 76px;
+      height: 80px;
+      position: absolute;
+      right: 75.837%;
+      top: 0;
+      background: #ffffff url("../img/icon-search.svg") no-repeat 50% 50%;
+      z-index: 1;
+      opacity: 0.2;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #ececec;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  @include tablet {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 19px;
+      left: 364px;
+      top: 44px;
+      transform: translate(-50%, -50%);
+      background: #ffffff url("../img/icon-search.svg") no-repeat center;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  }
+
+  @include desktop {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 19px;
+      left: 32px;
+      top: 36px;
+      background: #ffffff url("../img/icon-search.svg") no-repeat center;
+      opacity: 0.2;
+      z-index: -1;
+    }
   }
 }
 
@@ -186,22 +282,45 @@
   padding-left: 23.75%;
   box-sizing: border-box;
   text-decoration: none;
+  position: relative;
   @include font(17px, 24px, bold);
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 76px;
+    height: 80px;
+    position: absolute;
+    right: 75.837%;
+    top: 0;
+    background: #ffffff url("../img/icon-cart.svg") no-repeat 50% 50%;
+    z-index: 1;
+    opacity: 0.2;
+  }
+  @include tablet {
     width: 264px;
     padding-left: 44px;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     padding-right: 0;
     text-align: right;
     box-sizing: border-box;
-    margin-bottom: 41px;
+    &::before {
+      top: 0;
+      left: 2px;
+      height: 88px;
+    }
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     width: 266px;
     padding-top: 33px;
     padding-bottom: 33px;
     padding-left: 86px;
     padding-right: 0;
+    text-align: right;
+    &::before {
+      top: 0;
+      left: 0;
+      height: 88px;
+    }
   }
 }

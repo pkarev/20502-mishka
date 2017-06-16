@@ -1,13 +1,11 @@
 .page-footer {
   @include flex-layout();
   flex-direction: column;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     flex-direction: row;
-    &--catalog {
-      margin-top: 63px;
-    }
+
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     flex-direction: row;
     padding-right: 50px;
     padding-left: 50px;
@@ -17,7 +15,7 @@
 
 .page-footer__logo {
   display: none;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     display: block;
     width: 102px;
     height: 34px;
@@ -27,12 +25,15 @@
     margin-left: 30px;
     margin-right: 45px;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     display: block;
     width: 102px;
     height: 34px;
-    margin-top: 51px;
-    margin-bottom: 58px;
+    padding: 20px;
+    padding-left: 0;
+    margin-top: 31px;
+    margin-bottom: 38px;
+    margin-right: 45px;
   }
 }
 
@@ -44,11 +45,11 @@
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     margin: 0 87px;
   }
-  @media (min-width: $desktop-widths) {
-    margin-left: 345px;
+  @include desktop {
+    margin-left: 286px;
     margin-right: auto;
   }
 }
@@ -56,18 +57,61 @@
 .social-link {
   padding: 0;
   margin: 0;
+  position: relative;
+  display: block;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+  }
   a {
     display: block;
     font-size: 0;
     width: 45px;
     height: 80px;
     box-sizing: border-box;
-    border: 2px solid black;
-    @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+    @include tablet {
       height: 143px;
     }
-    @media (min-width: $desktop-widths) {
+    @include desktop {
       height: 143px;
+    }
+  }
+}
+
+.social-link--inst {
+  &::before{
+    background: url("../../img/icon-insta.svg") no-repeat 0 6px;
+  }
+  @include tablet {
+    &::before{
+      background: url("../../img/icon-insta.svg") no-repeat 5px 6px;
+    }
+  }
+}
+
+.social-link--fb {
+  &::before{
+    background: url("../../img/icon-fb.svg") no-repeat 10px 1px;
+  }
+  @include tablet {
+    &::before{
+      background: url("../../img/icon-fb.svg") no-repeat 20px 1px;
+    }
+  }
+}
+
+.social-link--twitter {
+  &::before{
+        background: url("../../img/icon-twitter.svg") no-repeat 19px 7px;
+  }
+  @include desktop {
+    &::before{
+          background: url("../../img/icon-twitter.svg") no-repeat 18px 7px;
     }
   }
 }
@@ -75,24 +119,55 @@
 .page-footer__copyright {
   margin: 0 auto;
   box-sizing: border-box;
-  padding-top: 28px;
+  padding-top: 31px;
   padding-right: 125px;
-  padding-bottom: 31px;
+  padding-bottom: 7px;
   padding-left: 70px;
   @include font(19px, 18px, bold);
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  position: relative;
+  @include mobile {
+    &::before {
+      content: "";
+      width: 81.25%;
+      height: 1px;
+      background-color: #ececec;
+      position: absolute;
+      top: -118px;
+      left: 9.375%;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 34px;
+    background-color: black;
+    top: 24px;
+    right: 70px;
+    background: url("../../img/logo-htmlacademy.svg") no-repeat center;
+  }
+
+  @include tablet {
     margin: 0;
     width: 232px;
     margin-top: 63px;
     padding: 0;
     padding-right: 100px;
+    &::after {
+      top: -5px;
+      right: 50px;
+    }
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     margin: 0;
     width: 184px;
     margin-top: 64px;
     padding: 0;
     padding-right: 58px;
+    &::after {
+      top: -5px;
+      right: 0;
+    }
   }
 }
 

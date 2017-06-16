@@ -2,12 +2,13 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  background: #292929 url("../img/hero-mobile@1x.jpg") no-repeat 50% -17px;
+  @include tablet {
     margin-top: 20px;
     padding-right: 50px;
     padding-left: 50px;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     padding-right: 50px;
     padding-left: 50px;
   }
@@ -17,22 +18,22 @@
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  padding-top: 70px;
+  padding-top: 72px;
   padding-right: 9.375%;
-  padding-bottom: 150px;
+  padding-bottom: 120px;
   padding-left: 9.375%;
   text-align: center;
   @include font(27px, 30px, bold);
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
-    padding-top: 86px;
+  @include tablet {
+    padding-top: 70px;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 372px;
     @include font(43px, 50px, bold);
   }
-  @media (min-width: $desktop-widths) {
-    padding-top: 58px;
-    padding-bottom: 352px;
+  @include desktop {
+    padding-top: 75px;
+    padding-bottom: 358px;
     @include font(53px, 57px, bold);
   }
 }
@@ -42,50 +43,125 @@
   width: 100%;
   padding: 0;
   list-style-type: none;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      background: url("") repeat-x;/*добавить волнистую картинку*/
+      bottom: -12px;
+      left: 0;
+    }
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      background: url("") repeat-x;/*добавить волнистую картинку*/
+      bottom: -12px;
+      left: 0;
+    }
   }
 }
 
 .goods__list-item {
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  background-color: #56c3b2;
+  @include tablet {
     width: 50%
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     width: 50%;
   }
+}
+
+.goods__list-item--bgc-lighter {
+  background-color: #63d1bb;
 }
 
 .goods__link {
   display: block;
   padding-top: 28px;
-  padding-bottom: 28px;
+  padding-bottom: 27px;
   padding-left: 9.375%;
   padding-right: 50%;
   box-sizing: border-box;
-  @include font(19px, 24px, bold);
+  @include font(19px, 24px, bold, #ffffff);
   text-decoration: none;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
-    padding-top: 35px;
+  position: relative;
+  @include tablet {
+    padding-top: 30px;
     padding-right: 167px;
     padding-bottom: 34px;
-    padding-left: 50px;
-    @include font(20px, 30px, bold);
+    padding-left: 35px;
+    @include font(20px, 30px, bold, #ffffff);
   }
-  @media (min-width: $desktop-widths) {
-    padding-top: 30px;
+  @include desktop {
+    padding-top: 28px;
     padding-right: 330px;
     padding-bottom: 29px;
     padding-left: 37px;
-    @include font(20px, 30px, bold);
+    @include font(20px, 30px, bold, #ffffff);
+  }
+}
+
+.goods__link--interior {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 117px;
+    height: 103px;
+    right: 0;
+    top: 0;
+    background: url("../img/icon-interior.svg") no-repeat 50% 50%;
+    opacity: 0.5;
+  }
+  @include tablet {
+    &::after {
+      top: 10px;
+    }
+  }
+  @include desktop {
+    &::after {
+      top: 8px;
+    }
+  }
+}
+
+.goods__link--toys {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 117px;
+    height: 103px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url("../img/icon-toy.svg") no-repeat 50% 50%;
+    opacity: 0.5;
+  }
+  @include tablet {
+    &::after {
+      top: 10px;
+      right: 5px;
+    }
+  }
+  @include desktop {
+    &::after {
+      top: 10px;
+      right: 5px;
+    }
   }
 }

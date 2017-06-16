@@ -6,13 +6,13 @@
   <link href="css/style.css" rel="stylesheet">
   <title>Мишка: Каталог</title>
 </head>
-<body>
+<body class="catalog">
   <header class="page-header">
     <h1 class="page-header__title">Магазин игрушек и аксессуаров "Мишка"</h1>
     <a class="page-header__link" href="index.html">
-      <img class="page-header__logo page-header__logo--mobile" src="http://placehold.it/86x35" alt="Mishka" width="86" height="35">
-      <img class="page-header__logo page-header__logo--tablet" src="http://placehold.it/113x46"  alt="Mishka" width="113" height="46">
-      <img class="page-header__logo page-header__logo--desktop" src="http://placehold.it/149x72"  alt="Mishka" width="149" height="72">
+      <img class="page-header__logo page-header__logo--mobile" src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+      <img class="page-header__logo page-header__logo--tablet" src="img/mishka-logo-tablet.svg"  alt="Mishka" width="113" height="46">
+      <img class="page-header__logo page-header__logo--desktop" src="img/mishka-logo-desktop.svg"  alt="Mishka" width="149" height="72">
     </a>
     <nav class="main-nav"> <!--main-nav--open - для открытого состояния меню -->
       <button class="main-nav__toggler" type="button">
@@ -27,9 +27,9 @@
         </form>
         <a class="main-nav__cart" href="#" title="Перейти в корзину">Корзина: пока пуста</a>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--new-arrivals"><a class="main-nav__link main-nav__link--new-arrivals" href="#">Новые поступления</a></li>
-          <li class="main-nav__item main-nav__item--sale"><a class="main-nav__link main-nav__link--sale" href="#">Распродажа</a></li>
-          <li class="main-nav__item main-nav__item--free-shipping"><a class="main-nav__link main-nav__link--free-shipping" href="#">Бесплатная доставка по России</a></li>
+          <li class="main-nav__item main-nav__item--new-arrivals"><a class="main-nav__link main-nav__link--smaller main-nav__link--new-arrivals" href="#">Новые поступления</a></li>
+          <li class="main-nav__item main-nav__item--sale"><a class="main-nav__link main-nav__link--smaller main-nav__link--sale" href="#">Распродажа</a></li>
+          <li class="main-nav__item main-nav__item--free-shipping"><a class="main-nav__link main-nav__link--smaller main-nav__link--free-shipping" href="#">Бесплатная доставка по России</a></li>
         </ul>
       </div>
     </nav>
@@ -39,7 +39,7 @@
       <h2 class="items__caption">Каталог-товаров</h2>
       <article class="catalog-item">
         <a class="catalog-item__link" href="#" title="Смотреть подробное описание">
-          <img class="catalog-item__image" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик" width="260" height="195">
+          <img class="catalog-item__image" src="../img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
           <h1 class="catalog-item__name">Зайчик-попрыгайчик</h1>
         </a>
         <p class="catalog-item__stats">Рост 30 см, вес 200 г</p>
@@ -48,7 +48,7 @@
       </article>
       <article class="catalog-item">
         <a class="catalog-item__link" href="#" title="Смотреть подробное описание">
-          <img class="catalog-item__image" src="http://placehold.it/260x195" alt="Корзинка для белья" win-width="260" min-height="195">
+          <img class="catalog-item__image" src="../img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" win-width="260" min-height="195">
           <h1 class="catalog-item__name">Корзинка для белья</h1>
         </a>
         <p class="catalog-item__stats">Диаметр 15 см, высота 10 см</p>
@@ -57,8 +57,8 @@
       </article>
       <article class="catalog-item">
         <a class="catalog-item__link" href="#" title="Смотреть подробное описание">
-          <img class="catalog-item__image" src="http://placehold.it/260x195" alt="Корзинка для белья" width="260" height="195">
-          <h1 class="catalog-item__name">Большая корзина для игрушек</h1>
+          <img class="catalog-item__image" src="../img/photo-3-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+          <h1 class="catalog-item__name">Большая корзина<br>для игрушек</h1>
         </a>
         <p class="catalog-item__stats">Диаметр 30 см, высота 30 см</p>
         <p class="catalog-item__price">1 500 руб</p>
@@ -84,14 +84,14 @@
       <a class="production__make-order btn" href="form.html">Сделать заказ</a>
     </section>
   </main>
-  <footer class="page-footer page-footer--catalog">
+  <footer class="page-footer">
     <a class="page-footer__logo">
       <img src="http://placehold.it/102x34" alt="Mishka" width="102" height="34">
     </a>
     <ul class="page-footer__social-links">
-      <li class="social-link social-link--vk"><a href="#">Мы в Вконтакте</a></li>
+      <li class="social-link social-link--inst"><a href="#">Мы в Вконтакте</a></li>
       <li class="social-link social-link--fb"><a href="#">Мы в Фейсбуке</a></li>
-      <li class="social-link social-link--inst"><a href="#">Мы в Фейсбуке</a></li>
+      <li class="social-link social-link--twitter"><a href="#">Мы в Фейсбуке</a></li>
     </ul>
     <p class=page-footer__copyright>
       Разработано:

@@ -6,13 +6,19 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 974px;
-  background-color: gold;
-  @include visibility-hidden();
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  top: 924px;
+  background-color: white;
+  border: 1px solid #c7c7c7;
+  border-right: none;
+  border-left: none;
+  box-shadow: 0 5px 10px 0 #c7c7c7;
+  display: none;
+  z-index: 1;
+  @include tablet {
     width: 566px;
+    top: 1374px;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     width: 566px;
   }
 }
@@ -28,13 +34,13 @@
   text-align: center;
   @include font(25px, 30px, bold);
   text-transform: uppercase;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 6px;
     @include font(30px, 57px, bold);
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 6px;
@@ -52,13 +58,13 @@
   text-align: center;
   box-sizing: border-box;
   @include font(15px, 30px);
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     padding-left: 150px;
     padding-right: 150px;
     padding-bottom: 18px;
     @include font(17px, 30px);
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     padding-left: 150px;
     padding-right: 150px;
     padding-bottom: 18px;
@@ -76,13 +82,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     flex-basis: 350px;
     margin: 0 auto;
     padding: 0;
     @include font(17px, 30px);
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     flex-basis: 350px;
     margin: 0 auto;
     padding: 0;
@@ -98,9 +104,9 @@
   flex-basis: 82px;
   box-sizing: border-box;
   text-align: center;
-  outline: 1px solid black;
+  border: 2px solid #c7c7c7;
   @include font(17px, 52px, bold);
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     flex-basis: 112px;
     box-sizing: border-box;
     text-align: center;
@@ -108,7 +114,7 @@
     padding: 0;
     @include font(17px, 52px, bold);
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     flex-basis: 112px;
     box-sizing: border-box;
     text-align: center;
@@ -121,7 +127,10 @@
 .modal__submit {
   flex-basis: 100%;
   margin: 31px 0 46px 0;
-  padding: 18px 20px 14px 20px;
+  padding: 20px 20px 16px 20px;
   box-sizing: border-box;
-  @include font(17px, 16px, bold);
+  border: none;
+  background-color: $tiffany;
+  @include font(17px, 16px, bold, white);
+  text-transform: uppercase;
 }

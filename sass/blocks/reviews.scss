@@ -5,38 +5,39 @@
   padding-right: 9.375%;
   padding-left: 9.375%;
   margin-bottom: 33px;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     padding-right: 50px;
     padding-left: 50px;
     margin-bottom: 32px;
     position: relative;
+    background: url("../img/review@1x.jpg") no-repeat 0% 0%;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     padding-right: 50px;
-    padding-left: 50px;
+    padding-left: 225px;
     position: relative;
-    margin-left: 175px;
-    margin-top: 33px;
+    margin-top: 29px;
+    background: url("../img/review@1x.jpg") no-repeat 50px 0%;
   }
 }
 
 .reviews__caption {
   margin: 0;
   width: 100%;
-  padding-top: 57px;
-  padding-bottom: 33px;
+  padding-top: 27px;
+  padding-bottom: 25px;
   @include font(25px, 30px, bold);
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
-    padding-top: 82px;
-    padding-bottom: 54px;
+  @include tablet {
+    padding-top: 80px;
+    padding-bottom: 48px;
     @include font(43px, 50px, bold);
     width: auto;
     margin-right: auto;
     order: -1;
   }
-  @media (min-width: $desktop-widths) {
-    padding-top: 78px;
-    padding-bottom: 57px;
+  @include desktop {
+    padding-top: 70px;
+    padding-bottom: 49px;
     @include font(53px, 57px, bold);
     width: auto;
     margin-right: auto;
@@ -45,6 +46,7 @@
 }
 
 .reviews__item {
+  display: block;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -54,25 +56,25 @@
   @include font(15px, 30px);
   margin: 0;
   padding-bottom: 4px;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  padding-right: 10px;
+  @include tablet {
     @include font(17px, 30px);
-    padding-bottom: 66px;
+    padding-bottom: 33px;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     @include font(17px, 30px);
-    padding-bottom: 40px;
+    padding-bottom: 13px;
     padding-right: 100px;
   }
 }
 
 .reviews__author {
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     display: block;
     width: 334px;
     margin-right: auto;
-    padding-bottom: 50px;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     display: block;
     width: 350px;
     margin-right: auto;
@@ -82,25 +84,28 @@
 
 .reviews__author-name {
   display: block;
-  padding-bottom: 10px;
+  padding-top: 24px;
   @include font(17px, 24px, bold);
   font-style: normal;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     @include font(18px, 24px);
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     @include font(18px, 24px);
   }
 }
 
 .reviews__author-profile {
   display: block;
+  padding-top: 5px;
+  padding-bottom: 30px;
   @include font(17px, 24px);
   font-style: normal;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
+    padding-bottom: 41px;
     @include font(17px, 30px);
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     @include font(17px, 30px);
   }
 }
@@ -111,40 +116,53 @@
   height: 52px;
   margin: 0;
   padding: 0;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  background-color: white;
+  font-size: 0;
+  border: none;
+
+  @include mobile {
+    border: 1px solid #ececec;
+    border-left: none;
+    border-right: none;
+  }
+
+  @include tablet {
     width: 80px;
   }
-  @media (min-width: $desktop-widths) {
+
+  @include desktop {
     width: 88px;
   }
 }
 
 .reviews__button--prev {
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  background: url("../../img/icon-left-arrow.svg") no-repeat center;
+  @include tablet {
     position: absolute;
     right: 140px;
-    bottom: 50px;
+    bottom: 47px;
     box-sizing: border-box;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     position: absolute;
     right: 136px;
-    bottom: 102px;
+    bottom: 130px;
     box-sizing: border-box;
   }
 }
 .reviews__button--next {
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  background: url("../../img/icon-right-arrow.svg") no-repeat center;
+  @include tablet {
     margin-right: 10px;
     position: absolute;
-    right: 50px;
-    bottom: 50px;
+    right: 45px;
+    bottom: 47px;
     box-sizing: border-box;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     position: absolute;
     right: 50px;
-    bottom: 102px;
+    bottom: 130px;
     box-sizing: border-box;
   }
 }
@@ -154,17 +172,20 @@
   margin-top: 38px;
   width: 260px;
   box-sizing: border-box;
-  padding: 18px 20px 18px 20px;
+  padding: 15px 20px 13px 20px;
   text-align: center;
-  border: 1px solid black;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  border: 2px solid #444444;
+  @include font(17px, 20px, bold);
+  text-transform: uppercase;
+  text-decoration: none;
+  @include tablet {
     order: -1;
     align-self: flex-start;
     margin: 0;
     margin-top: 78px;
     width: 175px;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     order: -1;
     align-self: flex-start;
     margin: 0;

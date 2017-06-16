@@ -4,12 +4,12 @@
   flex-wrap: wrap;
   padding-right: 9.375%;
   padding-left: 9.375%;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     padding-right: 50px;
     padding-left: 50px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     padding-right: 225px;
     padding-left: 225px;
   }
@@ -21,14 +21,14 @@
   padding-top: 70px;
   padding-bottom: 30px;
   @include font(25px, 30px, bold);
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
-    padding-top: 124px;
+  @include tablet {
+    padding-top: 120px;
     padding-bottom: 44px;
     @include font(43px, 50px, bold);
   }
-  @media (min-width: $desktop-widths) {
-    padding-top: 71px;
-    padding-bottom: 42tpx;
+  @include desktop {
+    padding-top: 159px;
+    padding-bottom: 42px;
     @include font(53px, 57px, bold);
   }
 }
@@ -38,11 +38,11 @@
   padding: 0;
   width: 100%;
   list-style-type: none;
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
+  @include tablet {
     display: flex;
     flex-wrap: wrap;
   }
-  @media (min-width: $desktop-widths) {
+  @include desktop {
     display: flex;
     flex-wrap: wrap;
     width: 350px * 2;
@@ -51,19 +51,124 @@
 
 .about-us__item {
   margin: 0;
-  padding-top: 60px;
-  padding-bottom: 0;
+  padding-top: 56px;
+  padding-bottom: 27px;
   @include font(17px, 20px, bold);
-  @media (min-width: $tablet-widths) and (max-width: $desktop-widths) {
-    padding-bottom: 55px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 88px;
+    position: absolute;
+    left: -6px;
+    top: 0;
+    background: red;
+    opacity: 0.5;
+  }
+  @include tablet {
+    padding-bottom: 59px;
     padding-top: 55px;
     @include font(20px, 22px, bold);
     width: 50%;
   }
-  @media (min-width: $desktop-widths) {
-    padding-bottom: 55px;
+  @include desktop {
+    padding-bottom: 59px;
     padding-top: 55px;
     @include font(20px, 22px, bold);
     width: 50%;
+  }
+}
+
+.about-us__item--icon-eco {
+  @include tablet {
+    order: 1;
+  }
+  @include desktop {
+    order: 1;
+  }
+}
+
+.about-us__item--icon-with-love {
+  @include tablet {
+    order: 2;
+  }
+  @include desktop {
+    order: 2;
+  }
+}
+
+.about-us__item--icon-style {
+  @include tablet {
+    order: 3;
+  }
+  @include desktop {
+    order: 3;
+  }
+}
+
+.about-us__item--icon-import-substitution {
+  @include tablet {
+    order: 4;
+  }
+  @include desktop {
+    order: 4;
+  }
+}
+
+.about-us__item--icon-like {
+  @include tablet {
+    order: 5;
+  }
+  @include desktop {
+    order: 5;
+  }
+}
+
+.about-us__item--icon-gift-package {
+  @include tablet {
+    order: 6;
+  }
+  @include desktop {
+    order: 6;
+  }
+}
+
+.about-us__item--icon-eco {
+  &::before {
+    background: url("../img/icon-feature-1.svg") no-repeat 50% 0%;
+  }
+}
+
+.about-us__item--icon-style {
+  &::before {
+    background: url("../img/icon-feature-3.svg") no-repeat 50% 0%;
+  }
+}
+
+.about-us__item--icon-like {
+  &::before {
+    background: url("../img/icon-feature-5.svg") no-repeat 50% 0%;
+    top: 5px;
+  }
+}
+
+.about-us__item--icon-with-love {
+  &::before {
+    background: url("../img/icon-feature-2.svg") no-repeat 50% 0%;
+    top: 5px;
+  }
+}
+
+.about-us__item--icon-import-substitution {
+  &::before {
+    background: url("../img/icon-feature-4.svg") no-repeat 50% 0%;
+    top: 5px;
+  }
+}
+
+.about-us__item--icon-gift-package {
+  &::before {
+    background: url("../img/icon-feature-6.svg") no-repeat 50% 0%;
   }
 }
