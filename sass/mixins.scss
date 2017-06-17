@@ -17,8 +17,48 @@
   font-family: OpenSans, Arial, sans-serif;
 }
 
-@mixin flex-mobile-layout(){
+@mixin mobile {
+  @media (max-width: $tablet-widths - 1) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-widths) and (max-width: $desktop-widths - 1) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-widths) {
+    @content
+  }
+}
+
+@mixin flex-layout() {
   display: flex;
   flex-wrap: wrap;
-  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  @include tablet {
+    width: $tablet-widths;
+  }
+  @include desktop {
+    width: $desktop-widths;
+  }
+}
+
+@mixin input-placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
 }

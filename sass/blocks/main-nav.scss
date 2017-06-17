@@ -1,6 +1,21 @@
 .main-nav {
   width: 100%;
   position: relative;
+  @include input-placeholder {
+    color: black;
+  }
+
+  @include tablet {
+    @include input-placeholder {
+      font-size: 0;
+    }
+  }
+
+  @include desktop {
+    @include input-placeholder {
+      font-size: 0;
+    }
+  }
 }
 
 .main-nav__toggler {
@@ -13,64 +28,299 @@
   padding: 0;
   margin: 0;
   background: url(../img/icon-menu-open.svg) no-repeat center;
+  @include tablet {
+      display: none;
+    }
+  @include desktop {
+      display: none;
+    }
 }
 
 .main-nav__wrapper {
-  @include visibility-hidden();
+  display: none;
   position: absolute;
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
-  top: 100%;
   left: 0;
   z-index: 1;
+  background-color: #ffffff;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 0;
+  }
 }
 
 .main-nav__list {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 100%;
+  flex-basis: 100%;
+  @include tablet {
+    flex-basis: 167px * 2;
+    display: flex;
+    order: 2;
+  }
+  @include desktop {
+    flex-basis: 223px * 2;
+    flex-grow: 1;
+    display: flex;
+  }
 }
 
 .main-nav__item {
   margin: 0;
   padding: 0;
-  width: 100%;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  @include tablet {
+    &::after {
+      top: 0;
+    }
+  }
+
+  @include desktop {
+    &::after {
+      top: 0;
+      display: none;
+    }
+  }
+}
+
+.main-nav__item--new-arrivals,
+.main-nav__item--sale,
+.main-nav__item--free-shipping {
+  display: none;
+  @include desktop {
+    display: block;
+    &::after {
+      top: 0;
+      display: block;
+    }
+  }
+}
+
+.main-nav__item--free-shipping {
+  @include tablet {
+    display: block;
+    width: 334px;
+    margin-left: auto;
+  }
+  @include desktop {
+    min-width: 350px;
+    flex-grow: 1;
+    margin-left: auto;
+  }
 }
 
 .main-nav__link {
   display: block;
-  width: 100%;
   padding-top: 27px;
   padding-bottom: 27px;
-  padding-right: 30px;
+  padding-right: 9.375%;
   padding-left: 23.75%;
   box-sizing: border-box;
   text-decoration: none;
   @include font(17px, 24px, bold);
+  @include tablet {
+    width: 167px;
+    padding-left: 0;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    @include font(15px, 24px, bold);
+  }
+  @include desktop {
+    width: 223px;
+    padding-top: 30px;
+    padding-bottom: 36px;
+    padding-left: 0;
+    padding-right: 20px;
+    @include font(17px, 24px, bold);
+  }
 }
 
-.main-nav__search input[type="text"] {
+.main-nav__link--smaller {
+  @include desktop {
+    @include font(15px, 24px, bold);
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+}
+
+.main-nav__link--free-shipping {
+  @include tablet {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 0;
+    text-align: right;
+    @include font(15px, 24px, normal);
+  }
+
+  @include desktop {
+    width: 100%;
+    padding-right: 0px;
+    text-align: right;
+    padding-left: 20px;
+    @include font(15px, 24px, normal);
+  }
+}
+
+.main-nav__text-field {
   width: 100%;
   padding-top: 27px;
   padding-bottom: 27px;
-  padding-right: 30px;
+  padding-right: 9.375%;
   padding-left: 23.75%;
   border: none;
   box-sizing: border-box;
   @include font(17px, 24px, bold);
   text-decoration: none;
+  background: none;
+
+  @include tablet {
+    width: 84px;
+    height: 88px;
+    padding: 10px;
+    margin-left: 320px;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+
+  @include desktop {
+    width: 84px;
+    height: 88px;
+    padding: 10px;
+    margin-left: auto;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+  }
+}
+
+.main-nav__search {
+  @include mobile {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 76px;
+      height: 80px;
+      position: absolute;
+      right: 75.837%;
+      top: 0;
+      background: #ffffff url("../img/icon-search.svg") no-repeat 50% 50%;
+      z-index: 1;
+      opacity: 0.2;
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #ececec;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  @include tablet {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 19px;
+      left: 364px;
+      top: 44px;
+      transform: translate(-50%, -50%);
+      background: #ffffff url("../img/icon-search.svg") no-repeat center;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  }
+
+  @include desktop {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 19px;
+      left: 32px;
+      top: 36px;
+      background: #ffffff url("../img/icon-search.svg") no-repeat center;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  }
 }
 
 .main-nav__cart {
   display: block;
-  width: 100%;
   padding-top: 27px;
   padding-bottom: 27px;
-  padding-right: 30px;
+  padding-right: 9.375%;
   padding-left: 23.75%;
   box-sizing: border-box;
   text-decoration: none;
+  position: relative;
   @include font(17px, 24px, bold);
+  &::before {
+    content: "";
+    position: absolute;
+    width: 76px;
+    height: 80px;
+    position: absolute;
+    right: 75.837%;
+    top: 0;
+    background: #ffffff url("../img/icon-cart.svg") no-repeat 50% 50%;
+    z-index: 1;
+    opacity: 0.2;
+  }
+  @include tablet {
+    width: 264px;
+    padding-left: 44px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-right: 0;
+    text-align: right;
+    box-sizing: border-box;
+    &::before {
+      top: 0;
+      left: 2px;
+      height: 88px;
+    }
+  }
+  @include desktop {
+    width: 266px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    padding-left: 86px;
+    padding-right: 0;
+    text-align: right;
+    &::before {
+      top: 0;
+      left: 0;
+      height: 88px;
+    }
+  }
 }

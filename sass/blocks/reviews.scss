@@ -2,83 +2,194 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding-right: 9.375%;
+  padding-left: 9.375%;
+  margin-bottom: 33px;
+  @include tablet {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-bottom: 32px;
+    position: relative;
+    background: url("../img/review@1x.jpg") no-repeat 0% 0%;
+  }
+  @include desktop {
+    padding-right: 50px;
+    padding-left: 225px;
+    position: relative;
+    margin-top: 29px;
+    background: url("../img/review@1x.jpg") no-repeat 50px 0%;
+  }
 }
 
 .reviews__caption {
   margin: 0;
-  box-sizing: border-box;
   width: 100%;
-  padding-top: 57px;
-  padding-right: 30px;
-  padding-bottom: 33px;
-  padding-left: 30px;
+  padding-top: 27px;
+  padding-bottom: 25px;
   @include font(25px, 30px, bold);
+  @include tablet {
+    padding-top: 80px;
+    padding-bottom: 48px;
+    @include font(43px, 50px, bold);
+    width: auto;
+    margin-right: auto;
+    order: -1;
+  }
+  @include desktop {
+    padding-top: 70px;
+    padding-bottom: 49px;
+    @include font(53px, 57px, bold);
+    width: auto;
+    margin-right: auto;
+    order: -1;
+  }
 }
 
 .reviews__item {
+  display: block;
   margin: 0;
   padding: 0;
   width: 100%;
-
 }
 
 .reviews__text {
   @include font(15px, 30px);
-  width: 100%;
-  box-sizing: border-box;
   margin: 0;
-  padding-top: 0;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 4px;
+  padding-right: 10px;
+  @include tablet {
+    @include font(17px, 30px);
+    padding-bottom: 33px;
+  }
+  @include desktop {
+    @include font(17px, 30px);
+    padding-bottom: 13px;
+    padding-right: 100px;
+  }
+}
+
+.reviews__author {
+  @include tablet {
+    display: block;
+    width: 334px;
+    margin-right: auto;
+  }
+  @include desktop {
+    display: block;
+    width: 350px;
+    margin-right: auto;
+    padding-bottom: 94px;
+  }
 }
 
 .reviews__author-name {
   display: block;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding-top: 0;
-  padding-right: 30px;
-  padding-bottom: 10px;
-  padding-left: 30px;
+  padding-top: 24px;
   @include font(17px, 24px, bold);
   font-style: normal;
+  @include tablet {
+    @include font(18px, 24px);
+  }
+  @include desktop {
+    @include font(18px, 24px);
+  }
 }
 
 .reviews__author-profile {
   display: block;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding-top: 0;
-  padding-right: 30px;
-  padding-bottom: 33px;
-  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 30px;
   @include font(17px, 24px);
   font-style: normal;
+  @include tablet {
+    padding-bottom: 41px;
+    @include font(17px, 30px);
+  }
+  @include desktop {
+    @include font(17px, 30px);
+  }
 }
 
 .reviews__button {
   box-sizing: border-box;
-  width: 40.625%;
+  width: 50%;
   height: 52px;
   margin: 0;
   padding: 0;
+  background-color: white;
+  font-size: 0;
+  border: none;
+
+  @include mobile {
+    border: 1px solid #ececec;
+    border-left: none;
+    border-right: none;
+  }
+
+  @include tablet {
+    width: 80px;
+  }
+
+  @include desktop {
+    width: 88px;
+  }
 }
 
 .reviews__button--prev {
-  margin-left: 9.375%;
+  background: url("../../img/icon-left-arrow.svg") no-repeat center;
+  @include tablet {
+    position: absolute;
+    right: 140px;
+    bottom: 47px;
+    box-sizing: border-box;
+  }
+  @include desktop {
+    position: absolute;
+    right: 136px;
+    bottom: 130px;
+    box-sizing: border-box;
+  }
 }
 .reviews__button--next {
-  margin-right: 9.375%;
+  background: url("../../img/icon-right-arrow.svg") no-repeat center;
+  @include tablet {
+    margin-right: 10px;
+    position: absolute;
+    right: 45px;
+    bottom: 47px;
+    box-sizing: border-box;
+  }
+  @include desktop {
+    position: absolute;
+    right: 50px;
+    bottom: 130px;
+    box-sizing: border-box;
+  }
 }
 
 .reviews__write-review {
   margin: 0 auto;
   margin-top: 38px;
-  flex-basis: 220px;
-  padding: 18px 20px 18px 20px;
+  width: 260px;
+  box-sizing: border-box;
+  padding: 15px 20px 13px 20px;
   text-align: center;
-  border: 1px solid black;
+  border: 2px solid #444444;
+  @include font(17px, 20px, bold);
+  text-transform: uppercase;
+  text-decoration: none;
+  @include tablet {
+    order: -1;
+    align-self: flex-start;
+    margin: 0;
+    margin-top: 78px;
+    width: 175px;
+  }
+  @include desktop {
+    order: -1;
+    align-self: flex-start;
+    margin: 0;
+    margin-top: 78px;
+    width: 175px;
+  }
 }

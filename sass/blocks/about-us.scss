@@ -2,34 +2,173 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding-right: 9.375%;
+  padding-left: 9.375%;
+  @include tablet {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+  }
+  @include desktop {
+    padding-right: 225px;
+    padding-left: 225px;
+  }
 }
 
 .about-us__caption {
   margin: 0 auto;
   width: 100%;
-  box-sizing: border-box;
   padding-top: 70px;
-  padding-right: 30px;
   padding-bottom: 30px;
-  padding-left: 30px;
   @include font(25px, 30px, bold);
+  @include tablet {
+    padding-top: 120px;
+    padding-bottom: 44px;
+    @include font(43px, 50px, bold);
+  }
+  @include desktop {
+    padding-top: 159px;
+    padding-bottom: 42px;
+    @include font(53px, 57px, bold);
+  }
 }
 
 .about-us__list {
-  margin: 0 auto;
-  padding: 0 30px;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  box-sizing: border-box;
   list-style-type: none;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px * 2;
+  }
 }
 
 .about-us__item {
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-  padding-top: 60px;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
+  margin: 0;
+  padding-top: 56px;
+  padding-bottom: 27px;
   @include font(17px, 20px, bold);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 88px;
+    position: absolute;
+    left: -6px;
+    top: 0;
+    background: red;
+    opacity: 0.5;
+  }
+  @include tablet {
+    padding-bottom: 59px;
+    padding-top: 55px;
+    @include font(20px, 22px, bold);
+    width: 50%;
+  }
+  @include desktop {
+    padding-bottom: 59px;
+    padding-top: 55px;
+    @include font(20px, 22px, bold);
+    width: 50%;
+  }
+}
+
+.about-us__item--icon-eco {
+  @include tablet {
+    order: 1;
+  }
+  @include desktop {
+    order: 1;
+  }
+}
+
+.about-us__item--icon-with-love {
+  @include tablet {
+    order: 2;
+  }
+  @include desktop {
+    order: 2;
+  }
+}
+
+.about-us__item--icon-style {
+  @include tablet {
+    order: 3;
+  }
+  @include desktop {
+    order: 3;
+  }
+}
+
+.about-us__item--icon-import-substitution {
+  @include tablet {
+    order: 4;
+  }
+  @include desktop {
+    order: 4;
+  }
+}
+
+.about-us__item--icon-like {
+  @include tablet {
+    order: 5;
+  }
+  @include desktop {
+    order: 5;
+  }
+}
+
+.about-us__item--icon-gift-package {
+  @include tablet {
+    order: 6;
+  }
+  @include desktop {
+    order: 6;
+  }
+}
+
+.about-us__item--icon-eco {
+  &::before {
+    background: url("../img/icon-feature-1.svg") no-repeat 50% 0%;
+  }
+}
+
+.about-us__item--icon-style {
+  &::before {
+    background: url("../img/icon-feature-3.svg") no-repeat 50% 0%;
+  }
+}
+
+.about-us__item--icon-like {
+  &::before {
+    background: url("../img/icon-feature-5.svg") no-repeat 50% 0%;
+    top: 5px;
+  }
+}
+
+.about-us__item--icon-with-love {
+  &::before {
+    background: url("../img/icon-feature-2.svg") no-repeat 50% 0%;
+    top: 5px;
+  }
+}
+
+.about-us__item--icon-import-substitution {
+  &::before {
+    background: url("../img/icon-feature-4.svg") no-repeat 50% 0%;
+    top: 5px;
+  }
+}
+
+.about-us__item--icon-gift-package {
+  &::before {
+    background: url("../img/icon-feature-6.svg") no-repeat 50% 0%;
+  }
 }

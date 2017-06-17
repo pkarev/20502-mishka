@@ -1,4 +1,7 @@
 .main-index {
-  @include flex-mobile-layout();
+  @include flex-layout();
   position: relative;
+  @include desktop {
+    margin-bottom: 105px;
+  }
 }

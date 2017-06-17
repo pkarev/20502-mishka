@@ -6,8 +6,21 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 974px;
-  @include visibility-hidden();
+  top: 924px;
+  background-color: white;
+  border: 1px solid #c7c7c7;
+  border-right: none;
+  border-left: none;
+  box-shadow: 0 5px 10px 0 #c7c7c7;
+  display: none;
+  z-index: 1;
+  @include tablet {
+    width: 566px;
+    top: 1374px;
+  }
+  @include desktop {
+    width: 566px;
+  }
 }
 
 .modal__caption {
@@ -21,6 +34,18 @@
   text-align: center;
   @include font(25px, 30px, bold);
   text-transform: uppercase;
+  @include tablet {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 6px;
+    @include font(30px, 57px, bold);
+  }
+  @include desktop {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 6px;
+    @include font(30px, 57px, bold);
+  }
 }
 
 .modal__prompt {
@@ -31,7 +56,20 @@
   padding-bottom: 23px;
   padding-left: 30px;
   text-align: center;
-  @include font(15px, 30px, normal);
+  box-sizing: border-box;
+  @include font(15px, 30px);
+  @include tablet {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 18px;
+    @include font(17px, 30px);
+  }
+  @include desktop {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 18px;
+    @include font(17px, 30px);
+  }
 }
 
 .modal__form {
@@ -40,11 +78,22 @@
   padding-left: 30px;
   box-sizing: border-box;
   margin-top: 31px;
-  margin-bottom: 51px;
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include tablet {
+    flex-basis: 350px;
+    margin: 0 auto;
+    padding: 0;
+    @include font(17px, 30px);
+  }
+  @include desktop {
+    flex-basis: 350px;
+    margin: 0 auto;
+    padding: 0;
+    @include font(17px, 30px);
+  }
 }
 
 .modal__radio-button {
@@ -55,13 +104,33 @@
   flex-basis: 82px;
   box-sizing: border-box;
   text-align: center;
-  outline: 1px solid black;
+  border: 2px solid #c7c7c7;
   @include font(17px, 52px, bold);
+  @include tablet {
+    flex-basis: 112px;
+    box-sizing: border-box;
+    text-align: center;
+    outline: 1px solid black;
+    padding: 0;
+    @include font(17px, 52px, bold);
+  }
+  @include desktop {
+    flex-basis: 112px;
+    box-sizing: border-box;
+    text-align: center;
+    outline: 1px solid black;
+    padding: 0;
+    @include font(17px, 52px, bold);
+  }
 }
 
 .modal__submit {
   flex-basis: 100%;
   margin: 31px 0 46px 0;
-  padding: 18px 20px 14px 20px;
-  @include font(17px, 16px, bold);
+  padding: 20px 20px 16px 20px;
+  box-sizing: border-box;
+  border: none;
+  background-color: $tiffany;
+  @include font(17px, 16px, bold, white);
+  text-transform: uppercase;
 }

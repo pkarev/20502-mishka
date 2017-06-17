@@ -1,3 +1,15 @@
 .main-catalog {
-  @include flex-mobile-layout();
+  @include flex-layout();
+  padding-right: 9.375%;
+  padding-left: 9.375%;
+  box-sizing: border-box;
+  @include tablet {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  @include desktop {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-bottom: 105px;
+  }
 }

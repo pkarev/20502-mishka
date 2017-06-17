@@ -2,28 +2,35 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body>
+  <body class="index">
     <header class="page-header">
       <h1 class="page-header__title">Магазин игрушек и аксессуаров "Мишка"</h1>
-      <a class="page-header__logo">
-        <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+      <a class="page-header__link">
+        <img class="page-header__logo page-header__logo--mobile" src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+        <img class="page-header__logo page-header__logo--tablet" src="http://placehold.it/113x46"  alt="Mishka" width="113" height="46">
+        <img class="page-header__logo page-header__logo--desktop" src="http://placehold.it/149x72"  alt="Mishka" width="149" height="72">
       </a>
       <nav class="main-nav"> <!--main-nav--open - для открытого состояния меню -->
         <button class="main-nav__toggler" type="button">
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#">Вязание на заказ</a></li>
+            <li class="main-nav__item main-nav__item--catalog"><a class="main-nav__link main-nav__link--catalog" href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item main-nav__item--order"><a class="main-nav__link main-nav__link--order" href="#">Вязание на заказ</a></li>
           </ul>
           <form class="main-nav__search" method="post" action="https://echo.htmlacademy.ru/">
-              <input type="text" placeholder="Поиск по сайту">
+              <input class="main-nav__text-field" type="text" placeholder="Поиск по сайту">
           </form>
           <a class="main-nav__cart" href="#" title="Перейти в корзину">Корзина: пока пуста</a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--new-arrivals"><a class="main-nav__link main-nav__link--smaller main-nav__link--new-arrivals" href="#">Новые поступления</a></li>
+            <li class="main-nav__item main-nav__item--sale"><a class="main-nav__link main-nav__link--smaller main-nav__link--sale" href="#">Распродажа</a></li>
+            <li class="main-nav__item main-nav__item--free-shipping"><a class="main-nav__link main-nav__link--smaller main-nav__link--free-shipping" href="#">Бесплатная доставка по России</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -31,8 +38,8 @@
       <section class="goods">
         <h2 class="goods__caption">Милые штуки ручной<br> работы для дома</h2>
         <ul class="goods__list">
-          <li class="goods__list-item"><a class="goods__link" href="#" title="Перейти в каталог">Предметы интерьера</a></li>
-          <li class="goods__list-item"><a class="goods__link" href="#" title="Перейти в каталог">Детские игрушки</a></li>
+          <li class="goods__list-item goods__list-item--bgc-lighter"><a class="goods__link goods__link--interior" href="#" title="Перейти в каталог">Предметы<br> интерьера</a></li>
+          <li class="goods__list-item"><a class="goods__link goods__link--toys" href="#" title="Перейти в каталог">Детские<br> игрушки</a></li>
         </ul>
       </section>
       <section class="promo">
@@ -48,12 +55,12 @@
             <td class="promo__name">Диаметр:</td>
             <td class="promo__value">25 см</td>
           </tr>
-          <tr class="promo__contents-group">
+          <tr class="promo__contents-row">
             <td class="promo__name">Высота:</td>
             <td class="promo__value">15 см</td>
           </tr>
         </table>
-        <img class="promo__image" src="http://placehold.it/260x315" alt="Вязаные корзинки" width="260" height="315">
+        <img class="promo__image" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки" width="260" height="315">
         <p class="promo__price">Цена: 990 руб.</p>
         <a class="promo__buy btn" href="#" title="Перейти к оформлению">Заказать</a>
       </section>
@@ -70,12 +77,12 @@
       <section class="about-us">
         <h2 class="about-us__caption">Коротко о нас:</h2>
         <ul class="about-us__list">
-          <li class="about-us__item about-us__item--icon--eco">Экологически<br> чистые материалы</li>
-          <li class="about-us__item about-us__item--icon--style">Скандинавский стиль<br> по российской цене</li>
-          <li class="about-us__item about-us__item--icon--like">Увеличивает лайки<br> на фотографиях</li>
-          <li class="about-us__item about-us__item--icon--with-love">Связано вручную с<br> любовью и умилением</li>
-          <li class="about-us__item about-us__item--icon--import-substitution">Поддержка отечественного<br> производителя</li>
-          <li class="about-us__item about-us__item--icon--gift-package">Поставляется в<br> подарочной упаковке</li>
+          <li class="about-us__item about-us__item--icon-eco">Экологически<br> чистые материалы</li>
+          <li class="about-us__item about-us__item--icon-style">Скандинавский стиль<br> по российской цене</li>
+          <li class="about-us__item about-us__item--icon-like">Увеличивает лайки<br> на фотографиях</li>
+          <li class="about-us__item about-us__item--icon-with-love">Связано вручную с<br> любовью и умилением</li>
+          <li class="about-us__item about-us__item--icon-import-substitution">Поддержка отечественного<br> производителя</li>
+          <li class="about-us__item about-us__item--icon-gift-package">Поставляется в<br> подарочной упаковке</li>
         </ul>
       </section>
       <section class="reviews">
@@ -99,13 +106,13 @@
         <table class="contacts__contents">
           <tr class="contacts__row">
             <td class="contacts__name">e-mail:</td>
-            <td class="contacts__value">info@mimimishkashop.ru</td>
+            <td class="contacts__value contacts__value--text-decoration-tiffany">info@mimimishkashop.ru</td>
           </tr>
           <tr class="contacts__row">
             <td class="contacts__name">адрес:</td>
             <td class="contacts__value">
-              г. Санкт-Петербург,
-              ул. Большая Конюшенная,
+              г. Санкт-Петербург,<br>
+              ул. Большая Конюшенная,<br>
               д. 19/8, офис 101
             </td>
           </tr>
@@ -115,10 +122,13 @@
       </section>
     </main>
     <footer class="page-footer">
+      <a class="page-footer__logo">
+        <img src="http://placehold.it/102x34" alt="Mishka" width="102" height="34">
+      </a>
       <ul class="page-footer__social-links">
-        <li class="social-link social-link--vk"><a href="#">Мы в Вконтакте</a></li>
+        <li class="social-link social-link--inst"><a href="#">Мы в Вконтакте</a></li>
         <li class="social-link social-link--fb"><a href="#">Мы в Фейсбуке</a></li>
-        <li class="social-link social-link--inst"><a href="#">Мы в Фейсбуке</a></li>
+        <li class="social-link social-link--twitter"><a href="#">Мы в Фейсбуке</a></li>
       </ul>
       <p class=page-footer__copyright>
         Разработано:

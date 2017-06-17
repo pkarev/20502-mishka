@@ -2,46 +2,138 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 30px;
   box-sizing: border-box;
+  @include mobile {
+    margin-bottom: 90px;
+  }
+  @include tablet {
+    margin-bottom: 109px;
+    position: relative;
+  }
+
+  @include desktop {
+    padding: 68px 0 0 700px;
+    position: relative;
+  }
 }
 
 .production__caption {
   width: 100%;
   margin: 0;
-  box-sizing: border-box;
   padding-top: 29px;
-  padding-right: 30px;
-  padding-bottom: 26px;
-  padding-left: 90px;
+  padding-bottom: 22px;
+  padding-left: 34.61%;
   text-align: left;
+  box-sizing: border-box;
   @include font(17px, 24px, bold);
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 103px;
+    top: 0;
+    right: 65.38%;
+    background: url(../img/icon-video.svg) no-repeat 55% 45%;
+  }
+  @include tablet {
+    padding-top: 39px;
+    padding-bottom: 33px;
+    @include font(20px, 24px, bold);
+    padding-left: 107px;
+    &::before {
+      left: 0;
+      background-position: 70% 45%;
+    }
+  }
+  @include desktop {
+    padding-top: 87px;
+    padding-left: 63px;
+    padding-right: 90px;
+    padding-bottom: 33px;
+    @include font(20px, 24px, bold);
+  }
 }
 
 .production__video {
   width: 100%;
-  border: 2px solid black;
   box-sizing: border-box;
+  height: 150px;
+  background:
+    url(../img/icon-play.svg) no-repeat center,
+    url(../img/video-mobile@1x.jpg) no-repeat center;
+  background-size:
+    auto,
+    cover;
+  @include tablet {
+    order: -1;
+    display: block;
+    height: 455px;
+  }
+  @include desktop {
+    position: absolute;
+    left: 0;
+    top: 55px;
+    width: 682px;
+    height: 455px;
+  }
 }
 
 .production__text {
   width: 100%;
   margin: 0;
   box-sizing: border-box;
-  padding-top: 30px;
-  padding-bottom: 25px;
-  padding-left: 35px;
-  padding-right: 45px;
+  padding-top: 28px;
+  padding-bottom: 24px;
+  padding-left: 13.46%;
+  padding-right: 17.3%;
   @include font(13px, 24px);
+  @include tablet {
+    padding-top: 0;
+    padding-bottom: 10px;
+    padding-left: 42px;
+    padding-right: 47px;
+    @include font(15px, 30px);
+  }
+  @include desktop {
+    padding-top: 0;
+    padding-left: 63px;
+    padding-right: 65px;
+    padding-bottom: 20px;
+    @include font(15px, 30px);
+  }
 }
 
 .production__make-order {
-  display: block;
   margin: 0 auto;
-  width: 192px;
-  padding: 20px 26px 15px 26px;
-  text-align: center;
-  border: 1px solid black;
+  margin-top: 23px;
   box-sizing: border-box;
-  margin-bottom: 47px;
+  width: 192px;
+  padding: 17px 20px 14px 20px;
+  text-align: center;
+  border: 2px solid #444444;
+  @include font(17px, 16px, bold);
+  text-transform: uppercase;
+  text-decoration: none;
+  @include tablet {
+    width: 100%;
+    margin-right: 42px;
+    margin-left: 42px;
+    &::before {
+      content: "";
+      width: 668px;
+      height: 1px;
+      background-color: #ececec;
+      position: absolute;
+      bottom: -46px;
+      left: 0;
+    }
+  }
+  @include desktop {
+    width: 230px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+    padding: 18px 20px 16px 20px;
+  }
 }
