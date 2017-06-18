@@ -37,7 +37,7 @@
 }
 
 .main-nav__wrapper {
-  display: none;
+  display: block;
   position: absolute;
   box-sizing: border-box;
   margin: 0 auto;
@@ -151,8 +151,8 @@
   }
   @include desktop {
     width: 223px;
-    padding-top: 30px;
-    padding-bottom: 36px;
+    padding-top: 32px;
+    padding-bottom: 33px;
     padding-left: 0;
     padding-right: 20px;
     @include font(17px, 24px, bold);
@@ -208,7 +208,7 @@
 
   @include desktop {
     width: 84px;
-    height: 88px;
+    height: 89px;
     padding: 10px;
     margin-left: auto;
     border-left: 1px solid #ececec;
@@ -312,7 +312,7 @@
   }
   @include desktop {
     width: 266px;
-    padding-top: 33px;
+    padding-top: 32px;
     padding-bottom: 33px;
     padding-left: 86px;
     padding-right: 0;

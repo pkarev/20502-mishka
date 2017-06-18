@@ -100,11 +100,11 @@
   border: none;
   @include font(15px, 20px, normal);
   @include tablet {
-    width: 334px;
+    width: 291px;
     margin-right: 334px;
   }
   @include desktop {
-    width: 350px;
+    width: 291px;
     margin-right: 525px;
   }
 }
@@ -116,11 +116,11 @@
   padding-bottom: 19px;
   border-bottom: 1px solid #ececec;
   @include tablet {
-    width: 98px;
+    width: 105px;
     padding: 10px 0;
   }
   @include desktop {
-    width: 98px;
+    width: 105px;
     padding: 10px 0;
   }
 }
@@ -132,11 +132,11 @@
   padding-bottom: 19px;
   border-bottom: 1px solid #ececec;
   @include tablet {
-    width: 236px;
+    width: 229px;
     padding: 10px 0;
   }
   @include desktop {
-    width: 252px;
+    width: 229px;
     padding: 10px 0;
   }
 }
