@@ -27,7 +27,6 @@
   border: none;
   padding: 0;
   margin: 0;
-  background: url(../img/icon-menu-open.svg) no-repeat center;
   @include tablet {
       display: none;
     }
@@ -36,8 +35,15 @@
     }
 }
 
+.main-nav--closed .main-nav__toggler {
+  background: url(../img/icon-menu-open.svg) no-repeat center;
+}
+
+.main-nav--opened .main-nav__toggler {
+  background: url(../img/icon-menu-close.svg) no-repeat center;
+}
+
 .main-nav__wrapper {
-  display: block;
   position: absolute;
   box-sizing: border-box;
   margin: 0 auto;
@@ -57,6 +63,25 @@
     position: relative;
     margin-bottom: 20px;
     z-index: 0;
+  }
+}
+
+@include mobile {
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toggler {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    display: block;
   }
 }
 

@@ -3,9 +3,6 @@
   box-sizing: border-box;
   position: relative;
 
-  @include mobile {
-    border-bottom: 1px solid #ececec;
-  }
   @include tablet {
     padding: 0 50px;
   }
