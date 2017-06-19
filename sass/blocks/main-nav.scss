@@ -27,7 +27,6 @@
   border: none;
   padding: 0;
   margin: 0;
-  background: url(../img/icon-menu-open.svg) no-repeat center;
   @include tablet {
       display: none;
     }
@@ -36,8 +35,15 @@
     }
 }
 
+.main-nav--closed .main-nav__toggler {
+  background: url(../img/icon-menu-open.svg) no-repeat center;
+}
+
+.main-nav--opened .main-nav__toggler {
+  background: url(../img/icon-menu-close.svg) no-repeat center;
+}
+
 .main-nav__wrapper {
-  display: none;
   position: absolute;
   box-sizing: border-box;
   margin: 0 auto;
@@ -57,6 +63,25 @@
     position: relative;
     margin-bottom: 20px;
     z-index: 0;
+  }
+}
+
+@include mobile {
+  .main-nav--closed .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__wrapper {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__toggler {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    display: block;
   }
 }
 
@@ -151,8 +176,8 @@
   }
   @include desktop {
     width: 223px;
-    padding-top: 30px;
-    padding-bottom: 36px;
+    padding-top: 32px;
+    padding-bottom: 33px;
     padding-left: 0;
     padding-right: 20px;
     @include font(17px, 24px, bold);
@@ -208,7 +233,7 @@
 
   @include desktop {
     width: 84px;
-    height: 88px;
+    height: 89px;
     padding: 10px;
     margin-left: auto;
     border-left: 1px solid #ececec;
@@ -312,7 +337,7 @@
   }
   @include desktop {
     width: 266px;
-    padding-top: 33px;
+    padding-top: 32px;
     padding-bottom: 33px;
     padding-left: 86px;
     padding-right: 0;

@@ -5,14 +5,17 @@
   margin-bottom: 28px;
   min-height: 334px;
   position: relative;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+
   @include tablet {
     margin-bottom: 54px;
+    box-sizing: border-box;
   }
   @include desktop {
     width: 316px;
     margin: 0;
-    align-items: flex-start;
-    outline: 1px solid #ececec;
+    box-sizing: border-box;
   }
 }
 
@@ -22,7 +25,10 @@
   text-decoration: none;
   display: flex;
   flex-wrap: wrap;
-  align-self: flex-start;
+  display: block;
+  @include tablet {
+    align-self: flex-start;
+  }
 }
 
 .catalog-item__image {
@@ -48,6 +54,7 @@
   padding-top: 28px;
   padding-left: 11.54%;
   padding-bottom: 7px;
+  box-sizing: border-box;
   @include font(17px, 24px, bold);
   @include tablet {
     width: 334px;
@@ -55,11 +62,10 @@
     margin-left: 334px;
     padding-left: 26px;
     @include font(20px, 24px, bold);
-    align-self: flex-start;
   }
   @include desktop {
-    padding-bottom: 0;
-    padding-top: 25px;
+    padding-bottom: 9px;
+    padding-top: 23px;
     @include font(20px, 24px, bold);
     padding-left: 29px;
     padding-right: 29px;
@@ -103,12 +109,11 @@
       left: 366px;
     }
     &::after {
-      width: 334px;
-      left: 334px;
+      display: none;
     }
   }
   @include desktop {
-    padding-bottom: 20px;
+    padding-bottom: 12px;
     @include font(15px, 30px);
     padding-left: 29px;
     padding-right: 29px;
@@ -117,9 +122,9 @@
       display: none;
     }
     &::after {
-      width: 260px;
-      left: 30px;
-      bottom: 75px;
+      width: 256px;
+      left: 27px;
+      bottom: 73px;
     }
   }
 }
@@ -133,29 +138,31 @@
   padding-left: 11.54%;
   @include font(15px, 24px, bold);
   @include tablet {
-    width: 259px;
+    width: 257px;
     box-sizing: border-box;
     margin-left: 334px;
     padding-left: 30px;
     padding-top: 25px;
     padding-bottom: 25px;
+    margin-top: auto;
     @include font(17px, 24px, bold);
   }
 
   @include desktop {
-    width: 242px;
+    width: 240px;
     @include font(17px, 24px, bold);
     padding-left: 29px;
     padding-right: 74px;
-    padding-top: 24px;
-    padding-bottom: 27px;
+    padding-top: 25px;
+    padding-bottom: 24px;
+    margin-top: auto;
     align-self: flex-end;
   }
 }
 
 .catalog-item__shop-it {
   width: 74px;
-  height: 74px;
+  height: 73px;
   padding: 0;
   margin: 0;
   font-size: 0;
@@ -169,5 +176,7 @@
   }
   @include desktop {
     background: url(../img/icon-cart.svg) no-repeat 40% 45%;
+    margin-top: auto;
+    align-self: flex-end;
   }
 }
