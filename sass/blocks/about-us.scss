@@ -44,8 +44,8 @@
     }
   }
   @include desktop {
-    padding-right: 225px;
-    padding-left: 225px;
+    padding-right: 175px;
+    padding-left: 175px;
     padding-top: 159px;
     padding-bottom: 42px;
     @include font(53px, 57px, bold);
@@ -73,8 +73,8 @@
     flex-wrap: wrap;
   }
   @include desktop {
-    padding-right: 225px;
-    padding-left: 225px;
+    padding-right: 175px;
+    padding-left: 175px;
     display: flex;
     flex-wrap: wrap;
     width: 350px * 2;

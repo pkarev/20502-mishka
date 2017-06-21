@@ -8,10 +8,9 @@
   }
   @include desktop {
     flex-direction: row;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
     box-sizing: border-box;
-    width: 100%;
   }
 }
 
