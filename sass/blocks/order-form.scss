@@ -4,61 +4,94 @@
   display: flex;
   flex-wrap: wrap;
   @include mobile {
-    margin-bottom: 52px;
+    margin-bottom: 55px;
+    padding-right: 9.375%;
+    padding-left: 9.375%;
   }
   @include input-placeholder {
     @include font(17px, 18px, normal, rgba(68, 68, 68, 0.3));
   }
 }
 
-.order-form__caption {
-  margin: 0;
-  margin-top: 31px;
-  width: 100%;
-  padding-top: 41px;
-  padding-bottom: 98px;
-  text-align: center;
-  @include font(27px, 30px, bold);
-  @include tablet {
-    padding-top: 0;
-    padding-bottom: 154px;
-    @include font(43px, 50px, bold);
-  }
-  @include desktop {
-    padding-top: 16px;
-    padding-bottom: 224px;
-    @include font(53px, 57px, bold);
-    margin: 0;
-  }
-}
-
 .order-form__text {
   margin: 0;
   max-width: 100%;
-  padding-bottom: 24px;
+  padding-top: 25px;
   @include font(13px, 24px);
   text-align: left;
+
   @include tablet {
-    padding-top: 0;
-    padding-bottom: 55px;
+    padding-top: 63px;
+    padding-bottom: 5px;
+    padding-right: 50px;
+    padding-left: 50px;
     @include font(17px, 30px);
   }
+
   @include desktop {
-    padding-top: 0;
-    padding-right: 175px;
-    padding-left: 175px;
-    padding-bottom: 53px;
+    padding-top: 105px;
+    padding-right: 225px;
+    padding-left: 225px;
     @include font(17px, 30px);
+    padding-bottom: 3px;
   }
 }
 
 .order-form__fieldset {
   width: 100%;
-  border: none;
   margin: 0;
   padding: 0;
   position: relative;
+  border: 2px solid $tiffany;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+
+  @include mobile {
+    margin-top: 23px;
+    margin-bottom: 12px
+  }
+
+  @include tablet {
+    border: none;
+    padding: 50px 50px;
+  }
+
+  @include desktop {
+    border: none;
+    padding: 50px 50px;
+  }
 }
+
+.order-form__fieldset--pt-zero {
+  @include tablet {
+    padding-top: 0;
+  }
+
+  @include desktop {
+    padding-top: 0;
+  }
+}
+
+.order-form__fieldset--pb-smaller {
+  @include tablet {
+    padding-bottom: 25px;
+  }
+
+  @include desktop {
+    padding-bottom: 25px;
+  }
+}
+
+.order-form__fieldset--bg-gray {
+  @include tablet {
+    background-color: #f1f1f1;
+  }
+  @include desktop {
+    background-color: #f1f1f1;
+  }
+}
+
 
 .order-form__flex-inner {
   @include tablet {
@@ -67,6 +100,7 @@
     margin-left: 167px;
     justify-content: space-between;
   }
+
   @include desktop {
     display: flex;
     flex-wrap: wrap;
@@ -76,28 +110,20 @@
 
 .order-form__fieldset-caption {
   margin: 0;
-  width: 100%;
+  width: auto;
   margin-bottom: 22px;
+  padding-right: 25px;
   @include font(17px, 16px, bold, $tiffany);
   text-transform: uppercase;
   position: relative;
-  @include mobile {
-    &::after {
-      content: "";
-      position: absolute;
-      width: 77%;
-      height: 2px;
-      background-color: $tiffany;
-      top: 7px;
-      right: 0;
-    }
-  }
+
   @include tablet {
     position: absolute;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 168px;
   }
+
   @include desktop {
     position: absolute;
     padding-top: 20px;
@@ -108,7 +134,7 @@
 }
 
 .order-form__fieldset-caption--mb-smaller {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .order-form__input-radio,
@@ -120,13 +146,16 @@
   display: block;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 22px;
   box-sizing: border-box;
-  padding-top: 12px;
-  padding-bottom: 9px;
+  padding-top: 13px;
+  padding-bottom: 8px;
   padding-right: 16%;
   padding-left: 24.2%;
   @include font(17px, 18px, bold);
+
+  @include mobile {
+    margin-bottom: 22px;
+  }
 
   @include tablet {
     margin: 0;
@@ -151,23 +180,14 @@
   }
 }
 
-.order-form__label--mb-bigger {
-  margin-bottom: 35px;
-  @include tablet {
-    margin-bottom: 100px;
-  }
-  @include desktop {
-    margin-bottom: 100px;
-  }
+.order-form__label--mb-zero {
+  margin-bottom: 0;
 }
 
-.order-form__label--mb-smaller {
-  @include mobile {
-    margin-bottom: 3px;
-  }
-  @include desktop {
-    margin-bottom: 25px;
-  }
+.order-form__label--mb-standart {
+    @include mobile {
+      margin-bottom: 23px;
+    }
 }
 
 .order-form__input-checkbox + .order-form__label {
@@ -175,7 +195,7 @@
   &::before {
     content: "";
     width: 40px;
-    height: 40px;
+    height: 39px;
     box-sizing: border-box;
     border: 2px solid #444444;
     left: 0;
@@ -218,7 +238,7 @@
   &::before {
     content: "";
     width: 40px;
-    height: 40px;
+    height: 39px;
     box-sizing: border-box;
     border: 2px solid #444444;
     left: 0;
@@ -243,9 +263,16 @@
 
 .order-form__input-radio:checked + .order-form__label {
   &::before {
-  background-color: $tiffany;
-  box-shadow:
-    inset 0 0 0 14px white;
+    background-color: $tiffany;
+    box-shadow: inset 0 0 0 10px white;
+
+    @include tablet {
+      box-shadow: inset 0 0 0 14px white;
+    }
+
+    @include desktop {
+      box-shadow: inset 0 0 0 14px white;
+    }
   }
 }
 
@@ -268,6 +295,12 @@
   }
 }
 
+.order-form__label--mb-smaller {
+  @include mobile {
+    margin-bottom: 3px;
+  }
+}
+
 .order-form__label--width100 {
 
   @include tablet {
@@ -282,10 +315,10 @@
 .order-form__input-text {
   width: 100%;
   box-sizing: border-box;
-  padding: 16px 15px;
+  padding: 16px 15px 16px 0;
   border: none;
   border-bottom: 2px solid black;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   @include font(17px, 18px);
 
   @include tablet {
@@ -302,20 +335,15 @@
     flex-grow: 1;
     padding-top: 14px;
     padding-bottom: 14px;
+    padding-left: 15px;
     margin-bottom: 25px;
     margin-right: 175px;
     @include font(19px, 18px);
   }
 }
 
-.order-form__input-text--mb-bigger {
-  margin-bottom: 31px;
-    @include tablet {
-      margin-bottom: 98px;
-    }
-    @include desktop {
-      margin-bottom: 98px;
-    }
+.order-form__input-text--mb-zero {
+    margin-bottom: 0;
 }
 
 .order-form__input-text--icon-phone {
@@ -343,22 +371,12 @@
   }
 }
 
-.order-form__fieldset-caption--absolute-lower {
-  @include tablet {
-    top: 74px;
-  }
-
-  @include desktop {
-    top: 74px;
-  }
-}
-
 .order-form__input-textarea {
   width: 100%;
   box-sizing: border-box;
   padding: 15px 17px;
-  margin-bottom: 13px;
-  margin-top: 17px;
+  margin-bottom: 0px;
+  margin-top: 20px;
   resize: none;
   border: 2px solid #444444;
   @include font(17px, 18px);
@@ -366,13 +384,13 @@
   @include tablet {
     @include font(19px, 18px);
     margin-bottom: 0;
-    margin-top: 75px;
+    margin-top: 0;
   }
   @include desktop {
     margin-right: 175px;
     @include font(19px, 18px);
     margin-bottom: 0;
-    margin-top: 75px;
+    margin-top: 0;
   }
 }
 
@@ -382,13 +400,14 @@
   padding: 0;
   width: 100%;
   @include font(14px, 16px);
+
   @include tablet {
     order: 2;
     width: 334px;
     text-align: right;
     margin-left: 104px;
     margin-bottom: 0;
-    margin-top: 64px;
+    margin-top: 12px;
     @include font(17px, 30px);
   }
   @include desktop {
@@ -396,8 +415,7 @@
     width: 350px;
     text-align: right;
     margin-left: 120px;
-    margin-bottom: 0;
-    margin-top: 60px;
+    margin-top: 10px;
     @include font(17px, 30px);
   }
 }
@@ -415,14 +433,14 @@
   text-decoration: none;
   @include tablet {
     margin: 0;
-    margin-top: 53px;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
+    margin-left: 50px;
     width: 230px;
   }
   @include desktop {
     margin: 0;
-    margin-left: 175px;
-    margin-top: 50px;
+    margin-left: 225px;
+    margin-bottom: 48px;
     width: 230px;
   }
 }

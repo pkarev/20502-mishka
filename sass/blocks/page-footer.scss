@@ -1,15 +1,17 @@
 .page-footer {
   @include flex-layout();
   flex-direction: column;
+  background-color: #f1f1f1;
   @include tablet {
     flex-direction: row;
 
   }
   @include desktop {
     flex-direction: row;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 100px;
+    padding-left: 100px;
     box-sizing: border-box;
+    width: 100%;
   }
 }
 
@@ -119,9 +121,9 @@
 .page-footer__copyright {
   margin: 0 auto;
   box-sizing: border-box;
-  padding-top: 31px;
+  padding-top: 29px;
   padding-right: 125px;
-  padding-bottom: 7px;
+  padding-bottom: 9px;
   padding-left: 70px;
   @include font(19px, 18px, bold);
   position: relative;

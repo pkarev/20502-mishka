@@ -8,11 +8,13 @@
 </head>
 <body class="form">
   <header class="page-header">
-    <h1 class="page-header__title">Магазин игрушек и аксессуаров "Мишка"</h1>
+    <h1 class="page-header__caption">Вязание на заказ</h1>
     <a class="page-header__link" href="index.html">
-      <img class="page-header__logo page-header__logo--mobile" src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
-      <img class="page-header__logo page-header__logo--tablet" src="img/mishka-logo-tablet.svg"  alt="Mishka" width="113" height="46">
-      <img class="page-header__logo page-header__logo--desktop" src="img/mishka-logo-desktop.svg"  alt="Mishka" width="149" height="72">
+      <picture class="page-header__logo">
+        <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img src="img/logo-mobile.svg" alt="Mishka">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs"> <!--main-nav--open - для открытого состояния меню -->
       <button class="main-nav__toggler" type="button">
@@ -36,7 +38,6 @@
   </header>
   <main class="main-form">
     <form class="order-form" method="post" action="https://echo.htmlacademy.ru/">
-      <h1 class="order-form__caption">Вязание на заказ</h1>
       <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <fieldset class="order-form__fieldset">
         <legend class="order-form__fieldset-caption">Тип</legend>
@@ -44,10 +45,10 @@
           <input class="order-form__input-radio order-form__input-radio--checked" type="radio" name="type" value="interior" id="interior" checked>
           <label class="order-form__label order-form__label--mb-smaller order-form__label--width100" for="interior">Аксессуар для интерьера</label>
           <input class="order-form__input-radio" type="radio" name="type" value="toy" id="toy">
-          <label class="order-form__label order-form__label--mb-bigger order-form__label--width100" for="toy">Детская игрушка</label>
+          <label class="order-form__label order-form__label--mb-zero order-form__label--width100" for="toy">Детская игрушка</label>
         </div>
       </fieldset>
-      <fieldset class="order-form__fieldset">
+      <fieldset class="order-form__fieldset order-form__fieldset--bg-gray">
         <legend class="order-form__fieldset-caption">Цвет</legend>
         <div class="order-form__flex-inner">
           <input class="order-form__input-checkbox order-form__input-checkbox--checked" type="checkbox" name="white" value="white" id="white" checked>
@@ -57,11 +58,11 @@
           <input class="order-form__input-checkbox" type="checkbox" name="tiffany" value="tiffany" id="tiffany">
           <label class="order-form__label order-form__label" for="tiffany">&laquo;Тиффани&raquo;</label>
           <input class="order-form__input-checkbox" type="checkbox" name="black" value="black" id="black">
-          <label class="order-form__label order-form__label" for="black">Черный</label>
+          <label class="order-form__label order-form__label order-form__label--mb-zero order-form__label--mb-standart" for="black">Черный</label>
           <input class="order-form__input-checkbox" type="checkbox" name="pink" value="pink" id="pink">
-          <label class="order-form__label order-form__label" for="pink">Розовый</label>
+          <label class="order-form__label order-form__label order-form__label--mb-zero order-form__label--mb-standart" for="pink">Розовый</label>
           <input class="order-form__input-checkbox" type="checkbox" name="orange" value="orange" id="orange">
-          <label class="order-form__label order-form__label order-form__label--mb-bigger" for="orange">Оранжевый</label>
+          <label class="order-form__label order-form__label order-form__label--mb-zero" for="orange">Оранжевый</label>
         </div>
       </fieldset>
       <fieldset class="order-form__fieldset">
@@ -71,24 +72,24 @@
           <input class="order-form__input-text" type="text" placeholder="Введите ваше имя*" name="name" id="name" required>
           <label class="order-form__label order-form__label--text-fields" for="surname">Фамилия:</label>
           <input class="order-form__input-text" type="text" placeholder="Укажите фамилию*" name="surname" id="surname" required>
-          <label class="order-form__label order-form__label--text-fields order-form__label--mb-bigger" for="patronymic">Отчество:</label>
-          <input class="order-form__input-text order-form__input-text--mb-bigger" type="text" placeholder="Отчество, если желаете" name="pathronymic" id="patronymic">
+          <label class="order-form__label order-form__label--text-fields order-form__label--mb-zero" for="patronymic">Отчество:</label>
+          <input class="order-form__input-text order-form__input-text--mb-zero" type="text" placeholder="Отчество, если желаете" name="pathronymic" id="patronymic">
         </div>
       </fieldset>
-      <fieldset class="order-form__fieldset">
+      <fieldset class="order-form__fieldset order-form__fieldset--bg-gray order-form__fieldset--pb-smaller">
         <legend class="order-form__fieldset-caption order-form__fieldset-caption--mb-smaller">Тел</legend>
         <div class="order-form__flex-inner">
-          <input class="order-form__input-text order-form__input-text--icon-phone order-form__input-text--mb-smaller" type="tel" placeholder="+7 XXX XX XX*" name="phone" id="phone" required>
+          <input class="order-form__input-text order-form__input-text--icon-phone order-form__input-text--mb-zero" type="tel" placeholder="+7 XXX XX XX*" name="phone" id="phone" required>
         </div>
       </fieldset>
-      <fieldset class="order-form__fieldset">
+      <fieldset class="order-form__fieldset order-form__fieldset--bg-gray order-form__fieldset--pt-zero">
         <legend class="order-form__fieldset-caption order-form__fieldset-caption--mb-smaller">e-mail</legend>
         <div class="order-form__flex-inner">
-          <input class="order-form__input-text order-form__input-text--icon-email order-form__input-text--mb-smaller" type="email" placeholder="Ваш Email*" name="email" id="email" required>
+          <input class="order-form__input-text order-form__input-text--icon-email order-form__input-text--mb-zero" type="email" placeholder="Ваш Email*" name="email" id="email" required>
         </div>
       </fieldset>
       <fieldset class="order-form__fieldset">
-        <legend class="order-form__fieldset-caption order-form__fieldset-caption--mb-smaller order-form__fieldset-caption--absolute-lower">Доп</legend>
+        <legend class="order-form__fieldset-caption order-form__fieldset-caption--mb-smaller">Доп</legend>
         <div class="order-form__flex-inner">
           <textarea class="order-form__input-textarea" placeholder="Опишите все ваши пожелания к заказу" name="additional" id="additional"></textarea>
         </div>
@@ -99,7 +100,7 @@
   </main>
   <footer class="page-footer">
     <a class="page-footer__logo">
-      <img src="img/logo-footer.svg" alt="Mishka" width="102" height="34">
+      <img src="img/logo-footer.svg" alt="Mishka">
     </a>
     <ul class="page-footer__social-links">
       <li class="social-link social-link--inst"><a href="#">Мы в Вконтакте</a></li>

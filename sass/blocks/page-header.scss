@@ -1,31 +1,70 @@
 .page-header {
   @include flex-layout();
-  box-sizing: border-box;
   position: relative;
+}
 
+
+.page-header__caption {
+  margin: 0;
+  margin-top: 0;
+  width: 100%;
+  padding-top: 72px;
+  padding-bottom: 74px;
+  text-align: center;
+  order: 2;
+  background-color: #f1f1f1;
+  @include font(27px, 30px, bold);
+  position: relative;
   @include tablet {
-    padding: 0 50px;
+    padding-top: 95px;
+    padding-bottom: 90px;
+    @include font(43px, 50px, bold);
+    margin-top: 88px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 19px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      bottom: 0;
+      left: 0;
+     }
   }
   @include desktop {
-    padding: 0 50px;
+    padding-top: 95px;
+    padding-bottom: 120px;
+    margin-top: 88px;
+    @include font(53px, 57px, bold);
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 34px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      bottom: 0;
+      left: 0;
+     }
   }
 }
 
-.page-header__title {
+.page-header__caption--visibility-hidden {
   @include visibility-hidden();
 }
 
 .page-header__link {
   box-sizing: border-box;
-  margin: 22px auto 21px;
+  margin: 22px auto 22px;
 
   @include tablet {
     margin: 0;
     position: absolute;
-    z-index: 1;
-    padding-top: 22px;
+    z-index: 2;
+    padding-top: 18px;
     padding-right: 20px;
     padding-bottom: 20px;
+    padding-left: 50px;
   }
 
   @include desktop {
@@ -33,7 +72,7 @@
     transform: translateX(-50%);
     margin: 0;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 7px;
@@ -41,32 +80,18 @@
   }
 }
 
-.page-header__logo--tablet {
-  display: none;
-  @include tablet {
+.page-header__logo {
+  @include mobile {
+    width: 86px;
+    height: 35px;
     display: block;
-  }
-  @include desktop {
-    display: none;
-  }
-}
-
-.page-header__logo--desktop {
-  display: none;
+  };
   @include tablet {
-    display: none;
-  }
+    width: 113px;
+    height: 46px;
+  };
   @include desktop {
-    display: block;
-  }
-}
-
-.page-header__logo--mobile {
-  display: block;
-  @include tablet {
-    display: none;
-  }
-  @include desktop {
-    display: none;
-  }
+    width: 149px;
+    height: 72px;
+  };
 }

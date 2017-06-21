@@ -1,15 +1,4 @@
 .main-form {
   @include flex-layout();
-  padding-right: 9.375%;
-  padding-left: 9.375%;
   box-sizing: border-box;
-  @include tablet {
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-  @include desktop {
-    margin-bottom: 50px;
-    padding-right: 50px;
-    padding-left: 50px;
-  }
 }

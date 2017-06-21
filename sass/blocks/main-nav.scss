@@ -27,9 +27,11 @@
   border: none;
   padding: 0;
   margin: 0;
+
   @include tablet {
       display: none;
     }
+
   @include desktop {
       display: none;
     }
@@ -49,20 +51,24 @@
   margin: 0 auto;
   width: 100%;
   left: 0;
-  z-index: 1;
-  background-color: #ffffff;
+
+  @include mobile {
+    background-color: #ffffff;
+    z-index: 1;
+  }
+
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
-    z-index: 0;
+    padding: 0 50px;
+    z-index: 1;
   }
+
   @include desktop {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
-    margin-bottom: 20px;
-    z-index: 0;
+    padding: 0 50px;
+    z-index: 1;
   }
 }
 
@@ -70,15 +76,12 @@
   .main-nav--closed .main-nav__wrapper {
     display: none;
   }
-
   .main-nav--opened .main-nav__wrapper {
     display: block;
   }
-
   .main-nav--nojs .main-nav__toggler {
     display: none;
   }
-
   .main-nav--nojs .main-nav__wrapper {
     position: static;
     display: block;
@@ -90,11 +93,13 @@
   padding: 0;
   list-style-type: none;
   flex-basis: 100%;
+
   @include tablet {
     flex-basis: 167px * 2;
     display: flex;
     order: 2;
   }
+
   @include desktop {
     flex-basis: 223px * 2;
     flex-grow: 1;
@@ -102,44 +107,34 @@
   }
 }
 
+.main-nav__list--main-menu {
+  @include tablet {
+    position: absolute;
+    top: 100%;
+    left: 50px;
+  }
+}
+
+.main-nav__list--secondary-menu {
+  @include tablet {
+    position: absolute;
+    top: 100%;
+    right: 50px;
+  }
+}
+
 .main-nav__item {
   margin: 0;
   padding: 0;
-  position: relative;
-  &::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #ececec;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
-  @include tablet {
-    &::after {
-      top: 0;
-    }
-  }
-
-  @include desktop {
-    &::after {
-      top: 0;
-      display: none;
-    }
-  }
 }
 
 .main-nav__item--new-arrivals,
 .main-nav__item--sale,
 .main-nav__item--free-shipping {
   display: none;
+
   @include desktop {
     display: block;
-    &::after {
-      top: 0;
-      display: block;
-    }
   }
 }
 
@@ -149,6 +144,7 @@
     width: 334px;
     margin-left: auto;
   }
+
   @include desktop {
     min-width: 350px;
     flex-grow: 1;
@@ -164,23 +160,35 @@
   padding-left: 23.75%;
   box-sizing: border-box;
   text-decoration: none;
+  border-top: 1px solid #ececec;
   @include font(17px, 24px, bold);
+
   @include tablet {
     width: 167px;
     padding-left: 0;
     padding-right: 20px;
-    padding-top: 20px;
+    padding-top: 18px;
     padding-bottom: 20px;
     box-sizing: border-box;
+    border: none;
     @include font(15px, 24px, bold);
   }
+
   @include desktop {
-    width: 223px;
+    width: 185px;
+    margin-right: 38px;
     padding-top: 32px;
     padding-bottom: 33px;
     padding-left: 0;
     padding-right: 20px;
+    border: none;
     @include font(17px, 24px, bold);
+  }
+}
+
+.main-nav__link--border-right {
+  @include desktop {
+    border-right: 1px solid #ececec;
   }
 }
 
@@ -217,6 +225,7 @@
   padding-right: 9.375%;
   padding-left: 23.75%;
   border: none;
+  border-top: 1px solid #ececec;
   box-sizing: border-box;
   @include font(17px, 24px, bold);
   text-decoration: none;
@@ -226,7 +235,7 @@
     width: 84px;
     height: 88px;
     padding: 10px;
-    margin-left: 320px;
+    border: none;
     border-left: 1px solid #ececec;
     border-right: 1px solid #ececec;
   }
@@ -242,59 +251,37 @@
 }
 
 .main-nav__search {
-  @include mobile {
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 76px;
-      height: 80px;
-      position: absolute;
-      right: 75.837%;
-      top: 0;
-      background: #ffffff url("../img/icon-search.svg") no-repeat 50% 50%;
-      z-index: 1;
-      opacity: 0.2;
-    }
-    &::after {
-      content: "";
-      width: 100%;
-      height: 1px;
-      background-color: #ececec;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 76px;
+    height: 80px;
+    right: 75.837%;
+    top: 0;
+    background: #ffffff url("../img/icon-search.svg") no-repeat center;
+    opacity: 0.2;
+    z-index: -1;
   }
 
   @include tablet {
-    position: relative;
+    margin-left: auto;
     &::before {
-      content: "";
-      position: absolute;
       width: 18px;
       height: 19px;
-      left: 364px;
-      top: 44px;
+      left: 50%;
+      top: 50%;
       transform: translate(-50%, -50%);
-      background: #ffffff url("../img/icon-search.svg") no-repeat center;
-      opacity: 0.2;
-      z-index: -1;
     }
   }
 
   @include desktop {
-    position: relative;
+    margin-left: auto;
     &::before {
       content: "";
-      position: absolute;
-      width: 18px;
-      height: 19px;
-      left: 32px;
-      top: 36px;
-      background: #ffffff url("../img/icon-search.svg") no-repeat center;
-      opacity: 0.2;
-      z-index: -1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
@@ -308,6 +295,7 @@
   box-sizing: border-box;
   text-decoration: none;
   position: relative;
+  border-top: 1px solid #ececec;
   @include font(17px, 24px, bold);
   &::before {
     content: "";
@@ -317,16 +305,17 @@
     position: absolute;
     right: 75.837%;
     top: 0;
-    background: #ffffff url("../img/icon-cart.svg") no-repeat 50% 50%;
-    z-index: 1;
+    background: url("../img/icon-cart.svg") no-repeat 50% 50%;
     opacity: 0.2;
   }
+
   @include tablet {
     width: 264px;
     padding-left: 44px;
     padding-top: 32px;
     padding-bottom: 32px;
     padding-right: 0;
+    border: none;
     text-align: right;
     box-sizing: border-box;
     &::before {
@@ -335,17 +324,18 @@
       height: 88px;
     }
   }
+
   @include desktop {
     width: 266px;
     padding-top: 32px;
-    padding-bottom: 33px;
+    padding-bottom: 32px;
     padding-left: 86px;
     padding-right: 0;
     text-align: right;
     &::before {
       top: 0;
       left: 0;
-      height: 88px;
+      height: 89px;
     }
   }
 }

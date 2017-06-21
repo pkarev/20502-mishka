@@ -13,7 +13,8 @@
     padding-right: 50px;
     padding-left: 50px;
     position: relative;
-    margin-left: 175px;
+    margin-right: 50px;
+    margin-left: 225px;
   }
 }
 
@@ -25,14 +26,14 @@
   text-align: left;
   @include font(25px, 30px, bold);
   @include tablet {
-    padding-bottom: 48px;
-    padding-top: 43px;
+    padding-bottom: 49px;
+    padding-top: 45px;
     width: 500px;
     @include font(43px, 50px, bold);
   }
   @include desktop {
     padding-bottom: 48px;
-    padding-top: 127px;
+    padding-top: 123px;
     width: 875px;
     @include font(53px, 57px, bold);
   }
@@ -49,8 +50,8 @@
   @include tablet {
     width: 168px;
     box-sizing: border-box;
-    padding-top: 53px;
-    padding-right: 27px;
+    padding-top: 55px;
+    padding-right: 25px;
     padding-left: 68px;
     padding-bottom: 51px;
     @include font(17px, 17px, bold, $tiffany);
@@ -65,7 +66,7 @@
     padding-right: 55px;
     box-sizing: border-box;
     margin-left: -175px;
-    margin-top: 138px;
+    margin-top: 135px;
   }
 }
 
@@ -73,7 +74,7 @@
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  padding-bottom: 27px;
+  padding-bottom: 16px;
   text-align: left;
   padding-right: 15px;
   @include font(15px, 24px, normal);
@@ -86,7 +87,7 @@
   @include desktop {
     width: 350px;
     margin-right: 525px;
-    padding-bottom: 47px;
+    padding-bottom: 48px;
     padding-right: 70px;
     @include font(17px, 30px, normal);
   }
@@ -113,15 +114,18 @@
   width: 38.46153%; /*ширина столбца таблицы*/
   padding: 0;
   margin: 0;
-  padding-bottom: 19px;
+  padding-bottom: 9px;
+  padding-top: 10px;
   border-bottom: 1px solid #ececec;
   @include tablet {
     width: 105px;
-    padding: 10px 0;
+    padding-bottom: 9px;
+    padding-top: 10px;
   }
   @include desktop {
     width: 105px;
-    padding: 10px 0;
+    padding-bottom: 9px;
+    padding-top: 10px;
   }
 }
 
@@ -129,31 +133,33 @@
   width: 61.53847%; /*ширина столбца таблицы*/
   padding: 0;
   margin: 0;
-  padding-bottom: 19px;
+  padding-bottom: 9px;
+  padding-top: 10px;
   border-bottom: 1px solid #ececec;
   @include tablet {
     width: 229px;
-    padding: 10px 0;
+    padding-bottom: 9px;
+    padding-top: 10px;
   }
   @include desktop {
     width: 229px;
-    padding: 10px 0;
+    padding-bottom: 9px;
+    padding-top: 10px;
   }
 }
 
 .promo__image {
   margin: 0 auto;
-  margin-top: 18px;
-  width: 260px;
-  height: 315px;
+  margin-top: 28px;
   box-sizing: border-box;
   background-size: cover;
+  width: 100%;
+  height: auto;
   @include tablet {
-    width: 334px;
+    width: 333px;
     height: 404px;
     position: absolute;
-    right: 0;
-    top: 130px;
+    top: 123px;
     right: 50px;
     z-index: -1;
   }
@@ -162,7 +168,7 @@
     height: 636px;
     position: absolute;
     right: 50px;
-    top: 55px;
+    top: 40px;
     z-index: -1;
   }
 
@@ -182,7 +188,7 @@
     padding-left: 74px;
     box-sizing: border-box;
     text-align: left;
-    padding-top: 56px;
+    padding-top: 59px;
     padding-bottom: 32px;
     @include font(20px, 24px, bold);
   }
@@ -190,7 +196,7 @@
     width: 292px;
     padding-top: 109px;
     margin-right: 583px;
-    padding-bottom: 32px;
+    padding-bottom: 34px;
     @include font(20px, 24px, bold);
   }
 }
