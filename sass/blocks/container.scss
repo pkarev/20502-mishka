@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+
+  @include tablet {
+    width: $tablet-widths;
+    padding: 0 50px;
+  }
+
+  @include desktop {
+    width: $desktop-widths;
+    padding: 0 50px;
+  }
+}
+
+.container--fieldset {
+  @include tablet {
+    padding-left: 217px;
+  }
+
+  @include desktop {
+    padding-left: 225px;
+  }
+}
+
+.container--footer {
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.container--pl-bigger {
+  @include desktop {
+    padding-left: 225px;
+  }
+}

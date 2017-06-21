@@ -21,6 +21,9 @@
   text-align: left;
 
   @include tablet {
+    width: 768px;
+    box-sizing: border-box;
+    margin: 0 auto;
     padding-top: 63px;
     padding-bottom: 5px;
     padding-right: 50px;
@@ -30,6 +33,8 @@
 
   @include desktop {
     padding-top: 105px;
+    width: 700px;
+    margin: 0 auto;
     padding-right: 225px;
     padding-left: 225px;
     @include font(17px, 30px);
@@ -46,7 +51,7 @@
   border-right: none;
   border-left: none;
   border-bottom: none;
-
+  box-sizing: border-box;
   @include mobile {
     margin-top: 23px;
     margin-bottom: 12px
@@ -54,12 +59,12 @@
 
   @include tablet {
     border: none;
-    padding: 50px 50px;
+    padding: 50px 0;
   }
 
   @include desktop {
     border: none;
-    padding: 50px 50px;
+    padding: 50px 0;
   }
 }
 
@@ -97,14 +102,12 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 167px;
     justify-content: space-between;
   }
 
   @include desktop {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 175px;
   }
 }
 
@@ -119,6 +122,8 @@
 
   @include tablet {
     position: absolute;
+    left: 50px;
+    top: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 168px;
@@ -128,13 +133,17 @@
     position: absolute;
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 175px;
-    padding-left: 61px;
+    width: auto;
+    padding-left: 111px;
   }
 }
 
 .order-form__fieldset-caption--mb-smaller {
   margin-bottom: 4px;
+}
+
+.order-form__fieldset-caption--absulute-upper {
+  top: 0;
 }
 
 .order-form__input-radio,
@@ -327,6 +336,7 @@
     padding-top: 14px;
     padding-bottom: 14px;
     margin-bottom: 25px;
+    padding-left: 15px;
     @include font(19px, 18px);
   }
 
@@ -335,7 +345,7 @@
     flex-grow: 1;
     padding-top: 14px;
     padding-bottom: 14px;
-    padding-left: 15px;
+    padding-left: 18px;
     margin-bottom: 25px;
     margin-right: 175px;
     @include font(19px, 18px);
@@ -434,12 +444,11 @@
   @include tablet {
     margin: 0;
     margin-bottom: 52px;
-    margin-left: 50px;
     width: 230px;
   }
   @include desktop {
     margin: 0;
-    margin-left: 225px;
+    margin-left: 175px;
     margin-bottom: 48px;
     width: 230px;
   }

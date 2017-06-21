@@ -2,30 +2,30 @@
   @include flex-layout();
   flex-direction: column;
   background-color: #f1f1f1;
+
   @include tablet {
     flex-direction: row;
 
   }
   @include desktop {
     flex-direction: row;
-    padding-right: 50px;
-    padding-left: 50px;
-    box-sizing: border-box;
   }
 }
 
 .page-footer__logo {
   display: none;
+
   @include tablet {
     display: block;
     width: 102px;
     height: 34px;
     padding: 20px;
+    padding-left: 0;
     margin-top: 31px;
     margin-bottom: 38px;
-    margin-left: 30px;
     margin-right: 45px;
   }
+
   @include desktop {
     display: block;
     width: 102px;
@@ -46,9 +46,12 @@
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+
   @include tablet {
-    margin: 0 87px;
+    margin-left: 87px;
+    margin-right: auto;
   }
+
   @include desktop {
     margin-left: 286px;
     margin-right: auto;
@@ -75,9 +78,11 @@
     width: 45px;
     height: 80px;
     box-sizing: border-box;
+
     @include tablet {
       height: 143px;
     }
+
     @include desktop {
       height: 143px;
     }
@@ -88,6 +93,7 @@
   &::before{
     background: url("../../img/icon-insta.svg") no-repeat 0 6px;
   }
+
   @include tablet {
     &::before{
       background: url("../../img/icon-insta.svg") no-repeat 5px 6px;
@@ -99,6 +105,7 @@
   &::before{
     background: url("../../img/icon-fb.svg") no-repeat 10px 1px;
   }
+
   @include tablet {
     &::before{
       background: url("../../img/icon-fb.svg") no-repeat 20px 1px;
@@ -110,6 +117,7 @@
   &::before{
         background: url("../../img/icon-twitter.svg") no-repeat 19px 7px;
   }
+
   @include desktop {
     &::before{
           background: url("../../img/icon-twitter.svg") no-repeat 18px 7px;
@@ -126,6 +134,7 @@
   padding-left: 70px;
   @include font(19px, 18px, bold);
   position: relative;
+
   @include mobile {
     &::before {
       content: "";
@@ -150,15 +159,16 @@
 
   @include tablet {
     margin: 0;
-    width: 232px;
+    width: auto;
     margin-top: 63px;
     padding: 0;
-    padding-right: 100px;
+    padding-right: 50px;
     &::after {
       top: -5px;
-      right: 50px;
+      right: 0;
     }
   }
+
   @include desktop {
     margin: 0;
     width: 184px;

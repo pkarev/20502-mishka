@@ -20,7 +20,7 @@
 
 .main-nav__toggler {
   position: absolute;
-  right: 0;
+  right: 0px;
   top: -79px;
   width: 80px;
   height: 79px;
@@ -60,14 +60,12 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 50px;
     z-index: 1;
   }
 
   @include desktop {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 50px;
     z-index: 1;
   }
 }
@@ -111,7 +109,7 @@
   @include tablet {
     position: absolute;
     top: 100%;
-    left: 50px;
+    left: 0;
   }
 }
 
@@ -119,7 +117,7 @@
   @include tablet {
     position: absolute;
     top: 100%;
-    right: 50px;
+    right: 0;
   }
 }
 

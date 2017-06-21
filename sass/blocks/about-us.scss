@@ -6,10 +6,6 @@
   @include tablet {
     margin-bottom: 20px;
   }
-
-  @include desktop {
-    margin: 0 50px;
-  }
 }
 
 .about-us__caption {
@@ -45,7 +41,7 @@
   }
   @include desktop {
     padding-right: 175px;
-    padding-left: 175px;
+    padding-left: 275px;
     padding-top: 159px;
     padding-bottom: 42px;
     @include font(53px, 57px, bold);
@@ -53,8 +49,7 @@
       height: 21px;
       opacity: 0.5;
       top: 75px;
-      width: 1050px;
-      left: 50px;
+      left: 0;
     }
   }
 }
@@ -67,14 +62,14 @@
   padding-right: 9.375%;
   padding-left: 9.375%;
   @include tablet {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 0;
+    padding-left: 0;
     display: flex;
     flex-wrap: wrap;
   }
   @include desktop {
-    padding-right: 175px;
-    padding-left: 175px;
+    padding-right: 0;
+    padding-left: 0;
     display: flex;
     flex-wrap: wrap;
     width: 350px * 2;

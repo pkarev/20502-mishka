@@ -6,11 +6,9 @@
     margin-top: 78px;
   }
   @include desktop {
-    padding-right: 50px;
-    padding-left: 50px;
     position: relative;
     margin-top: 58px;
-    margin-left: 175px;
+    flex-direction: column;
   }
 }
 
@@ -59,12 +57,11 @@
 
   @include desktop {
     @include font(53px, 57px, bold);
-    width: 350px;
+    width: 100%;
     padding-top: 112px;
     padding-bottom: 48px;
-    margin-right: 525px;
     padding-right: 50px;
-    padding-left: 0;
+    padding-left: 275px;
     box-sizing: border-box;
     position: relative;
     &::after {
@@ -72,7 +69,7 @@
       position: absolute;
       width: 47px;
       height: 81px;
-      left: -112px;
+      left: 160px;
       top: 102px;
       background: url("../img/icon-flag.svg") no-repeat center;
     }
@@ -80,8 +77,7 @@
       height: 20px;
       opacity: 0.5;
       top: -50px;
-      width: 1050px;
-      left: -175px;
+      left: 0;
     }
   }
 }
@@ -96,8 +92,8 @@
   @include font(15px, 30px, normal);
   @include tablet {
     @include font(17px, 30px);
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 0;
+    padding-left: 0;
     padding-bottom: 50px;
     tbody {
       display: flex;
@@ -107,7 +103,7 @@
     border-collapse: collapse;
     @include font(17px, 30px);
     width: 350px;
-    margin-right: 525px;
+    margin-right: 425px;
     padding-right: 0;
     margin-bottom: 42px;
     box-sizing: border-box;
@@ -195,7 +191,7 @@
     position: absolute;
     width: 525px;
     height: 457px;
-    right: 50px;
+    right: 100px;
     top: 40px;
     background:
       url("../../img/icon-map-pin.svg") no-repeat 51% 46%,
@@ -234,5 +230,6 @@
     width: 230px;
     box-sizing: border-box;
     margin: 0;
+    margin-left: 275px;
   }
 }
