@@ -68,7 +68,7 @@
           <picture class="promo__image">
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-            <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки" width="100%" height="auto">
+            <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
           </picture>
           <p class="promo__price">Цена: 990 руб.</p>
           <a class="promo__buy btn" href="#" title="Перейти к оформлению">Заказать</a>
@@ -78,10 +78,13 @@
         <h2 class="modal__caption">Добавить в корзину</h2>
         <span class="modal__prompt">Выберите размер:</span>
         <form class="modal__form" method="post" action="https://echo.htmlacademy.ru/">
-          <label class="modal__label" for="s"><input class="modal__radio-button" type="radio" name="size" id="s" value="s"><span class="modal__size">S</span></label>
-          <label class="modal__label" for="m"><input class="modal__radio-button" type="radio" name="size" id="m" value="m"><span class="modal__size">M</span></label>
-          <label class="modal__label" for="l"><input class="modal__radio-button" type="radio" name="size" id="l" value="l"><span class="modal__size">L</span></label>
-          <input class="modal__submit btn" type="submit" value="Добавить">
+          <input class="modal__radio-button" type="radio" name="size" id="s" value="s" checked>
+          <label class="modal__label" for="s"><span class="modal__size">S</span></label>
+          <input class="modal__radio-button" type="radio" name="size" id="m" value="m">
+          <label class="modal__label" for="m"><span class="modal__size">M</span></label>
+          <input class="modal__radio-button" type="radio" name="size" id="l" value="l">
+          <label class="modal__label" for="l"><span class="modal__size">L</span></label>
+          <input class="modal__submit btn btn--modal" type="submit" value="Добавить">
         </form>
       </section>
       <section class="about-us">
@@ -113,8 +116,8 @@
           <button class="reviews__button reviews__button--prev" type="button">Предыдущий отзыв</button>
           <button class="reviews__button reviews__button--next" type="button">Следующий отзыв</button>
           <a class="reviews__write-review btn" href="review.html" title="Оставьте свой отзыв">Написать</a>
-        </section>
-      </div>
+        </div>
+      </section>
       <section class="contacts">
         <h2 class="contacts__caption">Контакты</h2>
         <div class="container container--pl-bigger">
@@ -147,10 +150,7 @@
           <li class="social-link social-link--fb"><a href="#">Мы в Фейсбуке</a></li>
           <li class="social-link social-link--twitter"><a href="#">Мы в Фейсбуке</a></li>
         </ul>
-        <p class=page-footer__copyright>
-          Разработано:
-          <a class=page-footer__copyright-link href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </p>
+        <a class=page-footer__copyright href="https://htmlacademy.ru/intensive/adaptive">Разработано<span class=page-footer__copyright-hidden>HTML Academy</span></a>
       </div>
     </footer>
   <script src="js/script.js"></script>

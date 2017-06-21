@@ -83,6 +83,7 @@
       auto,
       cover;
   }
+
   @include tablet {
     order: -1;
     width: 668px;
@@ -161,6 +162,14 @@
   @include font(17px, 16px, bold);
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 5px 6px 0 darkgray;
+  }
+  &:active {
+    box-shadow: 0 3px 0 0 darkgray;
+  }
+
   @include tablet {
     margin-top: 23px;
     width: 100%;

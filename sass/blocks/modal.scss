@@ -110,7 +110,6 @@
     flex-basis: 112px;
     box-sizing: border-box;
     text-align: center;
-    outline: 1px solid black;
     padding: 0;
     @include font(17px, 52px, bold);
   }
@@ -118,10 +117,21 @@
     flex-basis: 112px;
     box-sizing: border-box;
     text-align: center;
-    outline: 1px solid black;
     padding: 0;
     @include font(17px, 52px, bold);
   }
+}
+
+.modal__radio-button:checked + .modal__label {
+  border-color: $tiffany;
+}
+
+.modal__radio-button:hover + .modal__label {
+  border-color: rgba(68, 68, 68, 0.7);
+}
+
+.modal__radio-button:active + .modal__label {
+  border-color: rgba(68, 68, 68, 0.1);
 }
 
 .modal__submit {

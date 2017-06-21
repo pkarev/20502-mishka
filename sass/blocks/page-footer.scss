@@ -5,8 +5,8 @@
 
   @include tablet {
     flex-direction: row;
-
   }
+
   @include desktop {
     flex-direction: row;
   }
@@ -128,12 +128,17 @@
 .page-footer__copyright {
   margin: 0 auto;
   box-sizing: border-box;
-  padding-top: 29px;
+  padding-top: 31px;
   padding-right: 125px;
-  padding-bottom: 9px;
+  padding-bottom: 31px;
   padding-left: 70px;
   @include font(19px, 18px, bold);
   position: relative;
+  text-decoration: none;
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 
   @include mobile {
     &::before {
@@ -182,6 +187,6 @@
   }
 }
 
-.page-footer__copyright-link {
-  font-size: 0;
+.page-footer__copyright-hidden {
+  @include visibility-hidden;
 }

@@ -19,6 +19,7 @@
       background-size: 1150px auto;
     }
   }
+
   @include desktop {
     background: #f9f9f9 url("../img/hero-desktop@1x.jpg") no-repeat 50% 0%;
     background-size: 1150px auto;
@@ -42,6 +43,7 @@
   transform: translateX(-50%);
   top: 74px;
   @include font(27px, 30px, bold);
+
   @include tablet {
     left: 50%;
     top: 154px;
@@ -50,6 +52,7 @@
     padding-right: 50px;
     @include font(43px, 50px, bold);
   }
+
   @include desktop {
     position: absolute;
     left: 50%;
@@ -65,6 +68,7 @@
   padding: 0;
   list-style-type: none;
   margin-top: auto;
+
   @include tablet {
     padding-right: 50px;
     padding-left: 50px;
@@ -84,6 +88,7 @@
       left: 0;
     }
   }
+
   @include desktop {
     padding-right: 100px;
     padding-left: 100px;
@@ -108,9 +113,11 @@
 
 .goods__list-item {
   background-color: #56c3b2;
+
   @include tablet {
     width: 50%
   }
+
   @include desktop {
     width: 50%;
   }
@@ -130,12 +137,19 @@
   @include font(19px, 24px, bold, #ffffff);
   text-decoration: none;
   position: relative;
+  &:active {
+    opacity: 0.3;
+  }
+
   @include tablet {
     padding-top: 27px;
     padding-right: 167px;
     padding-bottom: 32px;
     padding-left: 35px;
     @include font(20px, 30px, bold, #ffffff);
+    &:hover {
+      padding-bottom: 37px;
+    }
   }
   @include desktop {
     padding-top: 27px;
@@ -143,6 +157,9 @@
     padding-bottom: 32px;
     padding-left: 37px;
     @include font(20px, 30px, bold, #ffffff);
+    &:hover {
+      padding-bottom: 37px;
+    }
   }
 }
 
@@ -157,6 +174,7 @@
     background: url("../img/icon-interior.svg") no-repeat 50% 50%;
     opacity: 0.5;
   }
+
   @include tablet {
     &::after {
       top: 10px;

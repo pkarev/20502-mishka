@@ -148,6 +148,13 @@
   box-shadow:
     0px 5px white,
     0 6px $tiffany;
+  &:hover {
+    color: $tiffany;
+  }
+  &:active {
+    color: rgba(70, 193, 174, 0.3);
+    box-shadow: none;
+  }
 }
 
 .contacts__map {

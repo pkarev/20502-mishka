@@ -56,6 +56,12 @@
 .page-header__link {
   box-sizing: border-box;
   margin: 22px auto 22px;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 
   @include tablet {
     margin: 0;

@@ -160,6 +160,12 @@
   text-decoration: none;
   border-top: 1px solid #ececec;
   @include font(17px, 24px, bold);
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 
   @include tablet {
     width: 167px;
@@ -305,6 +311,12 @@
     top: 0;
     background: url("../img/icon-cart.svg") no-repeat 50% 50%;
     opacity: 0.2;
+  }
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
   }
 
   @include tablet {

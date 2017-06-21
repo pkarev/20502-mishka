@@ -56,3 +56,18 @@
     @content;
   }
 }
+
+@mixin input-placeholder--active {
+  ::-webkit-input-placeholder:active {
+    @content;
+  }
+  :-moz-placeholder:active {
+    @content;
+  }
+  ::-moz-placeholder:active {
+    @content;
+  }
+  :-ms-input-placeholder:active {
+    @content;
+  }
+}

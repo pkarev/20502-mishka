@@ -46,7 +46,7 @@
             <picture class="catalog-item__image">
               <source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
-              <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик" width="100%" height="auto">
+              <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
             </picture>
             <h1 class="catalog-item__name">Зайчик-попрыгайчик</h1>
           </a>
@@ -59,7 +59,7 @@
             <picture class="catalog-item__image">
               <source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
-              <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзина для белья"  width="100%" height="auto">
+              <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзина для белья">
             </picture>
             <h1 class="catalog-item__name">Корзинка для белья</h1>
           </a>
@@ -72,7 +72,7 @@
             <picture class="catalog-item__image">
               <source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
-              <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Большая корзина для игрушек"  width="100%" height="auto">
+              <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Большая корзина для игрушек">
             </picture>
             <h1 class="catalog-item__name">Большая корзина<br>для игрушек</h1>
           </a>
@@ -84,16 +84,20 @@
           <h2 class="modal__caption">Добавить в корзину</h2>
           <span class="modal__prompt">Выберите размер:</span>
           <form class="modal__form" method="post" action="https://echo.htmlacademy.ru/">
-            <label class="modal__label" for="s"><input class="modal__radio-button" type="radio" name="size" id="s" value="s"><span class="modal__size">S</span></label>
-            <label class="modal__label" for="m"><input class="modal__radio-button" type="radio" name="size" id="m" value="m"><span class="modal__size">M</span></label>
-            <label class="modal__label" for="l"><input class="modal__radio-button" type="radio" name="size" id="l" value="l"><span class="modal__size">L</span></label>
-            <input class="modal__submit btn" type="submit" value="Добавить">
+            <input class="modal__radio-button" type="radio" name="size" id="s" value="s" checked>
+            <label class="modal__label" for="s"><span class="modal__size">S</span></label>
+            <input class="modal__radio-button" type="radio" name="size" id="m" value="m">
+            <label class="modal__label" for="m"><span class="modal__size">M</span></label>
+            <input class="modal__radio-button" type="radio" name="size" id="l" value="l">
+            <label class="modal__label" for="l"><span class="modal__size">L</span></label>
+            <input class="modal__submit btn btn--modal" type="submit" value="Добавить">
           </form>
         </section>
       </section>
       <section class="production">
         <h2 class="production__caption">Процесс производства</h2>
-        <video class="production__video"></video>
+        <video class="production__video">
+        </video>
         <p class="production__text">
           По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
         </p>
@@ -111,10 +115,7 @@
         <li class="social-link social-link--fb"><a href="#">Мы в Фейсбуке</a></li>
         <li class="social-link social-link--twitter"><a href="#">Мы в Фейсбуке</a></li>
       </ul>
-      <p class=page-footer__copyright>
-        Разработано:
-        <a class=page-footer__copyright-link href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      </p>
+      <a class=page-footer__copyright href="https://htmlacademy.ru/intensive/adaptive">Разработано<span class=page-footer__copyright-hidden>HTML Academy</span></a>
     </div>
   </footer>
   <script src="js/script.js"></script>

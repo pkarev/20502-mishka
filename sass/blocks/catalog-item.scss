@@ -8,6 +8,13 @@
   border: 1px solid #ececec;
   box-sizing: border-box;
 
+  &:hover {
+    box-shadow: 0 5px 6px 0 #ececec;
+  }
+  &:active {
+    box-shadow: 0 3px 0 0 #ececec;
+  }
+
   @include mobile {
     margin-right: 9.375%;
     margin-left: 9.375%;
@@ -59,6 +66,13 @@
   padding-bottom: 5px;
   box-sizing: border-box;
   @include font(17px, 24px, bold);
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 
   @include mobile {
     margin-left: 11.54%;
