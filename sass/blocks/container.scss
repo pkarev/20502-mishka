@@ -19,6 +19,10 @@
   }
 }
 
+.container--vertical {
+  flex-direction: column;
+}
+
 .container--fieldset {
   @include tablet {
     padding-left: 217px;
