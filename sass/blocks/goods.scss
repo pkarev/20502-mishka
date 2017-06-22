@@ -18,6 +18,16 @@
       background-image: url("../img/hero-desktop@2x.jpg");
       background-size: 1150px auto;
     }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 19px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+      bottom: -8px;
+      left: 0;
+    }
   }
 
   @include desktop {
@@ -27,6 +37,17 @@
     height: 746px;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 34px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-X;
+      background-size: contain;
+      bottom: -17px;
+      left: 0;
     }
   }
 }
@@ -68,51 +89,30 @@
   padding: 0;
   list-style-type: none;
   margin-top: auto;
+  align-items: flex-end;
+  margin-top: auto;
 
   @include tablet {
-    padding-right: 50px;
-    padding-left: 50px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
     position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 19px;
-      background-image: url("../img/bg-zigzag-fill.svg");
-      background-size: contain;
-      bottom: -8px;
-      left: 0;
-    }
   }
 
   @include desktop {
-    padding-right: 100px;
-    padding-left: 100px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
     position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 34px;
-      background-image: url("../img/bg-zigzag-fill.svg");
-      background-repeat: repeat-X;
-      background-size: contain;
-      bottom: -17px;
-      left: 0;
-    }
   }
 }
 
 .goods__list-item {
   background-color: #56c3b2;
+  width: 100%;
+  align-self: flex-end;
 
   @include tablet {
     width: 50%

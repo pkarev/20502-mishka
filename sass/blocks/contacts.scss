@@ -2,23 +2,6 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  @include tablet {
-    margin-top: 78px;
-  }
-  @include desktop {
-    position: relative;
-    margin-top: 58px;
-    flex-direction: column;
-  }
-}
-
-.contacts__caption {
-  margin: 0;
-  width: 100%;
-  padding-top: 55px;
-  padding-bottom: 23px;
-  padding-right: 9.37%;
-  padding-left: 9.37%;
   position: relative;
   &::before {
     position: absolute;
@@ -30,13 +13,43 @@
     background-image: url("../img/bg-zigzag-line.svg");
     background-size: contain;
   }
+  @include tablet {
+    margin-top: 78px;
+    &::before {
+      height: 15px;
+      opacity: 0.5;
+      top: -40px;
+    }
+  }
+  @include desktop {
+    position: relative;
+    margin-top: 58px;
+    flex-direction: column;
+    &::before {
+      height: 20px;
+      opacity: 0.5;
+      top: -50px;
+      left: 0;
+    }
+  }
+}
+
+.contacts__caption {
+  margin: 0;
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 23px;
+  padding-right: 9.37%;
+  padding-left: 9.37%;
+  position: relative;
+
   @include font(18px, 30px, bold);
 
   @include tablet {
     @include font(43px, 50px, bold);
     padding-top: 40px;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 0;
+    padding-left: 0;
     padding-bottom: 45px;
     position: relative;
     &::after {
@@ -44,14 +57,9 @@
       position: absolute;
       width: 47px;
       height: 81px;
-      right: 52px;
+      right: 0;
       top: 24px;
       background: url("../img/icon-flag.svg") no-repeat center;
-    }
-    &::before {
-      height: 15px;
-      opacity: 0.5;
-      top: -40px;
     }
   }
 
@@ -60,8 +68,8 @@
     width: 100%;
     padding-top: 112px;
     padding-bottom: 48px;
-    padding-right: 50px;
-    padding-left: 275px;
+    padding-right: 0;
+    padding-left: 0;
     box-sizing: border-box;
     position: relative;
     &::after {
@@ -69,15 +77,9 @@
       position: absolute;
       width: 47px;
       height: 81px;
-      left: 160px;
+      left: -110px;
       top: 102px;
       background: url("../img/icon-flag.svg") no-repeat center;
-    }
-    &::before {
-      height: 20px;
-      opacity: 0.5;
-      top: -50px;
-      left: 0;
     }
   }
 }
@@ -198,7 +200,7 @@
     position: absolute;
     width: 525px;
     height: 457px;
-    right: 100px;
+    right: 50px;
     top: 40px;
     background:
       url("../../img/icon-map-pin.svg") no-repeat 51% 46%,
@@ -237,6 +239,5 @@
     width: 230px;
     box-sizing: border-box;
     margin: 0;
-    margin-left: 275px;
   }
 }

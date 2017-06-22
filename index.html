@@ -17,7 +17,7 @@
             <img src="img/logo-mobile.svg" alt="Mishka">
           </picture>
         </a>
-        <nav class="main-nav main-nav--closed main-nav--nojs"> <!--main-nav--open - для открытого состояния меню -->
+        <nav class="main-nav main-nav--closed main-nav--nojs"> <!--main-nav--open - для открытого состояния меню-->
           <button class="main-nav__toggler" type="button">
           </button>
           <div class="main-nav__wrapper">
@@ -42,8 +42,10 @@
       <section class="goods">
         <h2 class="goods__caption">Милые штуки ручной<br> работы для дома</h2>
         <ul class="goods__list">
-          <li class="goods__list-item goods__list-item--bgc-lighter"><a class="goods__link goods__link--interior" href="#" title="Перейти в каталог">Предметы<br> интерьера</a></li>
-          <li class="goods__list-item"><a class="goods__link goods__link--toys" href="#" title="Перейти в каталог">Детские<br> игрушки</a></li>
+          <div class="container">
+            <li class="goods__list-item goods__list-item--bgc-lighter"><a class="goods__link goods__link--interior" href="#" title="Перейти в каталог">Предметы<br> интерьера</a></li>
+            <li class="goods__list-item"><a class="goods__link goods__link--toys" href="#" title="Перейти в каталог">Детские<br> игрушки</a></li>
+          </div>
         </ul>
       </section>
       <section class="promo">
@@ -68,7 +70,7 @@
           <picture class="promo__image">
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-            <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+            <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки" width="100%">
           </picture>
           <p class="promo__price">Цена: 990 руб.</p>
           <a class="promo__buy btn" href="#" title="Перейти к оформлению">Заказать</a>
@@ -88,8 +90,8 @@
         </form>
       </section>
       <section class="about-us">
-        <h2 class="about-us__caption">Коротко о нас:</h2>
         <div class="container container--pl-bigger">
+          <h2 class="about-us__caption">Коротко о нас:</h2>
           <ul class="about-us__list">
             <li class="about-us__item about-us__item--icon-eco">Экологически<br> чистые материалы</li>
             <li class="about-us__item about-us__item--icon-style">Скандинавский стиль<br> по российской цене</li>
@@ -119,8 +121,8 @@
         </div>
       </section>
       <section class="contacts">
-        <h2 class="contacts__caption">Контакты</h2>
         <div class="container container--pl-bigger">
+          <h2 class="contacts__caption">Контакты</h2>
           <table class="contacts__contents">
             <tr class="contacts__row">
               <td class="contacts__name">e-mail:</td>
@@ -135,9 +137,9 @@
               </td>
             </tr>
           </table>
+          <div class="contacts__map"></div>
+          <a class="contacts__write-us btn" href="write-us.html">Напишите нам</a>
         </div>
-        <div class="contacts__map"></div>
-        <a class="contacts__write-us btn" href="write-us.html">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">

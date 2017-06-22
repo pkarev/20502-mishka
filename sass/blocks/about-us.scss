@@ -2,19 +2,6 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-
-  @include tablet {
-    margin-bottom: 20px;
-  }
-}
-
-.about-us__caption {
-  margin: 0 auto;
-  width: 100%;
-  padding-right: 9.375%;
-  padding-left: 9.375%;
-  padding-top: 70px;
-  padding-bottom: 30px;
   position: relative;
   &::before {
     position: absolute;
@@ -26,12 +13,40 @@
     background-image: url("../img/bg-zigzag-line.svg");
     background-size: contain;
   }
+
+  @include tablet {
+    margin-bottom: 20px;
+    &::before {
+      height: 15px;
+      opacity: 0.5;
+      top: 55px;
+    }
+  }
+
+  @include desktop {
+    &::before {
+      height: 21px;
+      opacity: 0.5;
+      top: 75px;
+      left: 0;
+    }
+  }
+}
+
+.about-us__caption {
+  margin: 0 auto;
+  width: 100%;
+  padding-right: 9.375%;
+  padding-left: 9.375%;
+  padding-top: 70px;
+  padding-bottom: 30px;
+
   @include font(25px, 30px, bold);
   @include tablet {
-    padding-right: 50px;
-    padding-left: 50px;
     padding-top: 120px;
     padding-bottom: 44px;
+    padding-left: 0;
+    padding-right: 0;
     @include font(43px, 50px, bold);
     &::before {
       height: 15px;
@@ -40,10 +55,10 @@
     }
   }
   @include desktop {
-    padding-right: 175px;
-    padding-left: 275px;
     padding-top: 159px;
     padding-bottom: 42px;
+    padding-left: 0;
+    padding-right: 0;
     @include font(53px, 57px, bold);
     &::before {
       height: 21px;
