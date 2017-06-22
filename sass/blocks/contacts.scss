@@ -165,15 +165,15 @@
   width: 100%;
   min-height: 457px;
   background:
-    url("../../img/icon-map-pin.svg") no-repeat 49% 46%,
-    url("../../img/map-mobile@1x.jpg") no-repeat center;
+    url("../img/icon-map-pin.svg") no-repeat 49% 46%,
+    url("../img/map-mobile@1x.jpg") no-repeat center;
   background-size:
     auto,
     cover;
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background:
-      url("../../img/icon-map-pin.svg") no-repeat 49% 46%,
-      url("../../img/map-mobile@2x.jpg") no-repeat center;
+      url("../img/icon-map-pin.svg") no-repeat 49% 46%,
+      url("../img/map-mobile@2x.jpg") no-repeat center;
     background-size:
       auto,
       cover;
@@ -181,15 +181,15 @@
 
   @include tablet {
     background:
-      url("../../img/icon-map-pin.svg") no-repeat 49% 46%,
-      url("../../img/map-tablet@1x.jpg") no-repeat center;
+      url("../img/icon-map-pin.svg") no-repeat 49% 46%,
+      url("../img/map-tablet@1x.jpg") no-repeat center;
     background-size:
       auto,
       cover;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background:
-        url("../../img/icon-map-pin.svg") no-repeat 49% 46%,
-        url("../../img/map-tablet@2x.jpg") no-repeat center;
+        url("../img/icon-map-pin.svg") no-repeat 49% 46%,
+        url("../img/map-tablet@2x.jpg") no-repeat center;
       background-size:
         auto,
         cover;
@@ -203,15 +203,15 @@
     right: 50px;
     top: 40px;
     background:
-      url("../../img/icon-map-pin.svg") no-repeat 51% 46%,
-      url("../../img/map-tablet@1x.jpg") no-repeat 45% 50%;
+      url("../img/icon-map-pin.svg") no-repeat 51% 46%,
+      url("../img/map-tablet@1x.jpg") no-repeat 45% 50%;
     background-size:
       auto,
       cover;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background:
-        url("../../img/icon-map-pin.svg") no-repeat 51% 46%,
-        url("../../img/map-tablet@2x.jpg") no-repeat 45% 50%;
+        url("../img/icon-map-pin.svg") no-repeat 51% 46%,
+        url("../img/map-tablet@2x.jpg") no-repeat 45% 50%;
       background-size:
         auto,
         cover;

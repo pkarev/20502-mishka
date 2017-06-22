@@ -176,14 +176,14 @@
   font-size: 0;
   margin-left: auto;
   border: none;
-  background: url(../img/icon-cart.svg) no-repeat center 40%;
+  background: url("../img/icon-cart.svg") no-repeat center 40%;
   opacity: 0.2;
   @include tablet {
-    background: url(../img/icon-cart.svg) no-repeat 40% 45%;
+    background: url("../img/icon-cart.svg") no-repeat 40% 45%;
     align-self: flex-end;
   }
   @include desktop {
-    background: url(../img/icon-cart.svg) no-repeat 40% 45%;
+    background: url("../img/icon-cart.svg") no-repeat 40% 45%;
 
     align-self: flex-end;
   }

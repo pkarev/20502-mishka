@@ -91,36 +91,36 @@
 
 .social-link--inst {
   &::before{
-    background: url("../../img/icon-insta.svg") no-repeat 0 6px;
+    background: url("../img/icon-insta.svg") no-repeat 0 6px;
   }
 
   @include tablet {
     &::before{
-      background: url("../../img/icon-insta.svg") no-repeat 5px 6px;
+      background: url("../img/icon-insta.svg") no-repeat 5px 6px;
     }
   }
 }
 
 .social-link--fb {
   &::before{
-    background: url("../../img/icon-fb.svg") no-repeat 10px 1px;
+    background: url("../img/icon-fb.svg") no-repeat 10px 1px;
   }
 
   @include tablet {
     &::before{
-      background: url("../../img/icon-fb.svg") no-repeat 20px 1px;
+      background: url("../img/icon-fb.svg") no-repeat 20px 1px;
     }
   }
 }
 
 .social-link--twitter {
   &::before{
-        background: url("../../img/icon-twitter.svg") no-repeat 19px 7px;
+        background: url("../img/icon-twitter.svg") no-repeat 19px 7px;
   }
 
   @include desktop {
     &::before{
-          background: url("../../img/icon-twitter.svg") no-repeat 18px 7px;
+          background: url("../img/icon-twitter.svg") no-repeat 18px 7px;
     }
   }
 }
@@ -159,7 +159,7 @@
     background-color: black;
     top: 24px;
     right: 70px;
-    background: url("../../img/logo-htmlacademy.svg") no-repeat center;
+    background: url("../img/logo-htmlacademy.svg") no-repeat center;
   }
 
   @include tablet {
