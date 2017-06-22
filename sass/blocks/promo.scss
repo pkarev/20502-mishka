@@ -5,15 +5,15 @@
   padding-right: 9.375%;
   padding-left: 9.375%;
   @include tablet {
-    padding-right: 50px;
-    padding-left: 50px;
     position: relative;
+    padding: 0;
+    min-height: 555px;
   }
   @include desktop {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding: 0;
     position: relative;
-    margin-left: 175px;
+    margin-top: 71px;
+    min-height: 636px;
   }
 }
 
@@ -25,14 +25,14 @@
   text-align: left;
   @include font(25px, 30px, bold);
   @include tablet {
-    padding-bottom: 48px;
-    padding-top: 43px;
+    padding-bottom: 49px;
+    padding-top: 45px;
     width: 500px;
     @include font(43px, 50px, bold);
   }
   @include desktop {
     padding-bottom: 48px;
-    padding-top: 127px;
+    padding-top: 52px;
     width: 875px;
     @include font(53px, 57px, bold);
   }
@@ -47,25 +47,26 @@
   text-transform: uppercase;
   color: $tiffany;
   @include tablet {
-    width: 168px;
-    box-sizing: border-box;
-    padding-top: 53px;
-    padding-right: 27px;
-    padding-left: 68px;
-    padding-bottom: 51px;
-    @include font(17px, 17px, bold, $tiffany);
-    text-align: center;
-  }
-  @include desktop {
-    order: -1;
     position: absolute;
-    width: 175px;
     padding: 0;
     padding-left: 48px;
     padding-right: 55px;
     box-sizing: border-box;
-    margin-left: -175px;
-    margin-top: 138px;
+    right: 90px;
+    top: 55px;
+    width: 80px;
+    @include font(17px, 17px, bold, $tiffany);
+  }
+  @include desktop {
+    width: 175px;
+    text-align: center;
+    position: absolute;
+    padding: 0;
+    padding-left: 48px;
+    padding-right: 55px;
+    box-sizing: border-box;
+    left: 50px;
+    top: 65px;
   }
 }
 
@@ -73,7 +74,7 @@
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  padding-bottom: 27px;
+  padding-bottom: 16px;
   text-align: left;
   padding-right: 15px;
   @include font(15px, 24px, normal);
@@ -86,7 +87,7 @@
   @include desktop {
     width: 350px;
     margin-right: 525px;
-    padding-bottom: 47px;
+    padding-bottom: 48px;
     padding-right: 70px;
     @include font(17px, 30px, normal);
   }
@@ -113,15 +114,18 @@
   width: 38.46153%; /*ширина столбца таблицы*/
   padding: 0;
   margin: 0;
-  padding-bottom: 19px;
+  padding-bottom: 9px;
+  padding-top: 10px;
   border-bottom: 1px solid #ececec;
   @include tablet {
     width: 105px;
-    padding: 10px 0;
+    padding-bottom: 9px;
+    padding-top: 10px;
   }
   @include desktop {
     width: 105px;
-    padding: 10px 0;
+    padding-bottom: 9px;
+    padding-top: 10px;
   }
 }
 
@@ -129,31 +133,33 @@
   width: 61.53847%; /*ширина столбца таблицы*/
   padding: 0;
   margin: 0;
-  padding-bottom: 19px;
+  padding-bottom: 9px;
+  padding-top: 10px;
   border-bottom: 1px solid #ececec;
   @include tablet {
     width: 229px;
-    padding: 10px 0;
+    padding-bottom: 9px;
+    padding-top: 10px;
   }
   @include desktop {
     width: 229px;
-    padding: 10px 0;
+    padding-bottom: 9px;
+    padding-top: 10px;
   }
 }
 
 .promo__image {
   margin: 0 auto;
-  margin-top: 18px;
-  width: 260px;
-  height: 315px;
+  margin-top: 28px;
   box-sizing: border-box;
   background-size: cover;
+  width: 100%;
+  height: auto;
   @include tablet {
-    width: 334px;
+    width: 333px;
     height: 404px;
     position: absolute;
-    right: 0;
-    top: 130px;
+    top: 123px;
     right: 50px;
     z-index: -1;
   }
@@ -162,36 +168,36 @@
     height: 636px;
     position: absolute;
     right: 50px;
-    top: 55px;
+    margin-top: 0;
+    bottom: 0;
     z-index: -1;
   }
-
 }
 
 .promo__price {
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  padding-top: 23px;
+  padding-top: 19px;
   padding-bottom: 25px;
   text-align: center;
   @include font(17px, 27px, bold);
   @include tablet {
-    width: 334px;
-    margin-right: 334px;
+    padding: 0;
+    padding-bottom: 34px;
     padding-left: 74px;
+    margin-top: auto;
     box-sizing: border-box;
     text-align: left;
-    padding-top: 56px;
-    padding-bottom: 32px;
     @include font(20px, 24px, bold);
   }
   @include desktop {
     width: 292px;
-    padding-top: 109px;
+    padding-top: 34px;
     margin-right: 583px;
-    padding-bottom: 32px;
+    padding-bottom: 34px;
     @include font(20px, 24px, bold);
+    margin-top: auto;
   }
 }
 

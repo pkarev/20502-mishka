@@ -1,0 +1,24 @@
+.btn {
+  &:hover {
+    background-color: #444444;
+    color: rgba(255, 255, 255, 1);
+  }
+  &:active {
+    background-color: #444444;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+
+.btn--modal {
+  &:hover {
+    background-color: white;
+    color: $tiffany;
+    outline: 2px solid $tiffany;
+  }
+  &:active {
+    background-color: white;
+    color: rgba(98, 209, 186, 0.3);
+    outline: 2px solid rgba(98, 209, 186, 0.3);
+  }
+}

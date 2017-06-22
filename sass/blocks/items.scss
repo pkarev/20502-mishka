@@ -2,27 +2,16 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  @include mobile {
+    margin-top: 30px;
+  }
+
+  @include tablet {
+    margin-top: 70px;
+  }
+
   @include desktop {
     justify-content: space-between;
-  }
-}
-
-.items__caption {
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 72px;
-  padding-bottom: 104px;
-  text-align: center;
-  @include font(27px, 30px, bold);
-  @include tablet {
-    padding-top: 33px;
-    padding-bottom: 78px;
-    @include font(43px, 50px, bold);
-    margin-bottom: 80px;
-  }
-  @include desktop {
-    padding-top: 16px;
-    padding-bottom: 275px;
-    @include font(53px, 57px, bold);
+    margin-top: 110px;
   }
 }

@@ -40,12 +40,6 @@
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
-  @include tablet {
-    width: $tablet-widths;
-  }
-  @include desktop {
-    width: $desktop-widths;
-  }
 }
 
 @mixin input-placeholder {
@@ -59,6 +53,21 @@
     @content;
   }
   :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin input-placeholder--active {
+  ::-webkit-input-placeholder:active {
+    @content;
+  }
+  :-moz-placeholder:active {
+    @content;
+  }
+  ::-moz-placeholder:active {
+    @content;
+  }
+  :-ms-input-placeholder:active {
     @content;
   }
 }

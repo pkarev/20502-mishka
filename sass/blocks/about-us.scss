@@ -2,34 +2,70 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding-right: 9.375%;
-  padding-left: 9.375%;
-  @include tablet {
-    padding-right: 50px;
-    padding-left: 50px;
-    margin-bottom: 20px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 6px;
+    top: 35px;
+    left: 0;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: contain;
   }
+
+  @include tablet {
+    margin-bottom: 20px;
+    &::before {
+      height: 15px;
+      opacity: 0.5;
+      top: 55px;
+    }
+  }
+
   @include desktop {
-    padding-right: 225px;
-    padding-left: 225px;
+    &::before {
+      height: 21px;
+      opacity: 0.5;
+      top: 75px;
+      left: 0;
+    }
   }
 }
 
 .about-us__caption {
   margin: 0 auto;
   width: 100%;
+  padding-right: 9.375%;
+  padding-left: 9.375%;
   padding-top: 70px;
   padding-bottom: 30px;
+
   @include font(25px, 30px, bold);
   @include tablet {
     padding-top: 120px;
     padding-bottom: 44px;
+    padding-left: 0;
+    padding-right: 0;
     @include font(43px, 50px, bold);
+    &::before {
+      height: 15px;
+      opacity: 0.5;
+      top: 55px;
+    }
   }
   @include desktop {
-    padding-top: 159px;
+    padding-top: 155px;
     padding-bottom: 42px;
+    padding-left: 0;
+    padding-right: 0;
     @include font(53px, 57px, bold);
+    &::before {
+      height: 21px;
+      opacity: 0.5;
+      top: 75px;
+      left: 0;
+    }
   }
 }
 
@@ -38,11 +74,17 @@
   padding: 0;
   width: 100%;
   list-style-type: none;
+  padding-right: 9.375%;
+  padding-left: 9.375%;
   @include tablet {
+    padding-right: 0;
+    padding-left: 0;
     display: flex;
     flex-wrap: wrap;
   }
   @include desktop {
+    padding-right: 0;
+    padding-left: 0;
     display: flex;
     flex-wrap: wrap;
     width: 350px * 2;

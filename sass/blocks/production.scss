@@ -1,32 +1,37 @@
 .production {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
+  position: relative;
   @include mobile {
+    width: 81.25%;
+    margin-right: 9.375%;
+    margin-left: 9.375%;
     margin-bottom: 57px;
     border: 1px solid #ececec;
     padding-bottom: 33px;
   }
   @include tablet {
-    margin-bottom: 109px;
+    margin-bottom: 62px;
     position: relative;
+    border: 1px solid #ececec;
   }
 
   @include desktop {
     padding: 10px 0 0 700px;
     position: relative;
-    margin-top: 60px;
+    margin-top: 59px;
     outline: 1px solid #ececec;
     box-sizing: border-box;
+    margin-bottom: 106px;
   }
 }
 
 .production__caption {
   width: 100%;
   margin: 0;
-  padding-top: 29px;
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 23px;
   padding-left: 34.61%;
   text-align: left;
   box-sizing: border-box;
@@ -39,7 +44,7 @@
     height: 103px;
     top: 0;
     right: 65.38%;
-    background: url(../img/icon-video.svg) no-repeat 55% 45%;
+    background: url("../img/icon-video.svg") no-repeat 55% 45%;
   }
   @include tablet {
     padding-top: 39px;
@@ -52,35 +57,69 @@
     }
   }
   @include desktop {
-    padding-top: 87px;
+    padding-top: 85px;
     padding-left: 63px;
     padding-right: 90px;
-    padding-bottom: 33px;
+    padding-bottom: 34px;
     @include font(20px, 24px, bold);
   }
 }
 
 .production__video {
   width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
   height: 150px;
-  background:
-    url(../img/icon-play.svg) no-repeat center,
-    url(../img/video-mobile@1x.jpg) no-repeat center;
-  background-size:
-    auto,
-    cover;
+  background: url("../img/video-mobile@1x.jpg") no-repeat center;
+  background-size: cover;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
+
   @include tablet {
     order: -1;
-    display: block;
+    width: 668px;
     height: 455px;
+    background: url("../img/video-tablet@1x.jpg") no-repeat center;
+    background-size: cover;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
   }
   @include desktop {
     position: absolute;
     left: 0;
     top: 0px;
     width: 682px;
-    height: 455px;
+    height: 453px;
+    background: url("../img/video-desktop@1x.jpg") no-repeat center;
+    background-size: cover;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  }
+}
+
+.production__play {
+  position: absolute;
+  width: 101px;
+  height: 78px;
+  top: 132px;
+  left: 79px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: url("../img/icon-play.svg") no-repeat center;
+  background-size: cover;
+  z-index: 1;
+
+  @include tablet {
+    top: 189px;
+    left: 291px;
+  }
+  @include desktop {
+    top: 189px;
+    left: 291px;
   }
 }
 
@@ -89,7 +128,7 @@
   margin: 0;
   box-sizing: border-box;
   padding-top: 28px;
-  padding-bottom: 24px;
+  padding-bottom: 23px;
   padding-left: 13.46%;
   padding-right: 17.3%;
   @include font(13px, 24px);
@@ -104,7 +143,7 @@
     padding-top: 0;
     padding-left: 63px;
     padding-right: 65px;
-    padding-bottom: 20px;
+    padding-bottom: 21px;
     @include font(15px, 30px);
   }
 }
@@ -120,27 +159,27 @@
   @include font(17px, 16px, bold);
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 5px 6px 0 darkgray;
+  }
+  &:active {
+    box-shadow: 0 3px 0 0 darkgray;
+  }
+
   @include tablet {
     margin-top: 23px;
     width: 100%;
     margin-right: 42px;
     margin-left: 42px;
-    &::before {
-      content: "";
-      width: 668px;
-      height: 1px;
-      background-color: #ececec;
-      position: absolute;
-      bottom: -46px;
-      left: 0;
-    }
+    margin-bottom: 46px;
   }
   @include desktop {
     margin-top: 23px;
     width: 230px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
     padding: 18px 20px 16px 20px;
   }
 }
