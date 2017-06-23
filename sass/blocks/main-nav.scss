@@ -307,7 +307,7 @@
     position: absolute;
     right: 84.375%;
     top: 0;
-    background: url("../img/icon-cart.svg") no-repeat center;
+    background: url("../img/icons/icon-cart.svg") no-repeat center;
     opacity: 0.2;
   }
   &:hover {
@@ -328,6 +328,8 @@
     box-sizing: border-box;
     &::before {
       left: 32px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -340,6 +342,8 @@
     text-align: right;
     &::before {
       left: 32px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

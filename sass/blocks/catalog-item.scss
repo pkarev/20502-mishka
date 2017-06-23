@@ -136,6 +136,31 @@
   display: flex;
   margin-top: auto;
   width: 100%;
+  position: relative;
+
+  @include tablet {
+    &::before {
+      content: "";
+      width: 267px;
+      height: 2px;
+      background-color: #ececec;
+      position: absolute;
+      left: 366px;
+      top: 0;
+    }
+  }
+
+  @include desktop {
+    &::before {
+      content: "";
+      width: 256px;
+      height: 2px;
+      background-color: #ececec;
+      position: absolute;
+      left: 27px;
+      top: 0;
+    }
+  }
 }
 
 .catalog-item__price {
@@ -177,14 +202,14 @@
   font-size: 0;
   margin-left: auto;
   border: none;
-  background: url("../img/icon-cart.svg") no-repeat center 40%;
+  background: url("../img/icons/icon-cart.svg") no-repeat center 40%;
   opacity: 0.2;
   @include tablet {
-    background: url("../img/icon-cart.svg") no-repeat 40% 45%;
+    background: url("../img/icons/icon-cart.svg") no-repeat 40% 45%;
     align-self: flex-end;
   }
   @include desktop {
-    background: url("../img/icon-cart.svg") no-repeat 40% 45%;
+    background: url("../img/icons/icon-cart.svg") no-repeat 40% 45%;
 
     align-self: flex-end;
   }
