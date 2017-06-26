@@ -38,7 +38,7 @@
   margin: 0;
   width: 100%;
   padding-top: 55px;
-  padding-bottom: 23px;
+  padding-bottom: 20px;
   padding-right: 9.37%;
   padding-left: 9.37%;
   position: relative;
@@ -201,7 +201,7 @@
     width: 525px;
     height: 457px;
     right: 50px;
-    top: 40px;
+    bottom: -52px;
     background:
       url("../img/icon-map-pin.svg") no-repeat 51% 46%,
       url("../img/map-tablet@1x.jpg") no-repeat 45% 50%;
@@ -227,7 +227,7 @@
 
 .contacts__write-us {
   margin: 0 auto;
-  margin-top: 38px;
+  margin-top: 40px;
   margin-bottom: 38px;
   width: 260px;
   box-sizing: border-box;

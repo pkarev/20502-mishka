@@ -370,22 +370,22 @@
   }
 
   @include tablet {
-    width: 375px;
+    width: 300px;
     flex-grow: 1;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    margin-bottom: 25px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
     padding-left: 15px;
     @include font(19px, 18px);
   }
 
   @include desktop {
-    width: 575px;
+    width: 500px;
     flex-grow: 1;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     padding-left: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     margin-right: 175px;
     @include font(19px, 18px);
   }
@@ -492,8 +492,9 @@
   text-decoration: none;
   @include tablet {
     margin: 0;
-    margin-bottom: 52px;
+    margin-bottom: 47px;
     width: 230px;
+    margin-top: 5px;
   }
   @include desktop {
     margin: 0;

@@ -306,7 +306,8 @@
     height: 18px;
     position: absolute;
     right: 84.375%;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     background: url("../img/icons/icon-cart.svg") no-repeat center;
     opacity: 0.2;
   }
@@ -328,8 +329,6 @@
     box-sizing: border-box;
     &::before {
       left: 32px;
-      top: 50%;
-      transform: translateY(-50%);
     }
   }
 
@@ -337,13 +336,11 @@
     width: 266px;
     padding-top: 32px;
     padding-bottom: 32px;
-    padding-left: 86px;
+    padding-left: 80px;
     padding-right: 0;
     text-align: right;
     &::before {
       left: 32px;
-      top: 50%;
-      transform: translateY(-50%);
     }
   }
 }

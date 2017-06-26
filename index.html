@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+  <script>document.createElement( "picture" );</script>
+  <script src="js/picturefill.js" async></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
@@ -132,13 +134,17 @@
             <tr class="contacts__row">
               <td class="contacts__name">адрес:</td>
               <td class="contacts__value">
-                г. Санкт-Петербург,<br>
+                г. Санкт-Петербург, <br>
                 ул. Большая Конюшенная,<br>
                 д. 19/8, офис 101
               </td>
             </tr>
           </table>
+        </div>
+        <div class="container container--map">
           <div class="contacts__map"></div>
+        </div>
+        <div class="container container--pl-bigger">
           <a class="contacts__write-us btn" href="write-us.html">Напишите нам</a>
         </div>
       </section>
@@ -146,7 +152,7 @@
     <footer class="page-footer">
       <div class="container container--footer">
         <a class="page-footer__logo">
-          <img src="img/logo-footer.svg" alt="Mishka">
+          <img src="../img/icons/logo-footer.svg" alt="Mishka">
         </a>
         <ul class="page-footer__social-links">
           <li class="social-link social-link--inst"><a href="#">Мы в Вконтакте</a></li>
