@@ -3,7 +3,6 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   width: 100%;
@@ -21,16 +20,6 @@
 
 .container--vertical {
   flex-direction: column;
-}
-
-.container--fieldset {
-  @include tablet {
-    padding-left: 217px;
-  }
-
-  @include desktop {
-    padding-left: 225px;
-  }
 }
 
 .container--footer {

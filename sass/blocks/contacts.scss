@@ -23,7 +23,7 @@
   }
   @include desktop {
     position: relative;
-    margin-top: 58px;
+    margin-top: 90px;
     flex-direction: column;
     &::before {
       height: 20px;
@@ -66,7 +66,7 @@
   @include desktop {
     @include font(53px, 57px, bold);
     width: 100%;
-    padding-top: 112px;
+    padding-top: 107px;
     padding-bottom: 48px;
     padding-right: 0;
     padding-left: 0;
@@ -107,7 +107,7 @@
     width: 350px;
     margin-right: 425px;
     padding-right: 0;
-    margin-bottom: 42px;
+    margin-bottom: 45px;
     box-sizing: border-box;
   }
 }
@@ -201,7 +201,7 @@
     width: 525px;
     height: 457px;
     right: 50px;
-    bottom: -52px;
+    bottom: -55px;
     background:
       url("../img/icon-map-pin.svg") no-repeat 51% 46%,
       url("../img/map-tablet@1x.jpg") no-repeat 45% 50%;

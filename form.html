@@ -43,60 +43,74 @@
   </header>
   <main class="main-form">
     <form class="order-form" method="post" action="https://echo.htmlacademy.ru/">
-      <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <div class="container">
+        <p class="order-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      </div>
       <fieldset class="order-form__fieldset">
-        <div class="order-form__flex-inner container container--fieldset">
+        <div class="order-form__flex-inner container">
           <h2 class="order-form__fieldset-caption">Тип</h2>
-          <input class="order-form__input-radio order-form__input-radio--checked" type="radio" name="type" value="interior" id="interior" checked>
-          <label class="order-form__label order-form__label--mb-smaller order-form__label--width100" for="interior">Аксессуар для интерьера</label>
-          <input class="order-form__input-radio" type="radio" name="type" value="toy" id="toy">
-          <label class="order-form__label order-form__label--mb-zero order-form__label--width100" for="toy">Детская игрушка</label>
+          <div class="order-form__input-wrapper">
+            <input class="order-form__input-radio order-form__input-radio--checked" type="radio" name="type" value="interior" id="interior" checked>
+            <label class="order-form__label order-form__label--mb-smaller order-form__label--width100" for="interior">Аксессуар для интерьера</label>
+            <input class="order-form__input-radio" type="radio" name="type" value="toy" id="toy">
+            <label class="order-form__label order-form__label--mb-zero order-form__label--width100" for="toy">Детская игрушка</label>
+          </div>
         </div>
       </fieldset>
       <fieldset class="order-form__fieldset order-form__fieldset--bg-gray">
-        <div class="order-form__flex-inner container container--fieldset">
+        <div class="order-form__flex-inner container">
           <h2 class="order-form__fieldset-caption">Цвет</h2>
-          <input class="order-form__input-checkbox order-form__input-checkbox--checked" type="checkbox" name="white" value="white" id="white" checked>
-          <label class="order-form__label order-form__label" for="white">Белый</label>
-          <input class="order-form__input-checkbox order-form__input-checkbox--checked" type="checkbox" name="gray" value="gray" id="gray" checked>
-          <label class="order-form__label order-form__label" for="gray">Серый</label>
-          <input class="order-form__input-checkbox" type="checkbox" name="tiffany" value="tiffany" id="tiffany">
-          <label class="order-form__label order-form__label" for="tiffany">&laquo;Тиффани&raquo;</label>
-          <input class="order-form__input-checkbox" type="checkbox" name="black" value="black" id="black">
-          <label class="order-form__label order-form__label order-form__label--mb-zero order-form__label--mb-standart" for="black">Черный</label>
-          <input class="order-form__input-checkbox" type="checkbox" name="pink" value="pink" id="pink">
-          <label class="order-form__label order-form__label order-form__label--mb-zero order-form__label--mb-standart" for="pink">Розовый</label>
-          <input class="order-form__input-checkbox" type="checkbox" name="orange" value="orange" id="orange">
-          <label class="order-form__label order-form__label order-form__label--mb-zero" for="orange">Оранжевый</label>
+          <div class="order-form__input-wrapper">
+            <input class="order-form__input-checkbox order-form__input-checkbox--checked" type="checkbox" name="white" value="white" id="white" checked>
+            <label class="order-form__label order-form__label" for="white">Белый</label>
+            <input class="order-form__input-checkbox order-form__input-checkbox--checked" type="checkbox" name="gray" value="gray" id="gray" checked>
+            <label class="order-form__label order-form__label" for="gray">Серый</label>
+            <input class="order-form__input-checkbox" type="checkbox" name="tiffany" value="tiffany" id="tiffany">
+            <label class="order-form__label order-form__label" for="tiffany">&laquo;Тиффани&raquo;</label>
+            <input class="order-form__input-checkbox" type="checkbox" name="black" value="black" id="black">
+            <label class="order-form__label order-form__label order-form__label--mb-zero order-form__label--mb-standart" for="black">Черный</label>
+            <input class="order-form__input-checkbox" type="checkbox" name="pink" value="pink" id="pink">
+            <label class="order-form__label order-form__label order-form__label--mb-zero order-form__label--mb-standart" for="pink">Розовый</label>
+            <input class="order-form__input-checkbox" type="checkbox" name="orange" value="orange" id="orange">
+            <label class="order-form__label order-form__label order-form__label--mb-zero" for="orange">Оранжевый</label>
+          </div>
         </div>
       </fieldset>
       <fieldset class="order-form__fieldset">
-        <div class="order-form__flex-inner container container--fieldset">
+        <div class="order-form__flex-inner container">
           <h2 class="order-form__fieldset-caption">ФИО</h2>
-          <label class="order-form__label order-form__label--text-fields" for="name">Имя:</label>
-          <input class="order-form__input-text" type="text" placeholder="Введите ваше имя*" name="name" id="name" required>
-          <label class="order-form__label order-form__label--text-fields" for="surname">Фамилия:</label>
-          <input class="order-form__input-text" type="text" placeholder="Укажите фамилию*" name="surname" id="surname" required>
-          <label class="order-form__label order-form__label--text-fields order-form__label--mb-zero" for="patronymic">Отчество:</label>
-          <input class="order-form__input-text order-form__input-text--mb-zero" type="text" placeholder="Отчество, если желаете" name="pathronymic" id="patronymic">
+          <div class="order-form__input-wrapper">
+            <label class="order-form__label order-form__label--text-fields" for="name">Имя:</label>
+            <input class="order-form__input-text" type="text" placeholder="Введите ваше имя*" name="name" id="name" required>
+            <label class="order-form__label order-form__label--text-fields" for="surname">Фамилия:</label>
+            <input class="order-form__input-text" type="text" placeholder="Укажите фамилию*" name="surname" id="surname" required>
+            <label class="order-form__label order-form__label--text-fields order-form__label--mb-zero" for="patronymic">Отчество:</label>
+            <input class="order-form__input-text order-form__input-text--mb-zero" type="text" placeholder="Отчество, если желаете" name="pathronymic" id="patronymic">
+          </div>
         </div>
       </fieldset>
       <fieldset class="order-form__fieldset order-form__fieldset--bg-gray order-form__fieldset--pb-smaller">
-        <div class="order-form__flex-inner container container--fieldset">
+        <div class="order-form__flex-inner container">
           <h2 class="order-form__fieldset-caption order-form__fieldset-caption--mb-smaller">Тел</h2>
-          <input class="order-form__input-text order-form__input-text--icon-phone order-form__input-text--mb-zero" type="tel" placeholder="+7 XXX XX XX*" name="phone" id="phone" required>
+          <div class="order-form__input-wrapper">
+            <input class="order-form__input-text order-form__input-text--icon-phone order-form__input-text--mb-zero" type="tel" placeholder="+7 XXX XX XX*" name="phone" id="phone" required>
+          </div>
         </div>
       </fieldset>
       <fieldset class="order-form__fieldset order-form__fieldset--bg-gray order-form__fieldset--pt-zero">
-        <div class="order-form__flex-inner container container--fieldset">
+        <div class="order-form__flex-inner container">
           <h2 class="order-form__fieldset-caption order-form__fieldset-caption--mb-smaller">e-mail</h2>
-          <input class="order-form__input-text order-form__input-text--icon-email order-form__input-text--mb-zero" type="email" placeholder="Ваш Email*" name="email" id="email" required>
+          <div class="order-form__input-wrapper">
+            <input class="order-form__input-text order-form__input-text--icon-email order-form__input-text--mb-zero" type="email" placeholder="Ваш Email*" name="email" id="email" required>
+          </div>
         </div>
       </fieldset>
       <fieldset class="order-form__fieldset">
-        <div class="order-form__flex-inner container container--fieldset">
+        <div class="order-form__flex-inner container">
           <h2 class="order-form__fieldset-caption order-form__fieldset-caption--mb-smaller">Доп</h2>
-          <textarea class="order-form__input-textarea" placeholder="Опишите все ваши пожелания к заказу" name="additional" id="additional"></textarea>
+          <div class="order-form__input-wrapper">
+            <textarea class="order-form__input-textarea" placeholder="Опишите все ваши пожелания к заказу" name="additional" id="additional"></textarea>
+          </div>
         </div>
       </fieldset>
       <div class="container">

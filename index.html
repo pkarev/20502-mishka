@@ -19,8 +19,8 @@
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img src="img/logo-mobile.svg" alt="Mishka">
           </picture>
-        </a>
-        <nav class="main-nav main-nav--closed main-nav--nojs"> <!--main-nav--open - для открытого состояния меню-->
+        </a><!--main-nav--open - для открытого состояния меню-->
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggler" type="button">
           </button>
           <div class="main-nav__wrapper">
@@ -43,18 +43,20 @@
     </header>
     <main class="main-index">
       <section class="goods">
-        <h2 class="goods__caption">Милые штуки ручной<br> работы для дома</h2>
+        <h2 class="goods__caption">Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</h2>
         <div class="container">
           <ul class="goods__list">
-            <li class="goods__list-item goods__list-item--bgc-lighter"><a class="goods__link goods__link--interior" href="#" title="Перейти в каталог">Предметы<br> интерьера</a></li>
-            <li class="goods__list-item"><a class="goods__link goods__link--toys" href="#" title="Перейти в каталог">Детские<br> игрушки</a></li>
+            <li class="goods__list-item goods__list-item--bgc-lighter"><a class="goods__link goods__link--interior" href="#" title="Перейти в каталог">Предметы интерьера</a></li>
+            <li class="goods__list-item"><a class="goods__link goods__link--toys" href="#" title="Перейти в каталог">Детские игрушки</a></li>
           </ul>
         </div>
       </section>
       <section class="promo">
-        <div class="container container--vertical container--pl-bigger">
-          <h2 class="promo__caption">Вязаные корзинки</h2>
-          <span class="promo__legend">Товар недели</span>
+        <div class="container container--vertical">
+          <div class="promo__inner">
+            <h2 class="promo__caption">Вязаные корзинки</h2>
+            <span class="promo__legend">Товар недели</span>
+          </div>
           <p class="promo__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="promo__contents">
             <tr class="promo__contents-row">
@@ -96,12 +98,12 @@
         <div class="container container--pl-bigger">
           <h2 class="about-us__caption">Коротко о нас:</h2>
           <ul class="about-us__list">
-            <li class="about-us__item about-us__item--icon-eco">Экологически<br> чистые материалы</li>
-            <li class="about-us__item about-us__item--icon-style">Скандинавский стиль<br> по российской цене</li>
-            <li class="about-us__item about-us__item--icon-like">Увеличивает лайки<br> на фотографиях</li>
-            <li class="about-us__item about-us__item--icon-with-love">Связано вручную с<br> любовью и умилением</li>
-            <li class="about-us__item about-us__item--icon-import-substitution">Поддержка отечественного<br> производителя</li>
-            <li class="about-us__item about-us__item--icon-gift-package">Поставляется в<br> подарочной упаковке</li>
+            <li class="about-us__item about-us__item--icon-eco">Экологически чистые&nbsp;материалы</li>
+            <li class="about-us__item about-us__item--icon-style">Скандинавский&nbsp;стиль по&nbsp;российской&nbsp;цене</li>
+            <li class="about-us__item about-us__item--icon-like">Увеличивает&nbsp;лайки на&nbsp;фотографиях</li>
+            <li class="about-us__item about-us__item--icon-with-love">Связано&nbsp;вручную&nbsp;с любовью&nbsp;и&nbsp;умилением</li>
+            <li class="about-us__item about-us__item--icon-import-substitution">Поддержка&nbsp;отечественного производителя</li>
+            <li class="about-us__item about-us__item--icon-gift-package">Поставляется&nbsp;в подарочной&nbsp;упаковке</li>
           </ul>
         </div>
       </section>
@@ -111,15 +113,15 @@
           <blockquote class="reviews__item">
             <p class="reviews__text">
               Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек.
-              В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+              В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!
             </p>
             <cite class="reviews__author">
               <span class="reviews__author-name">Анастасия Красильникова</span>
               <span class="reviews__author-profile">@misssssiskras</span>
             </cite>
+            <button class="reviews__button reviews__button--prev" type="button">Предыдущий отзыв</button>
+            <button class="reviews__button reviews__button--next" type="button">Следующий отзыв</button>
           </blockquote>
-          <button class="reviews__button reviews__button--prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__button reviews__button--next" type="button">Следующий отзыв</button>
           <a class="reviews__write-review btn" href="review.html" title="Оставьте свой отзыв">Написать</a>
         </div>
       </section>

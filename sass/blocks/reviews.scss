@@ -55,7 +55,8 @@
 }
 
 .reviews__item {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -64,15 +65,18 @@
 .reviews__text {
   @include font(15px, 30px);
   margin: 0;
-  padding-bottom: 4px;
+
+  @include mobile {
+    padding-bottom: 4px;
+  }
+
   @include tablet {
     @include font(17px, 30px);
-    padding-bottom: 33px;
   }
   @include desktop {
     @include font(17px, 30px);
-    padding-bottom: 13px;
     padding-right: 100px;
+    width: 100%;
   }
 }
 
@@ -81,12 +85,13 @@
     display: block;
     width: 334px;
     margin-right: auto;
+    padding-top: 33px;
   }
   @include desktop {
     display: block;
     width: 350px;
     margin-right: auto;
-    padding-bottom: 94px;
+    padding-bottom: 95px;
   }
 }
 
@@ -96,10 +101,11 @@
   @include font(17px, 24px, bold);
   font-style: normal;
   @include tablet {
-    @include font(18px, 24px);
+    @include font(18px, 24px, bold);
   }
   @include desktop {
-    @include font(18px, 24px);
+    @include font(18px, 24px, bold);
+    padding-top: 37px;
   }
 }
 
@@ -114,8 +120,8 @@
     @include font(17px, 30px);
   }
   @include desktop {
-    padding-bottom: 30px;
     @include font(17px, 30px);
+    padding-bottom: 0;
   }
 }
 
@@ -135,25 +141,21 @@
 
   @include tablet {
     width: 80px;
+    margin-top: 55px;
   }
 
   @include desktop {
     width: 88px;
+    margin-top: 37px;
   }
 }
 
 .reviews__button--prev {
   background: url("../img/icon-left-arrow.svg") no-repeat center;
   @include tablet {
-    position: absolute;
-    right: 140px;
-    bottom: 47px;
     box-sizing: border-box;
   }
   @include desktop {
-    position: absolute;
-    right: 136px;
-    bottom: 130px;
     box-sizing: border-box;
   }
 }
@@ -161,15 +163,9 @@
   background: url("../img/icon-right-arrow.svg") no-repeat center;
   @include tablet {
     margin-right: 10px;
-    position: absolute;
-    right: 45px;
-    bottom: 47px;
     box-sizing: border-box;
   }
   @include desktop {
-    position: absolute;
-    right: 50px;
-    bottom: 130px;
     box-sizing: border-box;
   }
 }

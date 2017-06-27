@@ -46,12 +46,12 @@
 }
 
 .main-nav__wrapper {
-  position: absolute;
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
 
   @include mobile {
+    position: absolute;
     background-color: #ffffff;
     z-index: 1;
   }
@@ -101,22 +101,6 @@
     flex-basis: 223px * 2;
     flex-grow: 1;
     display: flex;
-  }
-}
-
-.main-nav__list--main-menu {
-  @include tablet {
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-}
-
-.main-nav__list--secondary-menu {
-  @include tablet {
-    position: absolute;
-    top: 100%;
-    right: 0;
   }
 }
 
@@ -304,7 +288,6 @@
     position: absolute;
     width: 21px;
     height: 18px;
-    position: absolute;
     right: 84.375%;
     top: 50%;
     transform: translateY(-50%);

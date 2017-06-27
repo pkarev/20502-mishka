@@ -18,8 +18,8 @@
   @include tablet {
     padding-top: 95px;
     padding-bottom: 90px;
+    margin-top: -62px;
     @include font(43px, 50px, bold);
-    margin-top: 88px;
     &::after {
       content: "";
       position: absolute;
@@ -34,7 +34,7 @@
   @include desktop {
     padding-top: 95px;
     padding-bottom: 120px;
-    margin-top: 88px;
+    margin-top: -58px;
     @include font(53px, 57px, bold);
     &::after {
       content: "";
