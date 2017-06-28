@@ -25,6 +25,7 @@
 
   @include desktop {
     &::before {
+      display: none;
       height: 21px;
       opacity: 0.5;
       top: 75px;
@@ -48,23 +49,24 @@
     padding-left: 0;
     padding-right: 0;
     @include font(43px, 50px, bold);
-    &::before {
-      height: 15px;
-      opacity: 0.5;
-      top: 55px;
-    }
   }
   @include desktop {
     padding-top: 155px;
     padding-bottom: 42px;
-    padding-left: 0;
+    padding-left: 175px;
     padding-right: 0;
     @include font(53px, 57px, bold);
+    position: relative;
     &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
       height: 21px;
       opacity: 0.5;
-      top: 75px;
+      top: 70px;
       left: 0;
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-size: cover;
     }
   }
 }
@@ -84,7 +86,7 @@
   }
   @include desktop {
     padding-right: 0;
-    padding-left: 0;
+    padding-left: 175px;
     display: flex;
     flex-wrap: wrap;
     width: 350px * 2;

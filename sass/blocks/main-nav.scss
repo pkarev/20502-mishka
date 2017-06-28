@@ -6,22 +6,74 @@
   }
 
   @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     @include input-placeholder {
       font-size: 0;
     }
   }
 
   @include desktop {
+    display: flex;
+    flex-wrap: wrap;
     @include input-placeholder {
       font-size: 0;
     }
   }
 }
 
+.main-nav__logo-link {
+  box-sizing: border-box;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  display: block;
+  width: auto;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+
+  @include tablet {
+    margin: 0;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 18px;
+    padding-left: 0;
+  }
+
+  @include desktop {
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 5px;
+  }
+}
+
+.main-nav__logo-image {
+  @include mobile {
+    width: 86px;
+    height: 35px;
+    display: block;
+    margin: 0 auto;
+  }
+  @include tablet {
+    width: 113px;
+    height: 46px;
+    display: block;
+  }
+  @include desktop {
+    width: 149px;
+    height: 72px;
+    display: block;
+  }
+}
+
 .main-nav__toggler {
   position: absolute;
-  right: 0px;
-  top: -79px;
+  right: 0;
+  top: 0;
   width: 80px;
   height: 79px;
   border: none;
@@ -47,25 +99,45 @@
 
 .main-nav__wrapper {
   box-sizing: border-box;
-  margin: 0 auto;
-  width: 100%;
 
   @include mobile {
     position: absolute;
     background-color: #ffffff;
     z-index: 1;
+    top: 79px;
+    width: 100%;
   }
 
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    z-index: 1;
+    width: auto;
+    order: 2
   }
 
   @include desktop {
     display: flex;
     flex-wrap: wrap;
     z-index: 1;
+    width: auto;
+  }
+}
+
+.main-nav__wrapper--user-block {
+  @include mobile {
+    top: 237px;
+  }
+  @include tablet {
+    order: 1;
+  }
+  @include desktop {
+    margin-left: auto;
+  }
+}
+
+.main-nav__wrapper--secondary-menu {
+  @include desktop {
+    width: 100%;
   }
 }
 
@@ -94,14 +166,27 @@
   @include tablet {
     flex-basis: 167px * 2;
     display: flex;
-    order: 2;
   }
 
   @include desktop {
-    flex-basis: 223px * 2;
-    flex-grow: 1;
+    flex-basis: 100%;
     display: flex;
+    z-index: 1;
   }
+}
+
+
+.main-nav__wrapper--main-menu {
+  z-index: 1;
+  @include desktop {
+    order: -1;
+    margin-right: 45px;
+    width: 405px;
+  }
+}
+
+.main-nav__wrapper--secondary-menu {
+  z-index: 1;
 }
 
 .main-nav__item {
@@ -164,12 +249,18 @@
   @include desktop {
     width: 185px;
     margin-right: 38px;
-    padding-top: 32px;
+    padding-top: 31px;
     padding-bottom: 33px;
     padding-left: 0;
     padding-right: 20px;
     border: none;
     @include font(17px, 24px, bold);
+  }
+}
+
+.main-nav__link--order {
+  @include desktop {
+    margin-right: 0;
   }
 }
 
@@ -229,9 +320,8 @@
 
   @include desktop {
     width: 84px;
-    height: 89px;
+    height: 88px;
     padding: 10px;
-    margin-left: auto;
     border-left: 1px solid #ececec;
     border-right: 1px solid #ececec;
   }
@@ -304,8 +394,8 @@
   @include tablet {
     width: 264px;
     padding-left: 44px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 30px;
+    padding-bottom:29px;
     padding-right: 0;
     border: none;
     text-align: right;
@@ -317,7 +407,7 @@
 
   @include desktop {
     width: 266px;
-    padding-top: 32px;
+    padding-top: 30px;
     padding-bottom: 32px;
     padding-left: 80px;
     padding-right: 0;

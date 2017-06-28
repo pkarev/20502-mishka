@@ -28,6 +28,15 @@
   }
 }
 
+.container--goods {
+  @include tablet {
+    margin-top: auto;
+  }
+  @include desktop {
+    margin-top: auto;
+  }
+}
+
 .container--pl-bigger {
   @include desktop {
     padding-left: 225px;
@@ -36,4 +45,14 @@
 
 .container--map {
   padding: 0;
+}
+
+.container--reviews {
+  @include desktop {
+    background: url("../img/review@1x.jpg") no-repeat 50px 0%;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../img/review@2x.jpg") no-repeat 50px 0%;
+      background-size: 350px 457px;
+    }
+  }
 }

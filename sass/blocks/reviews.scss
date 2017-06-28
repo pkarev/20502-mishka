@@ -11,6 +11,7 @@
     margin-bottom: 32px;
     position: relative;
     background: url("../img/review@1x.jpg") no-repeat 0% 0%;
+    background-size: 350px 457px;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: url("../img/review@2x.jpg") no-repeat 0% 0%;
       background-size: 350px 457px;
@@ -22,11 +23,7 @@
     padding-left: 0;
     position: relative;
     margin-top: 29px;
-    background: url("../img/review@1x.jpg") no-repeat 50px 0%;
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../img/review@2x.jpg") no-repeat 50px 0%;
-      background-size: 350px 457px;
-    }
+    background: none;
   }
 }
 
@@ -47,6 +44,7 @@
   @include desktop {
     padding-top: 70px;
     padding-bottom: 49px;
+    padding-left: 175px;
     @include font(53px, 57px, bold);
     width: auto;
     margin-right: auto;
@@ -60,6 +58,9 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  @include desktop {
+    padding-left: 175px;
+  }
 }
 
 .reviews__text {
